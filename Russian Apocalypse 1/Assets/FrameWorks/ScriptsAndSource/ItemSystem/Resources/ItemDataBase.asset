@@ -1,0 +1,106 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feaf130ca87e3e246bab14e2b8cc338e, type: 3}
+  m_Name: ItemDataBase
+  m_EditorClassIdentifier: 
+  itemList:
+  - itemName: Armor 1
+    itemID: 0
+    itemDesc: 'Armor + 50
+
+      Health + 500
+
+      CD + 20%
+
+
+      unique passive: Bloack 10% of Critical strick'
+    itemIcon: {fileID: 21300000, guid: d13012f4abce7b241900001bf716f66e, type: 3}
+    itemPrefab: {fileID: 0}
+    itemValue: 1
+    itemType: 6
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes:
+    - attributeName: Mana
+      attributeValue: 200
+    - attributeName: Health
+      attributeValue: 2500
+    - attributeName: Armor
+      attributeValue: 50
+    - attributeName: SlowDown
+      attributeValue: 20
+  - itemName: Head Armor1
+    itemID: 1
+    itemDesc: +500 Health
+    itemIcon: {fileID: 21300000, guid: 3fc1e59e3cadbd64f851216dffacedc6, type: 3}
+    itemPrefab: {fileID: 0}
+    itemValue: 1
+    itemType: 4
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes: []
+  - itemName: SwordA
+    itemID: 2
+    itemDesc: '+50 Physical Damage
+
+      +Attack Speed 90%'
+    itemIcon: {fileID: 21300000, guid: 77a2f52e24a6cbd41b678d9875f219d0, type: 3}
+    itemPrefab: {fileID: 181888, guid: 835af2a4f84a6d24bb76e68c53d03f7b, type: 2}
+    itemValue: 1
+    itemType: 1
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes: []
+  - itemName: PotionA
+    itemID: 3
+    itemDesc: +20 Health
+    itemIcon: {fileID: 21300000, guid: 66d1c16477f38954fa4b70e03ca26276, type: 3}
+    itemPrefab: {fileID: 1931401742535334, guid: eda131b9b887f804c81e70471359d886,
+      type: 2}
+    itemValue: 1
+    itemType: 0
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes: []
+  - itemName: Stuff1
+    itemID: 4
+    itemDesc: Magic Damage + 5
+    itemIcon: {fileID: 21300000, guid: a9c77c02829229f4cb7119ca8edeecb3, type: 3}
+    itemPrefab: {fileID: 1162029972264856, guid: 46ae13d29695caa4cb89683885809d50,
+      type: 2}
+    itemValue: 1
+    itemType: 0
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes: []
+  - itemName: Mana
+    itemID: 5
+    itemDesc: 
+    itemIcon: {fileID: 21300000, guid: bdd1808c35726bd4ba03939a9d5ec34e, type: 3}
+    itemPrefab: {fileID: 1721091639859826, guid: 86dc97aaf141dfb4fa1f804c3cd5a18a,
+      type: 2}
+    itemValue: 1
+    itemType: 0
+    itemWeight: 0
+    maxStack: 1
+    indexItemInList: 999
+    rarity: 0
+    itemAttributes: []
