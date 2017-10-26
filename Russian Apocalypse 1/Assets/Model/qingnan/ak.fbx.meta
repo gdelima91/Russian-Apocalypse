@@ -1,57 +1,169 @@
 fileFormatVersion: 2
-guid: c0480faa06eda8c4585f0c2fa02fd448
-timeCreated: 1508443634
+guid: adfdf43d361910742a2cfcffd3471b10
+timeCreated: 1509056612
 licenseType: Pro
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
     100000: //RootNode
+    100002: ak_47_part_1
+    100004: ak_47_part_10
+    100006: ak_47_part_11
+    100008: ak_47_part_12
+    100010: ak_47_part_13
+    100012: ak_47_part_14
+    100014: ak_47_part_15
+    100016: ak_47_part_16
+    100018: ak_47_part_17
+    100020: ak_47_part_18
+    100022: ak_47_part_19
+    100024: ak_47_part_2
+    100026: ak_47_part_20
+    100028: ak_47_part_21
+    100030: ak_47_part_22
+    100032: ak_47_part_23
+    100034: ak_47_part_3
+    100036: ak_47_part_4
+    100038: ak_47_part_5
+    100040: ak_47_part_6
+    100042: ak_47_part_7
+    100044: ak_47_part_8
+    100046: ak_47_part_9
     400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: ak_47_part_24
+    400002: ak_47_part_1
+    400004: ak_47_part_10
+    400006: ak_47_part_11
+    400008: ak_47_part_12
+    400010: ak_47_part_13
+    400012: ak_47_part_14
+    400014: ak_47_part_15
+    400016: ak_47_part_16
+    400018: ak_47_part_17
+    400020: ak_47_part_18
+    400022: ak_47_part_19
+    400024: ak_47_part_2
+    400026: ak_47_part_20
+    400028: ak_47_part_21
+    400030: ak_47_part_22
+    400032: ak_47_part_23
+    400034: ak_47_part_3
+    400036: ak_47_part_4
+    400038: ak_47_part_5
+    400040: ak_47_part_6
+    400042: ak_47_part_7
+    400044: ak_47_part_8
+    400046: ak_47_part_9
+    2300000: ak_47_part_1
+    2300002: ak_47_part_10
+    2300004: ak_47_part_11
+    2300006: ak_47_part_12
+    2300008: ak_47_part_13
+    2300010: ak_47_part_14
+    2300012: ak_47_part_15
+    2300014: ak_47_part_16
+    2300016: ak_47_part_17
+    2300018: ak_47_part_18
+    2300020: ak_47_part_19
+    2300022: ak_47_part_2
+    2300024: ak_47_part_20
+    2300026: ak_47_part_21
+    2300028: ak_47_part_22
+    2300030: ak_47_part_23
+    2300032: ak_47_part_3
+    2300034: ak_47_part_4
+    2300036: ak_47_part_5
+    2300038: ak_47_part_6
+    2300040: ak_47_part_7
+    2300042: ak_47_part_8
+    2300044: ak_47_part_9
+    3300000: ak_47_part_1
+    3300002: ak_47_part_10
+    3300004: ak_47_part_11
+    3300006: ak_47_part_12
+    3300008: ak_47_part_13
+    3300010: ak_47_part_14
+    3300012: ak_47_part_15
+    3300014: ak_47_part_16
+    3300016: ak_47_part_17
+    3300018: ak_47_part_18
+    3300020: ak_47_part_19
+    3300022: ak_47_part_2
+    3300024: ak_47_part_20
+    3300026: ak_47_part_21
+    3300028: ak_47_part_22
+    3300030: ak_47_part_23
+    3300032: ak_47_part_3
+    3300034: ak_47_part_4
+    3300036: ak_47_part_5
+    3300038: ak_47_part_6
+    3300040: ak_47_part_7
+    3300042: ak_47_part_8
+    3300044: ak_47_part_9
+    4300000: ak_47_part_1
+    4300002: ak_47_part_2
+    4300004: ak_47_part_3
+    4300006: ak_47_part_4
+    4300008: ak_47_part_5
+    4300010: ak_47_part_6
+    4300012: ak_47_part_7
+    4300014: ak_47_part_8
+    4300016: ak_47_part_9
+    4300018: ak_47_part_10
+    4300020: ak_47_part_11
+    4300022: ak_47_part_12
+    4300024: ak_47_part_13
+    4300026: ak_47_part_14
+    4300028: ak_47_part_15
+    4300030: ak_47_part_16
+    4300032: ak_47_part_17
+    4300034: ak_47_part_18
+    4300036: ak_47_part_19
+    4300038: ak_47_part_20
+    4300040: ak_47_part_21
+    4300042: ak_47_part_22
+    4300044: ak_47_part_23
     9500000: //RootNode
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: blinn11
+      name: akp11
     second: {fileID: 2100000, guid: 83e340a1b548b9c48bcb92994c699923, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: blinn18
+      name: akp18
     second: {fileID: 2100000, guid: 83e340a1b548b9c48bcb92994c699923, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: blinn2
+      name: akp2
     second: {fileID: 2100000, guid: 83e340a1b548b9c48bcb92994c699923, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: blinn3
+      name: akp21
     second: {fileID: 2100000, guid: 83e340a1b548b9c48bcb92994c699923, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: blinn4
+      name: akp7
     second: {fileID: 2100000, guid: 83e340a1b548b9c48bcb92994c699923, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: blinn5
+      name: akp8
     second: {fileID: 2100000, guid: 83e340a1b548b9c48bcb92994c699923, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: blinn6
-    second: {fileID: 2100000, guid: 3b654771a8801474fbb08c4e9890bf51, type: 2}
+      name: ironpart
+    second: {fileID: 2100000, guid: 83e340a1b548b9c48bcb92994c699923, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: blinn7
-    second: {fileID: 2100000, guid: 83e340a1b548b9c48bcb92994c699923, type: 2}
+      name: woodpart
+    second: {fileID: 2100000, guid: 97a6087e677853f4b89e9d589e9e3f54, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

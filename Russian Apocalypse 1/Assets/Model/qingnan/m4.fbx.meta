@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 0cf614413604cef41bfcec47b070b43b
-timeCreated: 1508443632
+guid: 06cba77fa0c7d3a42b39af958d202877
+timeCreated: 1509056610
 licenseType: Pro
 ModelImporter:
   serializedVersion: 22
@@ -9,13 +9,13 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: clip1
+    4300000: M4A2
     9500000: //RootNode
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: m4
+      name: M4A1_mat1
     second: {fileID: 2100000, guid: da2e748acecd8b7409d14e9fe15fa60f, type: 2}
   materials:
     importMaterials: 1
