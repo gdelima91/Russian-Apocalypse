@@ -1,4 +1,0 @@
-sceneSetups:
-- path: Assets/Particals_Vir/Scene/Particals_Vir.unity
-  isLoaded: 1
-  isActive: 1
