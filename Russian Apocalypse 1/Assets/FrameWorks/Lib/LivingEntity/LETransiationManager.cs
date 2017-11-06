@@ -6,25 +6,23 @@ using UnityEngine.AI;
 public class LETransiationManager : MonoBehaviour {
 
     public TransitionControlType controlType = TransitionControlType.RootMotion;
-
-    [SerializeField]
-    protected float moveSpeed = 2.0f;
-    [SerializeField]
-    protected float speedScales = 1.0f;
-    protected float currentSpeed;
-
     protected Transform mainBody;
     V.LECameraManager cameramanager;
     LEAnimatorManager animationManager;
+    LECharacterController cc;
+    private Vector3 transitionVH;
+
+    public bool freezeY = true;
+
 
     NavMeshAgent navMeshAgent;
 
     private void Start()
     {
-        currentSpeed = moveSpeed * speedScales;
         cameramanager = GetComponentInChildren<V.LECameraManager>();
         mainBody = transform.root.GetComponentInChildren<Animator>().transform;
         animationManager = GetComponent<LEAnimatorManager>();
+        cc = GetComponent<LECharacterController>();
     }
 
     public void UpdateTransition(V.LEUserInput input)
@@ -41,9 +39,6 @@ public class LETransiationManager : MonoBehaviour {
     public void UpdateNaveMeshAngent()
     {
         if (navMeshAgent == null) { navMeshAgent = GetComponent<NavMeshAgent>(); if (navMeshAgent == null) { Debug.LogError("Game Object Dont have NaveMeshAgent Component"); return; } }
-        
-
-
     }
 
     public void UpdateTransitionBasedOn_Camera_Forward(V.LEUserInput input)
@@ -52,7 +47,11 @@ public class LETransiationManager : MonoBehaviour {
         {
             Vector3 forward = new Vector3(cameramanager.CurrentCamera.Transform.forward.x, transform.position.y, cameramanager.CurrentCamera.Transform.forward.z).normalized;
             Vector3 right = new Vector3(cameramanager.CurrentCamera.Transform.right.x, transform.position.y, cameramanager.CurrentCamera.Transform.right.z).normalized;
-            transform.position += (forward * input.currentVH.y + right * input.currentVH.x) * Time.deltaTime * currentSpeed;
+            transitionVH = (forward * input.currentVH.y + right * input.currentVH.x);
+
+            if (freezeY){transitionVH.y = 0.0f; transitionVH.Normalize();}
+            else {transitionVH.Normalize();}
+            cc.Set_TransitionVH(transitionVH);
         }
     }
 
@@ -63,7 +62,12 @@ public class LETransiationManager : MonoBehaviour {
         {
             Vector3 forward = new Vector3(mainBody.forward.x, transform.position.y, mainBody.forward.z).normalized;
             Vector3 right = new Vector3(mainBody.right.x, transform.position.y, mainBody.right.z).normalized;
-            transform.position += (forward * input.currentVH.y + right * input.currentVH.x) * Time.deltaTime * currentSpeed;
+            transitionVH = (forward * input.currentVH.y + right * input.currentVH.x);
+
+            if (freezeY) { transitionVH.y = 0.0f; transitionVH.Normalize(); }
+            else { transitionVH.Normalize(); }
+
+            cc.Set_TransitionVH(transitionVH);
         }
     }
 

@@ -8,6 +8,7 @@ using System.IO;
 [RequireComponent(typeof(LEAnimatorManager))]
 [RequireComponent(typeof(LERotationManager))]
 [RequireComponent(typeof(LETransiationManager))]
+[RequireComponent(typeof(LECharacterController))]
 public abstract class LEMainBase : MonoBehaviour {
 
     protected LEInputClientManager inputClientManager;
