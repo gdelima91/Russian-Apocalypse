@@ -9,7 +9,8 @@ public class Enemy1_Partrol : AiStateInterface<LE_Enemy1>  {
 
     public override void Enter(LE_Enemy1 entity)
     {
-        Debug.Log("Enter ......");
+        entity.StateMachine.Anima_Set_Float("Speed Z", 1.0f);
+
     }
 
     public override void Execute(LE_Enemy1 entity)
@@ -19,14 +20,14 @@ public class Enemy1_Partrol : AiStateInterface<LE_Enemy1>  {
         {
            
             Vector3 pos = stateMachine.Get_RandomPosXZ_BasedOnCurrentPos(-20, 20);
-            bool walkable = stateMachine.Check_PositionWalkAble(pos);
-            
+            bool walkable = stateMachine.Check_PositionWalkAble(pos);    
             if (walkable) { stateMachine.Set_Nav_Destination(pos); }
+
         }
     }
 
     public override void Exit(LE_Enemy1 entity)
     {
-       
+      
     }
 }

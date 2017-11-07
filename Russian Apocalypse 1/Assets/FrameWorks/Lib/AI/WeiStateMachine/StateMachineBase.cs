@@ -7,6 +7,7 @@ public abstract class StateMachineBase : MonoBehaviour
     //Those Value will be assigned. When SateMachine Base First Time be accessed from the LEMainBase.....
     [HideInInspector] public LEMainBase leBase;
     [HideInInspector] public LETransiationManager transitionManager;
+    [HideInInspector] public LEAnimatorManager animatorManager;
 
 
     public bool Ckeck_FindPlayer()
@@ -48,6 +49,11 @@ public abstract class StateMachineBase : MonoBehaviour
     public bool ArriveDestination_NotPathPending()
     {
         return transitionManager.ArriveDestination_NotPathPending();
+    }
+
+    public void Anima_Set_Float(string name,float value)
+    {
+        animatorManager.SetFloat(name, value);
     }
 
 
