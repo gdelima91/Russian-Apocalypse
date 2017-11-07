@@ -38,7 +38,7 @@ public abstract class LEMainBase : MonoBehaviour {
         enableBaiscMovement = value;
     }
 
-    public StateMachineBase StateMachine { get { if (stateMachine == null) { stateMachine = GetComponent<StateMachineBase>(); if (stateMachine != null) { stateMachine.leBase = this; stateMachine.transitionManager = transitionManager; } }return stateMachine; } }
+    public StateMachineBase StateMachine { get { if (stateMachine == null) { stateMachine = GetComponent<StateMachineBase>(); if (stateMachine != null) { stateMachine.leBase = this; stateMachine.transitionManager = transitionManager; stateMachine.animatorManager = animationManager; } }return stateMachine; } }
 
     //======================================================================
     //Recive massage from AnimationManager.
