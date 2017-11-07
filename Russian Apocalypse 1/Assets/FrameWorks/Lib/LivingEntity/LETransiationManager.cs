@@ -5,24 +5,33 @@ using UnityEngine.AI;
 
 public class LETransiationManager : MonoBehaviour {
 
-    public TransitionControlType controlType = TransitionControlType.RootMotion;
-    protected Transform mainBody;
-    V.LECameraManager cameramanager;
-    LEAnimatorManager animationManager;
-    LECharacterController cc;
-    private Vector3 transitionVH;
-
     public bool freezeY = true;
 
+    public TransitionControlType controlType = TransitionControlType.RootMotion;
 
+    
+    public LETransitionDriver transitionDriver = new LETransitionDriver();
+
+
+    protected Transform mainBody;
+    V.LECameraManager cameramanager;
+    
+    private Vector3 transitionVH;
+
+   
     NavMeshAgent navMeshAgent;
+    NavMeshHit hit = new NavMeshHit();
 
     private void Start()
     {
         cameramanager = GetComponentInChildren<V.LECameraManager>();
         mainBody = transform.root.GetComponentInChildren<Animator>().transform;
-        animationManager = GetComponent<LEAnimatorManager>();
-        cc = GetComponent<LECharacterController>();
+        transitionDriver.Start(this);
+    }
+
+    private void Update()
+    {
+        transitionDriver.Update();
     }
 
     public void UpdateTransition(V.LEUserInput input)
@@ -32,8 +41,6 @@ public class LETransiationManager : MonoBehaviour {
         else if (controlType == TransitionControlType.Forward_Camera) { UpdateTransitionBasedOn_Camera_Forward(input); }
         else if (controlType == TransitionControlType.Forward_MainBody) { UpdateTransitionBasedOn_MainBody_forward(input); }
         else if (controlType == TransitionControlType.NaveMesh) { /*if NavMesh We dont do anything.*/}
-
-        if (animationManager) { Update_Animation_TransitionMotion(input); }
     }
 
     public void UpdateNaveMeshAngent()
@@ -51,7 +58,7 @@ public class LETransiationManager : MonoBehaviour {
 
             if (freezeY){transitionVH.y = 0.0f; transitionVH.Normalize();}
             else {transitionVH.Normalize();}
-            cc.Set_TransitionVH(transitionVH);
+            transitionDriver.Set_TransitionVH(transitionVH);
         }
     }
 
@@ -67,7 +74,7 @@ public class LETransiationManager : MonoBehaviour {
             if (freezeY) { transitionVH.y = 0.0f; transitionVH.Normalize(); }
             else { transitionVH.Normalize(); }
 
-            cc.Set_TransitionVH(transitionVH);
+            transitionDriver.Set_TransitionVH(transitionVH);
         }
     }
 
@@ -77,24 +84,16 @@ public class LETransiationManager : MonoBehaviour {
         navMeshAgent.SetDestination(pos);
     }
 
-    void Update_Animation_TransitionMotion(V.LEUserInput input)
+    public bool SamplePosition(Vector3 Pos)
     {
-        if (input.currentVH == Vector2.zero)
-        {
-            animationManager.SetFloat("Speed X", 0.0f);
-            animationManager.SetFloat("Speed Z", 0.0f);
-        }
-        else
-        {
-
-            float yaw = cameramanager.CurrentCamera.Yaw;
-            float bodyY = mainBody.eulerAngles.y;
-            Vector2 vh = input.currentVH.Rotate(bodyY - yaw);
-            animationManager.SetFloat("Speed X", vh.x);
-            animationManager.SetFloat("Speed Z", vh.y);
-        }
+        if (NavMesh.SamplePosition(Pos, out hit, 1.0f, NavMesh.AllAreas)){ return true;} else { return false; }   
     }
 
+    public bool ArriveDestination_NotPathPending()
+    {
+        if (navMeshAgent == null) { navMeshAgent = GetComponent<NavMeshAgent>(); if (navMeshAgent == null) { Debug.LogError("Game Object Dont have NaveMeshAgent Component"); return false; } }
+        return navMeshAgent.ArriveDestination_NotPathPending();
+    }
 }
 
 public enum TransitionControlType
@@ -105,3 +104,4 @@ public enum TransitionControlType
     InputDir,
     Forward_MainBody
 }
+

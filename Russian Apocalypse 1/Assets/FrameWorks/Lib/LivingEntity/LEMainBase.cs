@@ -8,7 +8,6 @@ using System.IO;
 [RequireComponent(typeof(LEAnimatorManager))]
 [RequireComponent(typeof(LERotationManager))]
 [RequireComponent(typeof(LETransiationManager))]
-[RequireComponent(typeof(LECharacterController))]
 public abstract class LEMainBase : MonoBehaviour {
 
     protected LEInputClientManager inputClientManager;
@@ -21,6 +20,8 @@ public abstract class LEMainBase : MonoBehaviour {
     protected bool alive = true;
     public bool Alive { get { return alive; } }
     public bool IsAlive() { return alive; }
+
+    StateMachineBase stateMachine;
 
     protected virtual void OnEnable()
     {
@@ -36,6 +37,8 @@ public abstract class LEMainBase : MonoBehaviour {
     {
         enableBaiscMovement = value;
     }
+
+    public StateMachineBase StateMachine { get { if (stateMachine == null) { stateMachine = GetComponent<StateMachineBase>(); if (stateMachine != null) { stateMachine.leBase = this; stateMachine.transitionManager = transitionManager; } }return stateMachine; } }
 
     //======================================================================
     //Recive massage from AnimationManager.

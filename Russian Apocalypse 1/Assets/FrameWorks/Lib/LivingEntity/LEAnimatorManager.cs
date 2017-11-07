@@ -12,6 +12,9 @@ public class LEAnimatorManager : MonoBehaviour {
     bool enableMotionInput = true;
     float nextInputTime;
 
+    V.LECameraManager cameramanager;
+    Transform mainBody;
+
     LEAnimationCallBack callback;
 
     System.Random rand = new System.Random();
@@ -29,9 +32,28 @@ public class LEAnimatorManager : MonoBehaviour {
 
     protected virtual void Start () {
         callback = GetComponent<LEAnimationCallBack>();
+        cameramanager = GetComponent<V.LECameraManager>();
+        mainBody = transform.root.GetComponentInChildren<Animator>().transform;
     }
 
-    public void UpdateAnimation() { }
+    public void UpdateAnimation(V.LEUserInput input) {
+
+        if (input.currentVH == Vector2.zero)
+        {
+            animator.SetFloat("Speed X", 0.0f);
+            animator.SetFloat("Speed Z", 0.0f);
+        }
+        else
+        {
+
+            float yaw = cameramanager.CurrentCamera.Yaw;
+            float bodyY = mainBody.eulerAngles.y;
+            Vector2 vh = input.currentVH.Rotate(bodyY - yaw);
+            animator.SetFloat("Speed X", vh.x);
+            animator.SetFloat("Speed Z", vh.y);
+        }
+
+    }
 
     public virtual void SetKeyStatue(InputIndex index,bool state) { animator.SetBool(index.ToString(), state); }
 

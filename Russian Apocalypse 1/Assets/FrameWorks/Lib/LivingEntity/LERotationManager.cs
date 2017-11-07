@@ -38,7 +38,7 @@ public class LERotationManager : MonoBehaviour {
         else if (controlType == RotationControlType.Non_Strafe_And_Back) {/*this means no Rotation Control for this LE Object*/ }
     }
 
-    public void SetRotationControlType(RotationControlType _controlType) {
+    public void Set_RotationControlType(RotationControlType _controlType) {
         controlType = _controlType;
     }
 
@@ -73,6 +73,11 @@ public class LERotationManager : MonoBehaviour {
     {
         target.y = SkeletonT.position.y;
         SkeletonT.LookAt(target);
+    }
+
+    public void Set_FacingDir()
+    {
+
     }
 
 }

@@ -1,0 +1,242 @@
+fileFormatVersion: 2
+guid: 8055b320e03621b42aae6a7fb0ded26a
+timeCreated: 1510014066
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: pCube11
+    100004: pCube12
+    100006: polySurface1
+    100008: polySurface1 1
+    100010: polySurface10
+    100012: polySurface11
+    100014: polySurface12
+    100016: polySurface13
+    100018: polySurface14
+    100020: polySurface15
+    100022: polySurface16
+    100024: polySurface17
+    100026: polySurface18
+    100028: polySurface18 1
+    100030: polySurface19
+    100032: polySurface20
+    100034: polySurface21
+    100036: polySurface22
+    100038: polySurface23
+    100040: polySurface24
+    100042: polySurface25
+    100044: polySurface26
+    100046: polySurface27
+    100048: polySurface28
+    100050: polySurface8
+    100052: polySurface9
+    100054: pSphere10
+    100056: pSphere11
+    100058: pSphere12
+    100060: pSphere2
+    100062: pSphere3
+    100064: pSphere4
+    100066: pSphere5
+    100068: pSphere6
+    100070: pSphere7
+    100072: pSphere8
+    100074: pSphere9
+    100076: transform20
+    100078: transform21
+    100080: transform22
+    100082: transform23
+    100084: transform24
+    100086: transform25
+    100088: transform26
+    100090: transform27
+    100092: transform28
+    100094: transform29
+    100096: transform30
+    100098: transform31
+    100100: transform32
+    100102: transform33
+    100104: transform34
+    100106: transform35
+    100108: transform36
+    100110: transform37
+    100112: transform38
+    100114: transform39
+    100116: transform40
+    100118: transform41
+    100120: transform42
+    100122: transform43
+    100124: transform44
+    100126: transform45
+    100128: transform46
+    100130: transform47
+    100132: transform48
+    100134: transform49
+    100136: transform50
+    100138: transform51
+    100140: transform52
+    100142: transform53
+    100144: transform54
+    100146: transform55
+    400000: //RootNode
+    400002: pCube11
+    400004: pCube12
+    400006: polySurface1
+    400008: polySurface1 1
+    400010: polySurface10
+    400012: polySurface11
+    400014: polySurface12
+    400016: polySurface13
+    400018: polySurface14
+    400020: polySurface15
+    400022: polySurface16
+    400024: polySurface17
+    400026: polySurface18
+    400028: polySurface18 1
+    400030: polySurface19
+    400032: polySurface20
+    400034: polySurface21
+    400036: polySurface22
+    400038: polySurface23
+    400040: polySurface24
+    400042: polySurface25
+    400044: polySurface26
+    400046: polySurface27
+    400048: polySurface28
+    400050: polySurface8
+    400052: polySurface9
+    400054: pSphere10
+    400056: pSphere11
+    400058: pSphere12
+    400060: pSphere2
+    400062: pSphere3
+    400064: pSphere4
+    400066: pSphere5
+    400068: pSphere6
+    400070: pSphere7
+    400072: pSphere8
+    400074: pSphere9
+    400076: transform20
+    400078: transform21
+    400080: transform22
+    400082: transform23
+    400084: transform24
+    400086: transform25
+    400088: transform26
+    400090: transform27
+    400092: transform28
+    400094: transform29
+    400096: transform30
+    400098: transform31
+    400100: transform32
+    400102: transform33
+    400104: transform34
+    400106: transform35
+    400108: transform36
+    400110: transform37
+    400112: transform38
+    400114: transform39
+    400116: transform40
+    400118: transform41
+    400120: transform42
+    400122: transform43
+    400124: transform44
+    400126: transform45
+    400128: transform46
+    400130: transform47
+    400132: transform48
+    400134: transform49
+    400136: transform50
+    400138: transform51
+    400140: transform52
+    400142: transform53
+    400144: transform54
+    400146: transform55
+    2300000: polySurface18
+    3300000: polySurface18
+    4300000: polySurface18
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: dc7059827f90ed64fb8dff35107f8b0b, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

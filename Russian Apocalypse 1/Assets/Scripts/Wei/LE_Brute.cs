@@ -22,6 +22,7 @@ public class LE_Brute : LEMainBase {
         cameraManager.UpdateCameraManager(userInput);
         rotationManager.UpdateRotation(userInput);
         transitionManager.UpdateTransition(userInput);
+        animationManager.UpdateAnimation(userInput);
    
     }
 
