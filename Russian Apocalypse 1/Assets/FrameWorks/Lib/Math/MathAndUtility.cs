@@ -263,35 +263,4 @@ namespace V
 
     }
 
-    public static class PhysicsRaycast
-    {
-
-        public static bool DetecteCollisionFromAtoB(Vector3 fromPos, Vector3 toPos)
-        {
-            Vector3 dir = (toPos - fromPos);
-            float length = dir.magnitude;
-            if (Physics.Raycast(fromPos, dir, length))
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-
-        public static bool DetecteCollisionFromAtoB(Vector3 fromPos, Vector3 toPos, ref RaycastHit hit)
-        {
-            Vector3 dir = (toPos - fromPos);
-            float length = dir.magnitude;
-            if (Physics.Raycast(fromPos, dir, out hit, length))
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-    }
 }

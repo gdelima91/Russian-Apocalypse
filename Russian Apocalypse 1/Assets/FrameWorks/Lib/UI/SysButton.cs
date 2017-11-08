@@ -18,7 +18,7 @@ public class SysButton : MonoBehaviour {
 
     public void OnClick()
     {
-        GameUIPr.Instance.MainUIMenueEvent();
+        GameUIPr.Instance.MainUI_ESC_Pressed();
     }
 
 

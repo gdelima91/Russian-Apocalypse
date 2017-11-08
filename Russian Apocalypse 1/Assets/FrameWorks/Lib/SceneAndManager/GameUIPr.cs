@@ -89,17 +89,19 @@ public class GameUIPr : Singleton<GameUIPr> {
                 settingPanelObj = Instantiate(SettingPanel_PB).gameObject;
                 settingPanelObj.transform.SetParent(MainCanvasObject.transform);
                 subPanelObjs.Add(settingPanelObj);
-            }
-
-            //Disable all ob sub Panel
-            foreach (GameObject sub in subPanelObjs)
-            {
-                sub.SetActive(false);
-            }
+            }   
         }
         else
         {
             settingPanelObj = settingPanel.gameObject;
+            subPanelObjs.Add(settingPanelObj);
+        }
+
+
+        //Disable all ob sub Panel
+        foreach (GameObject sub in subPanelObjs)
+        {
+            sub.SetActive(false);
         }
 
     }
@@ -130,7 +132,10 @@ public class GameUIPr : Singleton<GameUIPr> {
         else if (target == PanelType.Setting)
         {
             if (settingPanelObj != null)
+            {
                 settingPanelObj.SetActive(true);
+                settingPanelObj.transform.localPosition = Vector3.zero;
+            }
         }
         else if (target == PanelType.LoadSave)
         {
@@ -159,7 +164,7 @@ public class GameUIPr : Singleton<GameUIPr> {
             loadingBackGroundPanelObj.SetActive(false);     
     }
 
-    public void MainUIMenueEvent()
+    public void MainUI_ESC_Pressed()
     {
         if (mainManueObj != null)
         {
@@ -205,6 +210,10 @@ public class GameUIPr : Singleton<GameUIPr> {
         if (settingPanelObj != null)
         {
             settingPanelObj.SetActive(!settingPanelObj.activeSelf);
+            if (settingPanelObj.activeSelf) {
+                settingPanelObj.GetComponent<RectTransform>().localPosition = Vector3.zero;
+                Debug.Log(settingPanelObj.GetComponent<RectTransform>().localPosition);
+            }
         }
     }
 
@@ -441,7 +450,6 @@ public class GameUIPr : Singleton<GameUIPr> {
         RectTransform textRT = textObj.GetComponent<RectTransform>();
         V.UIHelper.SetAndMatchAnchors(ref textRT, rect.min_LowerLeft, rect.max_UpperRight);
     }
-
 
     private void Reset()
     {

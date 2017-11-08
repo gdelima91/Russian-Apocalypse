@@ -56,7 +56,7 @@ public class GameCentalPr : Singleton<GameCentalPr> {
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            GameUIPr.Instance.MainUIMenueEvent();
+            GameUIPr.Instance.MainUI_ESC_Pressed();
         }
         
     }

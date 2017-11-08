@@ -26,7 +26,7 @@ public class VCamera : MonoBehaviour {
 
     //Cache View/Proj matrices.
     Matrix4x4 View = Matrix4x4.identity;
-    Matrix4x4 Proj = Matrix4x4.identity;
+    [HideInInspector] public Matrix4x4 Proj = Matrix4x4.identity;
 
 
     public Vector3 GetPosition()
@@ -200,15 +200,4 @@ public class VCamera : MonoBehaviour {
 
     }
 
-    public void CreateCameraPlane()
-    {
-        Plane Far = new Plane(Forward, FarZ);
-        Plane Near = new Plane(Forward, NearZ);
-
-        Vector3 topNormal = Forward.RotateAxis(Vector3.right, 0.5f * Mathf.Rad2Deg * FovY );
-        Plane TopPlane = new Plane(topNormal,0);
-
-        Vector3 BotNormal = Forward.RotateAxis(Vector3.right, -0.5f * Mathf.Rad2Deg * FovY);
-        Plane BotPlane = new Plane(BotNormal, 0);
-    }
 }

@@ -20,7 +20,7 @@ public class LETransiationManager : MonoBehaviour {
 
    
     NavMeshAgent navMeshAgent;
-    NavMeshHit hit = new NavMeshHit();
+    [HideInInspector] public NavMeshHit hit = new NavMeshHit();
 
     private void Start()
     {

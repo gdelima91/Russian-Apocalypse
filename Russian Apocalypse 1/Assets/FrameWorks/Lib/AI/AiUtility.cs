@@ -21,7 +21,7 @@ namespace AiUtility{
             viewAngle = _angle;
         }*/
 
-        public T GetNearestObjInsideFieldOfView<T>() where T : MonoBehaviour {
+        public T Get_Nearest_Obj_InsideFieldOfView<T>() where T : MonoBehaviour {
             List<T> allObjectInrange = new List<T>();
             List<T> allObjectInView = new List<T>();
 
@@ -52,7 +52,7 @@ namespace AiUtility{
 
         }
 
-        public List<Collider> GetAllColliderInsideFieldOfView()
+        public List<Collider> Get_All_Collider_InsideFieldOfView()
         {
             List<Collider> allColliderInView = new List<Collider>();
 
@@ -68,7 +68,7 @@ namespace AiUtility{
             return allColliderInView;
         }
 
-        public List<Collider> GetAllColliderInsideFieldOfView(LayerMask layerMask)
+        public List<Collider> Get_All_Collider_InsideFieldOfView(LayerMask layerMask)
         {
             List<Collider> allColliderInView = new List<Collider>();
 
@@ -86,7 +86,7 @@ namespace AiUtility{
             return allColliderInView;
         }
      
-        public void GetAllColliderInsideFieldOfView<T>(ref List<T> allColliderTInView, Action callBack,bool boundsRaycast = false) where T : MonoBehaviour
+        public void Get_All_Collider_InsideFieldOfView<T>(ref List<T> allColliderTInView, Action callBack,bool boundsRaycast = false) where T : MonoBehaviour
         {
             //get all Collider in a sphere
             Collider[] allColliders = Physics.OverlapSphere(eye.position, viewDistance);
@@ -165,9 +165,9 @@ namespace AiUtility{
             }  
         }
 
-        public Collider GetNearestColliderInsideFieldOfView() {
+        public Collider Get_Nearest_Collider_InsideFieldOfView() {
 
-            List<Collider> allColliderInView = GetAllColliderInsideFieldOfView();
+            List<Collider> allColliderInView = Get_All_Collider_InsideFieldOfView();
 
             //Get Check the nearest collider
             Collider nearestCollider = null;
@@ -184,9 +184,9 @@ namespace AiUtility{
             return nearestCollider;
         }
 
-        public Collider GetNearestColliderInsideFieldOfView(LayerMask layerMask)
+        public Collider Get_Nearest_Collider_InsideFieldOfView(LayerMask layerMask)
         {
-            List<Collider> allColliderInView = GetAllColliderInsideFieldOfView(layerMask);
+            List<Collider> allColliderInView = Get_All_Collider_InsideFieldOfView(layerMask);
 
             //Get Check the nearest collider
             Collider nearestCollider = null;
@@ -203,7 +203,7 @@ namespace AiUtility{
             return nearestCollider;
         }
 
-        public Collider GetFirstColliderInsideFieldOfView()
+        public Collider Get_First_Collider_InsideFieldOfView()
         {
 
             //get all Collider in a sphere
@@ -220,7 +220,7 @@ namespace AiUtility{
             return null;
         }
 
-        public Collider GetFirstColliderInsideFieldOfView(LayerMask layerMask)
+        public Collider Get_First_Collider_InsideFieldOfView(LayerMask layerMask)
         {
             //get all Collider in a sphere
             Collider[] allColliders = Physics.OverlapSphere(eye.position, viewDistance, layerMask);
@@ -236,7 +236,7 @@ namespace AiUtility{
             return null;
         }
 
-        public bool GetFirstColliderCanSeeInFieldOfView(LayerMask layerMask, string tag, ref Collider collider)
+        public bool Get_First_Collider_CanSeeInFieldOfView(LayerMask layerMask, string tag, ref Collider collider)
         {
             //get all Collider in a sphere
             Collider[] allColliders = Physics.OverlapSphere(eye.position, viewDistance, layerMask);
@@ -264,7 +264,7 @@ namespace AiUtility{
         }
 
         //need to fix
-        public bool IfObjectInFieldOfView(Ibounds ib,bool useBoundsCheck=false)
+        public bool If_Object_Bounds_InFieldOfView(Ibounds ib,bool useBoundsCheck=false)
         {
             if((ib.Transform.position - eye.position).sqrMagnitude > viewDistance * viewDistance) { return false; }
             if (useBoundsCheck)
@@ -290,7 +290,7 @@ namespace AiUtility{
                 }
                 else
                 {
-                    //check if any vertices of the bounds inside view angle. if there is, we raycast the tow view edge
+                    //check if any vertices of the bounds inside view angle. if there is, we raycast the two view edge
                     //if hit the collider. means we can see the bounds
                     foreach (Vector3 v in vertices)
                     {
@@ -314,7 +314,7 @@ namespace AiUtility{
             return false;
         }
 
-        public bool IfObjectInFieldOfViewAngle(Vector3 pos)
+        public bool If_Position_InFieldOfView_Angle(Vector3 pos)
         {
             if (Vector3.Angle(eye.forward, pos - eye.position) < viewAngle / 2)
             {
@@ -363,6 +363,31 @@ namespace AiUtility{
 
             //Debug.DrawRay(staticOrigin, staticForward, Color.red);
         }
+
+
+        public bool See_Target_InFieldOfView_WithComponent<T>(List<Collider> allPartition) where T : MonoBehaviour
+        {
+            foreach (Collider c in allPartition)
+            {
+                
+                return true;
+            }
+            return false;
+        }
+
+
+        public bool See_Collider_InFieldOfView(Collider c)
+        {
+            if (If_Position_InFieldOfView_Angle(c.transform.position))
+            {
+                if (V.VPhysics.RaycastExtention.If_Collide_Target_FromAtoB(eye.position,c.transform.position,c)) {
+                    return true;
+                }
+            }
+            return false;
+            
+        }
+
     }
 
 
