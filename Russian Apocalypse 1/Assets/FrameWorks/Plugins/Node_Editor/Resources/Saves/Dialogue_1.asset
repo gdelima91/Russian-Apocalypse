@@ -1,0 +1,3101 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6c0086c3892b96438fecf5113b2de2d, type: 3}
+  m_Name: Dialogue_1
+  m_EditorClassIdentifier: 
+  editorStates:
+  - {fileID: 114055818719991160}
+  saveName: Dialogue_1
+  savePath: Assets/Plugins/Node_Editor/Resources/Saves/Dialogue_1.asset
+  livesInScene: 0
+  nodes:
+  - {fileID: 114933419194113814}
+  - {fileID: 114120310792091114}
+  - {fileID: 114112297580978106}
+  - {fileID: 114729288787876726}
+  - {fileID: 114292293863938280}
+  - {fileID: 114192835583662192}
+  - {fileID: 114369317480311382}
+  - {fileID: 114933739225414262}
+  - {fileID: 114033773268067680}
+  - {fileID: 114706317386228504}
+  - {fileID: 114484709194338362}
+  - {fileID: 114102101400411256}
+  - {fileID: 114417287731099326}
+  - {fileID: 114278716056612386}
+  - {fileID: 114200241381496696}
+  - {fileID: 114295146463420260}
+  - {fileID: 114725111702766154}
+  - {fileID: 114763337421568886}
+  - {fileID: 114057578721040314}
+  - {fileID: 114235954167853450}
+  - {fileID: 114929506925216326}
+  - {fileID: 114423886475974524}
+  - {fileID: 114128431304379734}
+  - {fileID: 114729176944797246}
+  - {fileID: 114632827407074566}
+  - {fileID: 114804702120712080}
+  - {fileID: 114375903406158304}
+  - {fileID: 114858947947609044}
+  - {fileID: 114472724386550230}
+  groups: []
+  Name: Dialog
+--- !u!114 &114024769306735406
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Next Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114933739225414262}
+  side: 2
+  sidePosition: 315.5
+  sideOffset: 0
+  connections: []
+  typeID: DialogForward
+  calculationBlockade: 0
+--- !u!114 &114032708437647542
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Next Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114102101400411256}
+  side: 2
+  sidePosition: 30
+  sideOffset: 0
+  connections:
+  - {fileID: 114477771486105808}
+  typeID: DialogForward
+  calculationBlockade: 0
+--- !u!114 &114033773268067680
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dd8e00a3d3c91a4cbd303bf65049f72, type: 3}
+  m_Name: Dialog Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 1091.6
+    y: 309.7
+    width: 350
+    height: 230
+  nodeKnobs:
+  - {fileID: 114105085192421618}
+  - {fileID: 114855578918879424}
+  - {fileID: 114262959417680938}
+  - {fileID: 114953032005534678}
+  Inputs:
+  - {fileID: 114105085192421618}
+  - {fileID: 114953032005534678}
+  Outputs:
+  - {fileID: 114855578918879424}
+  - {fileID: 114262959417680938}
+  backgroundColor: {r: 1, g: 1, b: 1, a: 1}
+  CharacterName: Dietrich
+  CharacterPotrait: {fileID: 21300000, guid: 2834222ad414e4143a9ec7cb3d81376a, type: 3}
+  DialogLine: The Order does not make use of anything that our knights may have confiscated
+    in their journey. Everything either gets donated to the Church or to the poor.
+  SoundDialog: {fileID: 0}
+--- !u!114 &114037077480676824
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Return Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114192835583662192}
+  side: 2
+  sidePosition: 50
+  sideOffset: 0
+  connection: {fileID: 0}
+  typeID: DialogBack
+--- !u!114 &114039876507633844
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Previous Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114369317480311382}
+  side: 4
+  sidePosition: 30
+  sideOffset: 0
+  connection: {fileID: 114217534161224614}
+  typeID: DialogForward
+--- !u!114 &114040390885508176
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Back Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114804702120712080}
+  side: 4
+  sidePosition: 50
+  sideOffset: 0
+  connections: []
+  typeID: DialogBack
+  calculationBlockade: 0
+--- !u!114 &114042867054214346
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Previous Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114278716056612386}
+  side: 4
+  sidePosition: 30
+  sideOffset: 0
+  connection: {fileID: 114197137105605530}
+  typeID: DialogForward
+--- !u!114 &114043028043571456
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Previous Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114292293863938280}
+  side: 4
+  sidePosition: 30
+  sideOffset: 0
+  connection: {fileID: 114687649924124174}
+  typeID: DialogForward
+--- !u!114 &114052455115795216
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Back Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114292293863938280}
+  side: 4
+  sidePosition: 50
+  sideOffset: 0
+  connections: []
+  typeID: DialogBack
+  calculationBlockade: 0
+--- !u!114 &114055818719991160
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6ab6487237ff124ea4c2aa5de9ce3fb, type: 3}
+  m_Name: MainEditorState
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 11400000}
+  parentEditor: {fileID: 0}
+  drawing: 1
+  selectedNode: {fileID: 0}
+  panOffset: {x: -203.40091, y: -173.00034}
+  zoom: 1.2
+--- !u!114 &114056694647434306
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Next Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114192835583662192}
+  side: 2
+  sidePosition: 30
+  sideOffset: 0
+  connections: []
+  typeID: DialogForward
+  calculationBlockade: 0
+--- !u!114 &114057578721040314
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed27bae6a3947364193a3e1558f691e8, type: 3}
+  m_Name: Dialog with Options Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 3800
+    y: 880
+    width: 400
+    height: 312
+  nodeKnobs:
+  - {fileID: 114386984626141648}
+  - {fileID: 114696468690237696}
+  - {fileID: 114211922833688950}
+  Inputs:
+  - {fileID: 114386984626141648}
+  Outputs:
+  - {fileID: 114696468690237696}
+  - {fileID: 114211922833688950}
+  backgroundColor: {r: 1, g: 1, b: 1, a: 1}
+  CharacterName: Dietrich
+  CharacterPotrait: {fileID: 21300000, guid: 2834222ad414e4143a9ec7cb3d81376a, type: 3}
+  DialogLine: 'In any case, I travelled with the hooded man along with a few other
+    prospective knights to the order''s keep and eventually became knighted as a full
+    member of the order. '
+  SoundDialog: {fileID: 0}
+  _options:
+  - OptionDisplay: What did you do after you were knighted? Any stories of your adventures
+      before we met?
+    NodeOutputIndex: 1
+--- !u!114 &114102101400411256
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dd8e00a3d3c91a4cbd303bf65049f72, type: 3}
+  m_Name: Dialog Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 160
+    y: 880
+    width: 350
+    height: 230
+  nodeKnobs:
+  - {fileID: 114521581808436786}
+  - {fileID: 114518848165170088}
+  - {fileID: 114032708437647542}
+  - {fileID: 114271728400208068}
+  Inputs:
+  - {fileID: 114521581808436786}
+  - {fileID: 114271728400208068}
+  Outputs:
+  - {fileID: 114518848165170088}
+  - {fileID: 114032708437647542}
+  backgroundColor: {r: 1, g: 1, b: 1, a: 1}
+  CharacterName: Dietrich
+  CharacterPotrait: {fileID: 21300000, guid: 2834222ad414e4143a9ec7cb3d81376a, type: 3}
+  DialogLine: I'm afraid there's not much to tell. I may be growing in age, but that
+    doesn't mean I've lived a colorful life.
+  SoundDialog: {fileID: 0}
+--- !u!114 &114105085192421618
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Previous Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114033773268067680}
+  side: 4
+  sidePosition: 30
+  sideOffset: 0
+  connection: {fileID: 114319342439061112}
+  typeID: DialogForward
+--- !u!114 &114110856833081304
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Previous Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114729288787876726}
+  side: 4
+  sidePosition: 30
+  sideOffset: 0
+  connection: {fileID: 114507873404062334}
+  typeID: DialogForward
+--- !u!114 &114112297580978106
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dd8e00a3d3c91a4cbd303bf65049f72, type: 3}
+  m_Name: Dialog Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 263.2
+    y: 234
+    width: 350
+    height: 230
+  nodeKnobs:
+  - {fileID: 114147727582093476}
+  - {fileID: 114916686221640774}
+  - {fileID: 114217534161224614}
+  - {fileID: 114430832332321672}
+  Inputs:
+  - {fileID: 114147727582093476}
+  - {fileID: 114430832332321672}
+  Outputs:
+  - {fileID: 114916686221640774}
+  - {fileID: 114217534161224614}
+  backgroundColor: {r: 1, g: 1, b: 1, a: 1}
+  CharacterName: Dietrich
+  CharacterPotrait: {fileID: 21300000, guid: 2834222ad414e4143a9ec7cb3d81376a, type: 3}
+  DialogLine: You put your loyalty in coin a little too much, rogue.
+  SoundDialog: {fileID: 0}
+--- !u!114 &114112719920028448
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Return Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114484709194338362}
+  side: 2
+  sidePosition: 50
+  sideOffset: 0
+  connection: {fileID: 0}
+  typeID: DialogBack
+--- !u!114 &114113940696819076
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Back Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114933739225414262}
+  side: 4
+  sidePosition: 50
+  sideOffset: 0
+  connections: []
+  typeID: DialogBack
+  calculationBlockade: 0
+--- !u!114 &114120310792091114
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dd8e00a3d3c91a4cbd303bf65049f72, type: 3}
+  m_Name: Dialog Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 263
+    y: -8.1
+    width: 350
+    height: 230
+  nodeKnobs:
+  - {fileID: 114783277369001550}
+  - {fileID: 114593209918977292}
+  - {fileID: 114333280419432002}
+  - {fileID: 114909908125840796}
+  Inputs:
+  - {fileID: 114783277369001550}
+  - {fileID: 114909908125840796}
+  Outputs:
+  - {fileID: 114593209918977292}
+  - {fileID: 114333280419432002}
+  backgroundColor: {r: 1, g: 1, b: 1, a: 1}
+  CharacterName: Dietrich
+  CharacterPotrait: {fileID: 21300000, guid: 2834222ad414e4143a9ec7cb3d81376a, type: 3}
+  DialogLine: I could not agree more, Kyra. Regardless of what Bertran says, I simply
+    have no love for the dark arts. This necromancer is no mere magic user. There
+    is more to him than meets the eye.
+  SoundDialog: {fileID: 0}
+--- !u!114 &114128431304379734
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dd8e00a3d3c91a4cbd303bf65049f72, type: 3}
+  m_Name: Dialog Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 160
+    y: 630
+    width: 350
+    height: 230
+  nodeKnobs:
+  - {fileID: 114492293233856426}
+  - {fileID: 114937876297246352}
+  - {fileID: 114205230100015272}
+  - {fileID: 114217564951301936}
+  Inputs:
+  - {fileID: 114492293233856426}
+  - {fileID: 114217564951301936}
+  Outputs:
+  - {fileID: 114937876297246352}
+  - {fileID: 114205230100015272}
+  backgroundColor: {r: 1, g: 1, b: 1, a: 1}
+  CharacterName: Dietrich
+  CharacterPotrait: {fileID: 21300000, guid: 2834222ad414e4143a9ec7cb3d81376a, type: 3}
+  DialogLine: 'Oh? Of course. The Order of the Flaming Chalice dates back as far as
+    the second founding of the Empire. Originally comprised of warrior monks who took
+    an oath to protect pilgrims on their way to pay homage to the Holy Chalice of
+    the Martyred Lady, the group soon grew to include many devout knights across the
+    imperial domain. Our sphere of influence eventually outgrew our original goals,
+    however, and the Emperor and his legates would occasionally call on us to help
+    protect the empire from the hethens to the north. After proving our strenght and
+    valor on the battlefield, the Administratum granted us our own keep from which
+    we grew to become a more militarized order. While we still protect the path to
+    the holy chalice, the Order now finds itself sending knights to quest in the name
+    of the Lady. '
+  SoundDialog: {fileID: 0}
+--- !u!114 &114135842622360042
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Previous Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114725111702766154}
+  side: 4
+  sidePosition: 30
+  sideOffset: 0
+  connection: {fileID: 114589057022723688}
+  typeID: DialogForward
+--- !u!114 &114147727582093476
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Previous Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114112297580978106}
+  side: 4
+  sidePosition: 30
+  sideOffset: 0
+  connection: {fileID: 114973825445569376}
+  typeID: DialogForward
+--- !u!114 &114152254159383540
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Next Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114278716056612386}
+  side: 2
+  sidePosition: 30
+  sideOffset: 0
+  connections:
+  - {fileID: 114936562427042100}
+  typeID: DialogForward
+  calculationBlockade: 0
+--- !u!114 &114170687043420768
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Next Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114423886475974524}
+  side: 2
+  sidePosition: 315.5
+  sideOffset: 0
+  connections:
+  - {fileID: 114783277369001550}
+  typeID: DialogForward
+  calculationBlockade: 0
+--- !u!114 &114182302408274062
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Next Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114933739225414262}
+  side: 2
+  sidePosition: 280.5
+  sideOffset: 0
+  connections: []
+  typeID: DialogForward
+  calculationBlockade: 0
+--- !u!114 &114183279155471146
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Previous Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114632827407074566}
+  side: 4
+  sidePosition: 30
+  sideOffset: 0
+  connection: {fileID: 0}
+  typeID: DialogForward
+--- !u!114 &114192835583662192
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dd8e00a3d3c91a4cbd303bf65049f72, type: 3}
+  m_Name: Dialog Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 4252.6
+    y: 879.3999
+    width: 350
+    height: 230
+  nodeKnobs:
+  - {fileID: 114867340762262242}
+  - {fileID: 114386838098136142}
+  - {fileID: 114056694647434306}
+  - {fileID: 114037077480676824}
+  Inputs:
+  - {fileID: 114867340762262242}
+  - {fileID: 114037077480676824}
+  Outputs:
+  - {fileID: 114386838098136142}
+  - {fileID: 114056694647434306}
+  backgroundColor: {r: 1, g: 1, b: 1, a: 1}
+  CharacterName: Dietrich
+  CharacterPotrait: {fileID: 21300000, guid: 2834222ad414e4143a9ec7cb3d81376a, type: 3}
+  DialogLine: That is a story for another time, Kyra. Perhaps when we find a restful
+    stop along our journey I could tell you more of my escapades.
+  SoundDialog: {fileID: 0}
+--- !u!114 &114197137105605530
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Next Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114417287731099326}
+  side: 2
+  sidePosition: 30
+  sideOffset: 0
+  connections:
+  - {fileID: 114042867054214346}
+  typeID: DialogForward
+  calculationBlockade: 0
+--- !u!114 &114200241381496696
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dd8e00a3d3c91a4cbd303bf65049f72, type: 3}
+  m_Name: Dialog Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 1350
+    y: 880
+    width: 350
+    height: 230
+  nodeKnobs:
+  - {fileID: 114936562427042100}
+  - {fileID: 114864937033945124}
+  - {fileID: 114987935155459452}
+  - {fileID: 114688214537794276}
+  Inputs:
+  - {fileID: 114936562427042100}
+  - {fileID: 114688214537794276}
+  Outputs:
+  - {fileID: 114864937033945124}
+  - {fileID: 114987935155459452}
+  backgroundColor: {r: 1, g: 1, b: 1, a: 1}
+  CharacterName: Dietrich
+  CharacterPotrait: {fileID: 21300000, guid: 2834222ad414e4143a9ec7cb3d81376a, type: 3}
+  DialogLine: 'In any case, when the hethens from the north invaded, I volunteered
+    myself to take part in the city''s defense. I was hoping to actually do some good,
+    being young and full of bravado. But, being one of the few militiamen actually
+    capable handling horses, the garrison commander simply had me run orders to and
+    from the different sections of the walls. '
+  SoundDialog: {fileID: 0}
+--- !u!114 &114205230100015272
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Next Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114128431304379734}
+  side: 2
+  sidePosition: 30
+  sideOffset: 0
+  connections: []
+  typeID: DialogForward
+  calculationBlockade: 0
+--- !u!114 &114207776395488420
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Return Here
+  m_EditorClassIdentifier: 
+  body: {fileID: 114929506925216326}
+  side: 2
+  sidePosition: 50
+  sideOffset: 0
+  connection: {fileID: 114386838098136142}
+  typeID: DialogBack
+--- !u!114 &114211922833688950
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Next Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114057578721040314}
+  side: 2
+  sidePosition: 280.5
+  sideOffset: 0
+  connections:
+  - {fileID: 114867340762262242}
+  typeID: DialogForward
+  calculationBlockade: 0
+--- !u!114 &114215882900670590
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Next Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114933419194113814}
+  side: 2
+  sidePosition: 30
+  sideOffset: 0
+  connections:
+  - {fileID: 114807747410004288}
+  typeID: DialogForward
+  calculationBlockade: 0
+--- !u!114 &114217534161224614
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Next Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114112297580978106}
+  side: 2
+  sidePosition: 30
+  sideOffset: 0
+  connections:
+  - {fileID: 114039876507633844}
+  typeID: DialogForward
+  calculationBlockade: 0
+--- !u!114 &114217564951301936
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Return Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114128431304379734}
+  side: 2
+  sidePosition: 50
+  sideOffset: 0
+  connection: {fileID: 0}
+  typeID: DialogBack
+--- !u!114 &114225233293404502
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Back Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114278716056612386}
+  side: 4
+  sidePosition: 50
+  sideOffset: 0
+  connections: []
+  typeID: DialogBack
+  calculationBlockade: 0
+--- !u!114 &114225834312425660
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Return Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114375903406158304}
+  side: 2
+  sidePosition: 50
+  sideOffset: 0
+  connection: {fileID: 0}
+  typeID: DialogBack
+--- !u!114 &114235954167853450
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed27bae6a3947364193a3e1558f691e8, type: 3}
+  m_Name: Dialog with Options Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 679.6
+    y: -410.3
+    width: 400
+    height: 347
+  nodeKnobs:
+  - {fileID: 114807747410004288}
+  - {fileID: 114770833061027012}
+  - {fileID: 114767899446267820}
+  - {fileID: 114642648607044040}
+  Inputs:
+  - {fileID: 114807747410004288}
+  Outputs:
+  - {fileID: 114770833061027012}
+  - {fileID: 114767899446267820}
+  - {fileID: 114642648607044040}
+  backgroundColor: {r: 1, g: 1, b: 1, a: 1}
+  CharacterName: Dietrich
+  CharacterPotrait: {fileID: 21300000, guid: 2834222ad414e4143a9ec7cb3d81376a, type: 3}
+  DialogLine: It is not a matter of lacking faith in our party's abilities, rogue.
+    We simply cannot afford to understimate anyone who dabbles in the dark arts. Especially
+    when that individual managed to destabilize an entire kingdom. Kyra, I merely
+    suggest that we take this slow and not let the prospect of a few gold coins lead
+    us into making some rather rash decisions.
+  SoundDialog: {fileID: 0}
+  _options:
+  - OptionDisplay: I know what I'm doing, Dietrich. The sooner we get this done, the
+      sooner we get to go back home.
+    NodeOutputIndex: 1
+  - OptionDisplay: Your point has merit, Dietrich. Very well, let us proceed carefully.
+    NodeOutputIndex: 2
+--- !u!114 &114245303963571174
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Back Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114375903406158304}
+  side: 4
+  sidePosition: 50
+  sideOffset: 0
+  connections: []
+  typeID: DialogBack
+  calculationBlockade: 0
+--- !u!114 &114261078325634296
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Back Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114369317480311382}
+  side: 4
+  sidePosition: 50
+  sideOffset: 0
+  connections: []
+  typeID: DialogBack
+  calculationBlockade: 0
+--- !u!114 &114261235458639404
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Return Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114706317386228504}
+  side: 2
+  sidePosition: 50
+  sideOffset: 0
+  connection: {fileID: 0}
+  typeID: DialogBack
+--- !u!114 &114262959417680938
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Next Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114033773268067680}
+  side: 2
+  sidePosition: 30
+  sideOffset: 0
+  connections:
+  - {fileID: 114830423274979522}
+  typeID: DialogForward
+  calculationBlockade: 0
+--- !u!114 &114271728400208068
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Return Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114102101400411256}
+  side: 2
+  sidePosition: 50
+  sideOffset: 0
+  connection: {fileID: 0}
+  typeID: DialogBack
+--- !u!114 &114277581493997408
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Next Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114292293863938280}
+  side: 2
+  sidePosition: 30
+  sideOffset: 0
+  connections:
+  - {fileID: 114386984626141648}
+  typeID: DialogForward
+  calculationBlockade: 0
+--- !u!114 &114278716056612386
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dd8e00a3d3c91a4cbd303bf65049f72, type: 3}
+  m_Name: Dialog Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 950
+    y: 880
+    width: 350
+    height: 230
+  nodeKnobs:
+  - {fileID: 114042867054214346}
+  - {fileID: 114225233293404502}
+  - {fileID: 114152254159383540}
+  - {fileID: 114341224862346580}
+  Inputs:
+  - {fileID: 114042867054214346}
+  - {fileID: 114341224862346580}
+  Outputs:
+  - {fileID: 114225233293404502}
+  - {fileID: 114152254159383540}
+  backgroundColor: {r: 1, g: 1, b: 1, a: 1}
+  CharacterName: Dietrich
+  CharacterPotrait: {fileID: 21300000, guid: 2834222ad414e4143a9ec7cb3d81376a, type: 3}
+  DialogLine: Even so, I naturally grew to know how to ride them. I actually feel
+    a little naked without my barded horse with me right now. Remind me to bring her
+    along next time we head out.
+  SoundDialog: {fileID: 0}
+--- !u!114 &114282738568142906
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Next Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114472724386550230}
+  side: 2
+  sidePosition: 30
+  sideOffset: 0
+  connections:
+  - {fileID: 114320897643733086}
+  typeID: DialogForward
+  calculationBlockade: 0
+--- !u!114 &114292293863938280
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dd8e00a3d3c91a4cbd303bf65049f72, type: 3}
+  m_Name: Dialog Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 3400
+    y: 880
+    width: 350
+    height: 230
+  nodeKnobs:
+  - {fileID: 114043028043571456}
+  - {fileID: 114052455115795216}
+  - {fileID: 114277581493997408}
+  - {fileID: 114651065499976590}
+  Inputs:
+  - {fileID: 114043028043571456}
+  - {fileID: 114651065499976590}
+  Outputs:
+  - {fileID: 114052455115795216}
+  - {fileID: 114277581493997408}
+  backgroundColor: {r: 1, g: 1, b: 1, a: 1}
+  CharacterName: Dietrich
+  CharacterPotrait: {fileID: 21300000, guid: 2834222ad414e4143a9ec7cb3d81376a, type: 3}
+  DialogLine: 'They survived the siege. I can not say that they were too happy of
+    my choice to go, but they already knew that I had been wanting to leave for some
+    time now. Besides, as I recall, they have a few new horses for the stable after
+    that battle. I hear they were doing just fine. '
+  SoundDialog: {fileID: 0}
+--- !u!114 &114295146463420260
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dd8e00a3d3c91a4cbd303bf65049f72, type: 3}
+  m_Name: Dialog Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 1750
+    y: 880
+    width: 350
+    height: 230
+  nodeKnobs:
+  - {fileID: 114673258418474064}
+  - {fileID: 114378182640563204}
+  - {fileID: 114589057022723688}
+  - {fileID: 114497977531821196}
+  Inputs:
+  - {fileID: 114673258418474064}
+  - {fileID: 114497977531821196}
+  Outputs:
+  - {fileID: 114378182640563204}
+  - {fileID: 114589057022723688}
+  backgroundColor: {r: 1, g: 1, b: 1, a: 1}
+  CharacterName: Dietrich
+  CharacterPotrait: {fileID: 21300000, guid: 2834222ad414e4143a9ec7cb3d81376a, type: 3}
+  DialogLine: I got my chance, however, when the southern wall's defenses faltered
+    and the hethens started funneling into the city. I was not sure if it was a case
+    of bravery or sheer stupidity, but I charged into the breach with my sword raised
+    high. It was such a rush, but it didn't last long.
+  SoundDialog: {fileID: 0}
+--- !u!114 &114319342439061112
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Next Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114369317480311382}
+  side: 2
+  sidePosition: 30
+  sideOffset: 0
+  connections:
+  - {fileID: 114105085192421618}
+  typeID: DialogForward
+  calculationBlockade: 0
+--- !u!114 &114320897643733086
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Previous Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114423886475974524}
+  side: 4
+  sidePosition: 30
+  sideOffset: 0
+  connection: {fileID: 114282738568142906}
+  typeID: DialogForward
+--- !u!114 &114323530251756540
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Back Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114632827407074566}
+  side: 4
+  sidePosition: 50
+  sideOffset: 0
+  connections: []
+  typeID: DialogBack
+  calculationBlockade: 0
+--- !u!114 &114333280419432002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Next Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114120310792091114}
+  side: 2
+  sidePosition: 30
+  sideOffset: 0
+  connections:
+  - {fileID: 114637794605726346}
+  typeID: DialogForward
+  calculationBlockade: 0
+--- !u!114 &114340481758111086
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Return Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114804702120712080}
+  side: 2
+  sidePosition: 50
+  sideOffset: 0
+  connection: {fileID: 0}
+  typeID: DialogBack
+--- !u!114 &114341224862346580
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Return Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114278716056612386}
+  side: 2
+  sidePosition: 50
+  sideOffset: 0
+  connection: {fileID: 0}
+  typeID: DialogBack
+--- !u!114 &114345694832084876
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Next Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114929506925216326}
+  side: 2
+  sidePosition: 30
+  sideOffset: 0
+  connections:
+  - {fileID: 114410657914896574}
+  typeID: DialogForward
+  calculationBlockade: 0
+--- !u!114 &114369317480311382
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dd8e00a3d3c91a4cbd303bf65049f72, type: 3}
+  m_Name: Dialog Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 679.4
+    y: 309.4
+    width: 350
+    height: 230
+  nodeKnobs:
+  - {fileID: 114039876507633844}
+  - {fileID: 114261078325634296}
+  - {fileID: 114319342439061112}
+  - {fileID: 114979768518252090}
+  Inputs:
+  - {fileID: 114039876507633844}
+  - {fileID: 114979768518252090}
+  Outputs:
+  - {fileID: 114261078325634296}
+  - {fileID: 114319342439061112}
+  backgroundColor: {r: 1, g: 1, b: 1, a: 1}
+  CharacterName: Bertran
+  CharacterPotrait: {fileID: 21300000, guid: 8750d79241d20ba4d8cbb7dbd5a761bc, type: 3}
+  DialogLine: 'Coin is what makes the world go ''round, old man. You should know,
+    your Order seems to hold its fair share of it thanks to all of the plunder they
+    take in. '
+  SoundDialog: {fileID: 0}
+--- !u!114 &114375903406158304
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dd8e00a3d3c91a4cbd303bf65049f72, type: 3}
+  m_Name: Dialog Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: -1258.5989
+    y: 205.10034
+    width: 350
+    height: 228
+  nodeKnobs:
+  - {fileID: 114937910642245426}
+  - {fileID: 114245303963571174}
+  - {fileID: 114467614819269582}
+  - {fileID: 114225834312425660}
+  Inputs:
+  - {fileID: 114937910642245426}
+  - {fileID: 114225834312425660}
+  Outputs:
+  - {fileID: 114245303963571174}
+  - {fileID: 114467614819269582}
+  backgroundColor: {r: 1, g: 1, b: 1, a: 1}
+  CharacterName: Bertran
+  CharacterPotrait: {fileID: 21300000, guid: 8750d79241d20ba4d8cbb7dbd5a761bc, type: 3}
+  DialogLine: Insert dialog text here
+  SoundDialog: {fileID: 0}
+--- !u!114 &114378182640563204
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Back Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114295146463420260}
+  side: 4
+  sidePosition: 50
+  sideOffset: 0
+  connections: []
+  typeID: DialogBack
+  calculationBlockade: 0
+--- !u!114 &114386838098136142
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Back Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114192835583662192}
+  side: 4
+  sidePosition: 50
+  sideOffset: 0
+  connections:
+  - {fileID: 114207776395488420}
+  typeID: DialogBack
+  calculationBlockade: 0
+--- !u!114 &114386984626141648
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Previous Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114057578721040314}
+  side: 4
+  sidePosition: 30
+  sideOffset: 0
+  connection: {fileID: 114277581493997408}
+  typeID: DialogForward
+--- !u!114 &114404811494351398
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Return Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114632827407074566}
+  side: 2
+  sidePosition: 50
+  sideOffset: 0
+  connection: {fileID: 0}
+  typeID: DialogBack
+--- !u!114 &114410657914896574
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Previous Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114729176944797246}
+  side: 4
+  sidePosition: 30
+  sideOffset: 0
+  connection: {fileID: 114345694832084876}
+  typeID: DialogForward
+--- !u!114 &114413359780112988
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Previous Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114804702120712080}
+  side: 4
+  sidePosition: 30
+  sideOffset: 0
+  connection: {fileID: 0}
+  typeID: DialogForward
+--- !u!114 &114417287731099326
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dd8e00a3d3c91a4cbd303bf65049f72, type: 3}
+  m_Name: Dialog Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 553
+    y: 880
+    width: 350
+    height: 230
+  nodeKnobs:
+  - {fileID: 114477771486105808}
+  - {fileID: 114504687021573216}
+  - {fileID: 114197137105605530}
+  - {fileID: 114861026796051374}
+  Inputs:
+  - {fileID: 114477771486105808}
+  - {fileID: 114861026796051374}
+  Outputs:
+  - {fileID: 114504687021573216}
+  - {fileID: 114197137105605530}
+  backgroundColor: {r: 1, g: 1, b: 1, a: 1}
+  CharacterName: Dietrich
+  CharacterPotrait: {fileID: 21300000, guid: 2834222ad414e4143a9ec7cb3d81376a, type: 3}
+  DialogLine: 'My parents ran the city''s stables, which meant that I speant a majority
+    of my childhood with horses. It s not as glamorous as it sounds, I can assure
+    you. '
+  SoundDialog: {fileID: 0}
+--- !u!114 &114423886475974524
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed27bae6a3947364193a3e1558f691e8, type: 3}
+  m_Name: Dialog with Options Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: -206
+    y: -246.8
+    width: 400
+    height: 378
+  nodeKnobs:
+  - {fileID: 114320897643733086}
+  - {fileID: 114708980673862120}
+  - {fileID: 114884169153918122}
+  - {fileID: 114170687043420768}
+  - {fileID: 114973825445569376}
+  Inputs:
+  - {fileID: 114320897643733086}
+  Outputs:
+  - {fileID: 114708980673862120}
+  - {fileID: 114884169153918122}
+  - {fileID: 114170687043420768}
+  - {fileID: 114973825445569376}
+  backgroundColor: {r: 1, g: 1, b: 1, a: 1}
+  CharacterName: Bertran
+  CharacterPotrait: {fileID: 21300000, guid: 8750d79241d20ba4d8cbb7dbd5a761bc, type: 3}
+  DialogLine: 'Getting cold feet already, Dietrich? That is highly unusual coming
+    from a knight of your order. Kyra knows what she''s doing. We have yet to face
+    an enemy we could not overcome, and the walking dead will fare no better. Let
+    us find this necromancer and be done with it already. Besides, I have several
+    plans back home once we earn that hefty bounty on his head. '
+  SoundDialog: {fileID: 0}
+  _options:
+  - OptionDisplay: Bertran is right, we have faced more dangerous beasts in the past.
+      The undead should pose little challenge to us.
+    NodeOutputIndex: 1
+  - OptionDisplay: 'I too feel a certain unease with this place. We must be cautious
+      going forward. '
+    NodeOutputIndex: 2
+  - OptionDisplay: '[Say Nothing]'
+    NodeOutputIndex: 3
+--- !u!114 &114425291446710934
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Back Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114729288787876726}
+  side: 4
+  sidePosition: 50
+  sideOffset: 0
+  connections: []
+  typeID: DialogBack
+  calculationBlockade: 0
+--- !u!114 &114430832332321672
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Return Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114112297580978106}
+  side: 2
+  sidePosition: 50
+  sideOffset: 0
+  connection: {fileID: 0}
+  typeID: DialogBack
+--- !u!114 &114453768806567268
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Next Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114729288787876726}
+  side: 2
+  sidePosition: 30
+  sideOffset: 0
+  connections:
+  - {fileID: 114926162929068052}
+  typeID: DialogForward
+  calculationBlockade: 0
+--- !u!114 &114467614819269582
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Next Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114375903406158304}
+  side: 2
+  sidePosition: 30
+  sideOffset: 0
+  connections: []
+  typeID: DialogForward
+  calculationBlockade: 0
+--- !u!114 &114472724386550230
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 248e06f3b7a27d4499c7e4eee5a23843, type: 3}
+  m_Name: Dialog Start Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: -609
+    y: -247
+    width: 350
+    height: 248
+  nodeKnobs:
+  - {fileID: 114282738568142906}
+  - {fileID: 114591751939990742}
+  Inputs:
+  - {fileID: 114591751939990742}
+  Outputs:
+  - {fileID: 114282738568142906}
+  backgroundColor: {r: 1, g: 1, b: 1, a: 1}
+  CharacterName: Dietrich
+  CharacterPotrait: {fileID: 21300000, guid: 2834222ad414e4143a9ec7cb3d81376a, type: 3}
+  DialogLine: It has been a long journey, Kyra. The foul stench of death now permeates
+    this once proud kingdom. With each step we take, it feels as though the air itself
+    is devouring the very life out of you.
+  SoundDialog: {fileID: 0}
+  DialogID: 6
+--- !u!114 &114474238324273480
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Next Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114729176944797246}
+  side: 2
+  sidePosition: 298
+  sideOffset: 0
+  connections:
+  - {fileID: 114521581808436786}
+  typeID: DialogForward
+  calculationBlockade: 0
+--- !u!114 &114477771486105808
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Previous Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114417287731099326}
+  side: 4
+  sidePosition: 30
+  sideOffset: 0
+  connection: {fileID: 114032708437647542}
+  typeID: DialogForward
+--- !u!114 &114484709194338362
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dd8e00a3d3c91a4cbd303bf65049f72, type: 3}
+  m_Name: Dialog Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 1912.4
+    y: 310.10004
+    width: 350
+    height: 230
+  nodeKnobs:
+  - {fileID: 114664008062239048}
+  - {fileID: 114892987428129066}
+  - {fileID: 114575326195902460}
+  - {fileID: 114112719920028448}
+  Inputs:
+  - {fileID: 114664008062239048}
+  - {fileID: 114112719920028448}
+  Outputs:
+  - {fileID: 114892987428129066}
+  - {fileID: 114575326195902460}
+  backgroundColor: {r: 1, g: 1, b: 1, a: 1}
+  CharacterName: Dietrich
+  CharacterPotrait: {fileID: 21300000, guid: 2834222ad414e4143a9ec7cb3d81376a, type: 3}
+  DialogLine: I grow tired of this banter. Let us just continue on with it.
+  SoundDialog: {fileID: 0}
+--- !u!114 &114488787667919892
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Return Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114729288787876726}
+  side: 2
+  sidePosition: 50
+  sideOffset: 0
+  connection: {fileID: 0}
+  typeID: DialogBack
+--- !u!114 &114492293233856426
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Previous Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114128431304379734}
+  side: 4
+  sidePosition: 30
+  sideOffset: 0
+  connection: {fileID: 114855277164108776}
+  typeID: DialogForward
+--- !u!114 &114497977531821196
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Return Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114295146463420260}
+  side: 2
+  sidePosition: 50
+  sideOffset: 0
+  connection: {fileID: 0}
+  typeID: DialogBack
+--- !u!114 &114498044826182812
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Previous Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114858947947609044}
+  side: 4
+  sidePosition: 30
+  sideOffset: 0
+  connection: {fileID: 0}
+  typeID: DialogForward
+--- !u!114 &114504687021573216
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Back Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114417287731099326}
+  side: 4
+  sidePosition: 50
+  sideOffset: 0
+  connections: []
+  typeID: DialogBack
+  calculationBlockade: 0
+--- !u!114 &114507873404062334
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Next Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114725111702766154}
+  side: 2
+  sidePosition: 30
+  sideOffset: 0
+  connections:
+  - {fileID: 114110856833081304}
+  typeID: DialogForward
+  calculationBlockade: 0
+--- !u!114 &114518848165170088
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Back Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114102101400411256}
+  side: 4
+  sidePosition: 50
+  sideOffset: 0
+  connections: []
+  typeID: DialogBack
+  calculationBlockade: 0
+--- !u!114 &114521581808436786
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Previous Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114102101400411256}
+  side: 4
+  sidePosition: 30
+  sideOffset: 0
+  connection: {fileID: 114474238324273480}
+  typeID: DialogForward
+--- !u!114 &114557552884495116
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Return Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114933419194113814}
+  side: 2
+  sidePosition: 50
+  sideOffset: 0
+  connection: {fileID: 0}
+  typeID: DialogBack
+--- !u!114 &114575326195902460
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Next Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114484709194338362}
+  side: 2
+  sidePosition: 30
+  sideOffset: 0
+  connections: []
+  typeID: DialogForward
+  calculationBlockade: 0
+--- !u!114 &114589057022723688
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Next Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114295146463420260}
+  side: 2
+  sidePosition: 30
+  sideOffset: 0
+  connections:
+  - {fileID: 114135842622360042}
+  typeID: DialogForward
+  calculationBlockade: 0
+--- !u!114 &114591751939990742
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Return Here
+  m_EditorClassIdentifier: 
+  body: {fileID: 114472724386550230}
+  side: 2
+  sidePosition: 50
+  sideOffset: 0
+  connection: {fileID: 0}
+  typeID: DialogBack
+--- !u!114 &114593209918977292
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Back Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114120310792091114}
+  side: 4
+  sidePosition: 50
+  sideOffset: 0
+  connections: []
+  typeID: DialogBack
+  calculationBlockade: 0
+--- !u!114 &114620732604890112
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Next Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114858947947609044}
+  side: 2
+  sidePosition: 30
+  sideOffset: 0
+  connections: []
+  typeID: DialogForward
+  calculationBlockade: 0
+--- !u!114 &114632827407074566
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dd8e00a3d3c91a4cbd303bf65049f72, type: 3}
+  m_Name: Dialog Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: -1257
+    y: 438
+    width: 350
+    height: 228
+  nodeKnobs:
+  - {fileID: 114183279155471146}
+  - {fileID: 114323530251756540}
+  - {fileID: 114845675826912500}
+  - {fileID: 114404811494351398}
+  Inputs:
+  - {fileID: 114183279155471146}
+  - {fileID: 114404811494351398}
+  Outputs:
+  - {fileID: 114323530251756540}
+  - {fileID: 114845675826912500}
+  backgroundColor: {r: 1, g: 1, b: 1, a: 1}
+  CharacterName: Zacharias
+  CharacterPotrait: {fileID: 21300000, guid: 84e7b1060364b0148a590e086ca2ec30, type: 3}
+  DialogLine: Insert dialog text here
+  SoundDialog: {fileID: 0}
+--- !u!114 &114637794605726346
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Previous Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114933739225414262}
+  side: 4
+  sidePosition: 30
+  sideOffset: 0
+  connection: {fileID: 114333280419432002}
+  typeID: DialogForward
+--- !u!114 &114642648607044040
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Next Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114235954167853450}
+  side: 2
+  sidePosition: 315.5
+  sideOffset: 0
+  connections: []
+  typeID: DialogForward
+  calculationBlockade: 0
+--- !u!114 &114651065499976590
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Return Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114292293863938280}
+  side: 2
+  sidePosition: 50
+  sideOffset: 0
+  connection: {fileID: 0}
+  typeID: DialogBack
+--- !u!114 &114652591280417274
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Back Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114729176944797246}
+  side: 4
+  sidePosition: 50
+  sideOffset: 0
+  connections: []
+  typeID: DialogBack
+  calculationBlockade: 0
+--- !u!114 &114664008062239048
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Previous Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114484709194338362}
+  side: 4
+  sidePosition: 30
+  sideOffset: 0
+  connection: {fileID: 114884847419249736}
+  typeID: DialogForward
+--- !u!114 &114673258418474064
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Previous Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114295146463420260}
+  side: 4
+  sidePosition: 30
+  sideOffset: 0
+  connection: {fileID: 114987935155459452}
+  typeID: DialogForward
+--- !u!114 &114676887878763484
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Next Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114729176944797246}
+  side: 2
+  sidePosition: 322
+  sideOffset: 0
+  connections: []
+  typeID: DialogForward
+  calculationBlockade: 0
+--- !u!114 &114687649924124174
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Next Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114763337421568886}
+  side: 2
+  sidePosition: 280.5
+  sideOffset: 0
+  connections:
+  - {fileID: 114043028043571456}
+  typeID: DialogForward
+  calculationBlockade: 0
+--- !u!114 &114688214537794276
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Return Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114200241381496696}
+  side: 2
+  sidePosition: 50
+  sideOffset: 0
+  connection: {fileID: 0}
+  typeID: DialogBack
+--- !u!114 &114696468690237696
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Back Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114057578721040314}
+  side: 4
+  sidePosition: 50
+  sideOffset: 0
+  connections: []
+  typeID: DialogBack
+  calculationBlockade: 0
+--- !u!114 &114705709096952994
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Return Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114858947947609044}
+  side: 2
+  sidePosition: 50
+  sideOffset: 0
+  connection: {fileID: 0}
+  typeID: DialogBack
+--- !u!114 &114706317386228504
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dd8e00a3d3c91a4cbd303bf65049f72, type: 3}
+  m_Name: Dialog Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 1502.6
+    y: 309.7
+    width: 350
+    height: 230
+  nodeKnobs:
+  - {fileID: 114830423274979522}
+  - {fileID: 114719957541175158}
+  - {fileID: 114884847419249736}
+  - {fileID: 114261235458639404}
+  Inputs:
+  - {fileID: 114830423274979522}
+  - {fileID: 114261235458639404}
+  Outputs:
+  - {fileID: 114719957541175158}
+  - {fileID: 114884847419249736}
+  backgroundColor: {r: 1, g: 1, b: 1, a: 1}
+  CharacterName: Bertran
+  CharacterPotrait: {fileID: 21300000, guid: 8750d79241d20ba4d8cbb7dbd5a761bc, type: 3}
+  DialogLine: If that is what you tell yourselves to absolve any guilt, then so be
+    it.
+  SoundDialog: {fileID: 0}
+--- !u!114 &114708980673862120
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Back Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114423886475974524}
+  side: 4
+  sidePosition: 50
+  sideOffset: 0
+  connections: []
+  typeID: DialogBack
+  calculationBlockade: 0
+--- !u!114 &114719957541175158
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Back Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114706317386228504}
+  side: 4
+  sidePosition: 50
+  sideOffset: 0
+  connections: []
+  typeID: DialogBack
+  calculationBlockade: 0
+--- !u!114 &114725111702766154
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dd8e00a3d3c91a4cbd303bf65049f72, type: 3}
+  m_Name: Dialog Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 2160
+    y: 880
+    width: 350
+    height: 230
+  nodeKnobs:
+  - {fileID: 114135842622360042}
+  - {fileID: 114923979141192928}
+  - {fileID: 114507873404062334}
+  - {fileID: 114809267144230512}
+  Inputs:
+  - {fileID: 114135842622360042}
+  - {fileID: 114809267144230512}
+  Outputs:
+  - {fileID: 114923979141192928}
+  - {fileID: 114507873404062334}
+  backgroundColor: {r: 1, g: 1, b: 1, a: 1}
+  CharacterName: Dietrich
+  CharacterPotrait: {fileID: 21300000, guid: 2834222ad414e4143a9ec7cb3d81376a, type: 3}
+  DialogLine: One of those hethens used their spear to dismount me off my horse. As
+    he raised his spear over me, a hooded man caved the hethen's head in from behind.
+    He helped me up and handed me my sword.
+  SoundDialog: {fileID: 0}
+--- !u!114 &114726291474547714
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Back Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114763337421568886}
+  side: 4
+  sidePosition: 50
+  sideOffset: 0
+  connections: []
+  typeID: DialogBack
+  calculationBlockade: 0
+--- !u!114 &114729176944797246
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed27bae6a3947364193a3e1558f691e8, type: 3}
+  m_Name: Dialog with Options Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: -300
+    y: 630
+    width: 400
+    height: 358
+  nodeKnobs:
+  - {fileID: 114410657914896574}
+  - {fileID: 114652591280417274}
+  - {fileID: 114855277164108776}
+  - {fileID: 114474238324273480}
+  - {fileID: 114676887878763484}
+  Inputs:
+  - {fileID: 114410657914896574}
+  Outputs:
+  - {fileID: 114652591280417274}
+  - {fileID: 114855277164108776}
+  - {fileID: 114474238324273480}
+  - {fileID: 114676887878763484}
+  backgroundColor: {r: 1, g: 1, b: 1, a: 1}
+  CharacterName: Dietrich
+  CharacterPotrait: {fileID: 21300000, guid: 2834222ad414e4143a9ec7cb3d81376a, type: 3}
+  DialogLine: Is there something you require?
+  SoundDialog: {fileID: 0}
+  _options:
+  - OptionDisplay: I'd like to learn more about your Order.
+    NodeOutputIndex: 1
+  - OptionDisplay: Tell me more about yourself, Dietrich.
+    NodeOutputIndex: 2
+  - OptionDisplay: May I see your inventory?
+    NodeOutputIndex: 3
+--- !u!114 &114729288787876726
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dd8e00a3d3c91a4cbd303bf65049f72, type: 3}
+  m_Name: Dialog Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 2560
+    y: 880
+    width: 350
+    height: 230
+  nodeKnobs:
+  - {fileID: 114110856833081304}
+  - {fileID: 114425291446710934}
+  - {fileID: 114453768806567268}
+  - {fileID: 114488787667919892}
+  Inputs:
+  - {fileID: 114110856833081304}
+  - {fileID: 114488787667919892}
+  Outputs:
+  - {fileID: 114425291446710934}
+  - {fileID: 114453768806567268}
+  backgroundColor: {r: 1, g: 1, b: 1, a: 1}
+  CharacterName: Dietrich
+  CharacterPotrait: {fileID: 21300000, guid: 2834222ad414e4143a9ec7cb3d81376a, type: 3}
+  DialogLine: As the two of us looked towards the breach, the hooded man placed his
+    hands on my shoulder and with a nod, he charged towards the enemy. Filled with
+    a newfound sense of determination, I charged along with him as we helped in the
+    defense of the city.
+  SoundDialog: {fileID: 0}
+--- !u!114 &114763337421568886
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed27bae6a3947364193a3e1558f691e8, type: 3}
+  m_Name: Dialog with Options Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 2960
+    y: 880
+    width: 400
+    height: 312
+  nodeKnobs:
+  - {fileID: 114926162929068052}
+  - {fileID: 114726291474547714}
+  - {fileID: 114687649924124174}
+  Inputs:
+  - {fileID: 114926162929068052}
+  Outputs:
+  - {fileID: 114726291474547714}
+  - {fileID: 114687649924124174}
+  backgroundColor: {r: 1, g: 1, b: 1, a: 1}
+  CharacterName: Dietrich
+  CharacterPotrait: {fileID: 21300000, guid: 2834222ad414e4143a9ec7cb3d81376a, type: 3}
+  DialogLine: After the siege was over, the garrison managed to hold the walls and
+    repel the invaders. The hooded man found me later in a makeshift tent for the
+    wounded - I suffered some slashing cuts during the fight. He commended me on my
+    courage and valor in battle, and said that he was looking for those who displayed
+    such traits. It just so happens that he was a recruiter for the Order of the Flaming
+    Chalice. Sensing an opportunity to finally be a part of a greater cause, I took
+    his offer to join on the spot.
+  SoundDialog: {fileID: 0}
+  _options:
+  - OptionDisplay: What of your family? You left them behind to join the order?
+    NodeOutputIndex: 1
+--- !u!114 &114767899446267820
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Next Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114235954167853450}
+  side: 2
+  sidePosition: 280.5
+  sideOffset: 0
+  connections: []
+  typeID: DialogForward
+  calculationBlockade: 0
+--- !u!114 &114770833061027012
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Back Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114235954167853450}
+  side: 4
+  sidePosition: 50
+  sideOffset: 0
+  connections: []
+  typeID: DialogBack
+  calculationBlockade: 0
+--- !u!114 &114783277369001550
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Previous Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114120310792091114}
+  side: 4
+  sidePosition: 30
+  sideOffset: 0
+  connection: {fileID: 114170687043420768}
+  typeID: DialogForward
+--- !u!114 &114804702120712080
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dd8e00a3d3c91a4cbd303bf65049f72, type: 3}
+  m_Name: Dialog Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: -1258.5989
+    y: -26.899658
+    width: 350
+    height: 228
+  nodeKnobs:
+  - {fileID: 114413359780112988}
+  - {fileID: 114040390885508176}
+  - {fileID: 114828024825189106}
+  - {fileID: 114340481758111086}
+  Inputs:
+  - {fileID: 114413359780112988}
+  - {fileID: 114340481758111086}
+  Outputs:
+  - {fileID: 114040390885508176}
+  - {fileID: 114828024825189106}
+  backgroundColor: {r: 1, g: 1, b: 1, a: 1}
+  CharacterName: Dietrich
+  CharacterPotrait: {fileID: 21300000, guid: 2834222ad414e4143a9ec7cb3d81376a, type: 3}
+  DialogLine: Insert dialog text here
+  SoundDialog: {fileID: 0}
+--- !u!114 &114807747410004288
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Previous Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114235954167853450}
+  side: 4
+  sidePosition: 30
+  sideOffset: 0
+  connection: {fileID: 114215882900670590}
+  typeID: DialogForward
+--- !u!114 &114809267144230512
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Return Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114725111702766154}
+  side: 2
+  sidePosition: 50
+  sideOffset: 0
+  connection: {fileID: 0}
+  typeID: DialogBack
+--- !u!114 &114828024825189106
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Next Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114804702120712080}
+  side: 2
+  sidePosition: 30
+  sideOffset: 0
+  connections: []
+  typeID: DialogForward
+  calculationBlockade: 0
+--- !u!114 &114830423274979522
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Previous Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114706317386228504}
+  side: 4
+  sidePosition: 30
+  sideOffset: 0
+  connection: {fileID: 114262959417680938}
+  typeID: DialogForward
+--- !u!114 &114845675826912500
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Next Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114632827407074566}
+  side: 2
+  sidePosition: 30
+  sideOffset: 0
+  connections: []
+  typeID: DialogForward
+  calculationBlockade: 0
+--- !u!114 &114855277164108776
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Next Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114729176944797246}
+  side: 2
+  sidePosition: 274
+  sideOffset: 0
+  connections:
+  - {fileID: 114492293233856426}
+  typeID: DialogForward
+  calculationBlockade: 0
+--- !u!114 &114855578918879424
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Back Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114033773268067680}
+  side: 4
+  sidePosition: 50
+  sideOffset: 0
+  connections: []
+  typeID: DialogBack
+  calculationBlockade: 0
+--- !u!114 &114858947947609044
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dd8e00a3d3c91a4cbd303bf65049f72, type: 3}
+  m_Name: Dialog Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: -1258.5989
+    y: -258.89966
+    width: 350
+    height: 228
+  nodeKnobs:
+  - {fileID: 114498044826182812}
+  - {fileID: 114919015737364186}
+  - {fileID: 114620732604890112}
+  - {fileID: 114705709096952994}
+  Inputs:
+  - {fileID: 114498044826182812}
+  - {fileID: 114705709096952994}
+  Outputs:
+  - {fileID: 114919015737364186}
+  - {fileID: 114620732604890112}
+  backgroundColor: {r: 1, g: 1, b: 1, a: 1}
+  CharacterName: Kyra
+  CharacterPotrait: {fileID: 21300000, guid: e0796d44bdf8eca498167678be971dea, type: 3}
+  DialogLine: Insert dialog text here
+  SoundDialog: {fileID: 0}
+--- !u!114 &114861026796051374
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Return Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114417287731099326}
+  side: 2
+  sidePosition: 50
+  sideOffset: 0
+  connection: {fileID: 0}
+  typeID: DialogBack
+--- !u!114 &114864937033945124
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Back Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114200241381496696}
+  side: 4
+  sidePosition: 50
+  sideOffset: 0
+  connections: []
+  typeID: DialogBack
+  calculationBlockade: 0
+--- !u!114 &114867340762262242
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Previous Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114192835583662192}
+  side: 4
+  sidePosition: 30
+  sideOffset: 0
+  connection: {fileID: 114211922833688950}
+  typeID: DialogForward
+--- !u!114 &114884169153918122
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Next Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114423886475974524}
+  side: 2
+  sidePosition: 280.5
+  sideOffset: 0
+  connections:
+  - {fileID: 114955991756276424}
+  typeID: DialogForward
+  calculationBlockade: 0
+--- !u!114 &114884847419249736
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Next Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114706317386228504}
+  side: 2
+  sidePosition: 30
+  sideOffset: 0
+  connections:
+  - {fileID: 114664008062239048}
+  typeID: DialogForward
+  calculationBlockade: 0
+--- !u!114 &114892786922869120
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Back Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114933419194113814}
+  side: 4
+  sidePosition: 50
+  sideOffset: 0
+  connections: []
+  typeID: DialogBack
+  calculationBlockade: 0
+--- !u!114 &114892987428129066
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Back Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114484709194338362}
+  side: 4
+  sidePosition: 50
+  sideOffset: 0
+  connections: []
+  typeID: DialogBack
+  calculationBlockade: 0
+--- !u!114 &114909908125840796
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Return Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114120310792091114}
+  side: 2
+  sidePosition: 50
+  sideOffset: 0
+  connection: {fileID: 0}
+  typeID: DialogBack
+--- !u!114 &114916686221640774
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Back Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114112297580978106}
+  side: 4
+  sidePosition: 50
+  sideOffset: 0
+  connections: []
+  typeID: DialogBack
+  calculationBlockade: 0
+--- !u!114 &114919015737364186
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Back Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114858947947609044}
+  side: 4
+  sidePosition: 50
+  sideOffset: 0
+  connections: []
+  typeID: DialogBack
+  calculationBlockade: 0
+--- !u!114 &114923979141192928
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Back Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114725111702766154}
+  side: 4
+  sidePosition: 50
+  sideOffset: 0
+  connections: []
+  typeID: DialogBack
+  calculationBlockade: 0
+--- !u!114 &114926162929068052
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Previous Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114763337421568886}
+  side: 4
+  sidePosition: 30
+  sideOffset: 0
+  connection: {fileID: 114453768806567268}
+  typeID: DialogForward
+--- !u!114 &114929506925216326
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 248e06f3b7a27d4499c7e4eee5a23843, type: 3}
+  m_Name: Dialog Start Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: -720
+    y: 630
+    width: 350
+    height: 248
+  nodeKnobs:
+  - {fileID: 114345694832084876}
+  - {fileID: 114207776395488420}
+  Inputs:
+  - {fileID: 114207776395488420}
+  Outputs:
+  - {fileID: 114345694832084876}
+  backgroundColor: {r: 1, g: 1, b: 1, a: 1}
+  CharacterName: Dietrich
+  CharacterPotrait: {fileID: 21300000, guid: 2834222ad414e4143a9ec7cb3d81376a, type: 3}
+  DialogLine: Yes, Kyra?
+  SoundDialog: {fileID: 0}
+  DialogID: 7
+--- !u!114 &114933419194113814
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dd8e00a3d3c91a4cbd303bf65049f72, type: 3}
+  m_Name: Dialog Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 263
+    y: -247.5
+    width: 350
+    height: 230
+  nodeKnobs:
+  - {fileID: 114955991756276424}
+  - {fileID: 114892786922869120}
+  - {fileID: 114215882900670590}
+  - {fileID: 114557552884495116}
+  Inputs:
+  - {fileID: 114955991756276424}
+  - {fileID: 114557552884495116}
+  Outputs:
+  - {fileID: 114892786922869120}
+  - {fileID: 114215882900670590}
+  backgroundColor: {r: 1, g: 1, b: 1, a: 1}
+  CharacterName: Bertran
+  CharacterPotrait: {fileID: 21300000, guid: 8750d79241d20ba4d8cbb7dbd5a761bc, type: 3}
+  DialogLine: See? I have every confidence in our intrepid leader. You worry too much,
+    old man.
+  SoundDialog: {fileID: 0}
+--- !u!114 &114933739225414262
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed27bae6a3947364193a3e1558f691e8, type: 3}
+  m_Name: Dialog with Options Node
+  m_EditorClassIdentifier: 
+  rect:
+    serializedVersion: 2
+    x: 678.6
+    y: -45.300003
+    width: 400
+    height: 347
+  nodeKnobs:
+  - {fileID: 114637794605726346}
+  - {fileID: 114113940696819076}
+  - {fileID: 114182302408274062}
+  - {fileID: 114024769306735406}
+  Inputs:
+  - {fileID: 114637794605726346}
+  Outputs:
+  - {fileID: 114113940696819076}
+  - {fileID: 114182302408274062}
+  - {fileID: 114024769306735406}
+  backgroundColor: {r: 1, g: 1, b: 1, a: 1}
+  CharacterName: Bertran
+  CharacterPotrait: {fileID: 21300000, guid: 8750d79241d20ba4d8cbb7dbd5a761bc, type: 3}
+  DialogLine: You worry too much, old man. Fine, we shall have it your way, for now.
+    I still say that we could cut our way straight to this necromancer easily enough
+    and be back home in time for the supper.
+  SoundDialog: {fileID: 0}
+  _options:
+  - OptionDisplay: We have faced bigger threats in the past. What threat could a few
+      undead pose to us?
+    NodeOutputIndex: 1
+  - OptionDisplay: I doubt it would be that easy. Even so, we should remain focused.
+    NodeOutputIndex: 2
+--- !u!114 &114936562427042100
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Previous Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114200241381496696}
+  side: 4
+  sidePosition: 30
+  sideOffset: 0
+  connection: {fileID: 114152254159383540}
+  typeID: DialogForward
+--- !u!114 &114937876297246352
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Back Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114128431304379734}
+  side: 4
+  sidePosition: 50
+  sideOffset: 0
+  connections: []
+  typeID: DialogBack
+  calculationBlockade: 0
+--- !u!114 &114937910642245426
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Previous Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114375903406158304}
+  side: 4
+  sidePosition: 30
+  sideOffset: 0
+  connection: {fileID: 0}
+  typeID: DialogForward
+--- !u!114 &114953032005534678
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Return Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114033773268067680}
+  side: 2
+  sidePosition: 50
+  sideOffset: 0
+  connection: {fileID: 0}
+  typeID: DialogBack
+--- !u!114 &114955991756276424
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Previous Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114933419194113814}
+  side: 4
+  sidePosition: 30
+  sideOffset: 0
+  connection: {fileID: 114884169153918122}
+  typeID: DialogForward
+--- !u!114 &114973825445569376
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Next Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114423886475974524}
+  side: 2
+  sidePosition: 344
+  sideOffset: 0
+  connections:
+  - {fileID: 114147727582093476}
+  typeID: DialogForward
+  calculationBlockade: 0
+--- !u!114 &114979768518252090
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4caff27366054dd44a30ddb5be369acc, type: 3}
+  m_Name: Return Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114369317480311382}
+  side: 2
+  sidePosition: 50
+  sideOffset: 0
+  connection: {fileID: 0}
+  typeID: DialogBack
+--- !u!114 &114987935155459452
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e7026d0da7df848ab67d517ac12d74, type: 3}
+  m_Name: Next Node
+  m_EditorClassIdentifier: 
+  body: {fileID: 114200241381496696}
+  side: 2
+  sidePosition: 30
+  sideOffset: 0
+  connections:
+  - {fileID: 114673258418474064}
+  typeID: DialogForward
+  calculationBlockade: 0
