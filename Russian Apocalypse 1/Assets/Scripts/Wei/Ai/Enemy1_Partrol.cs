@@ -23,6 +23,7 @@ public class Enemy1_Partrol : AiStateInterface<LE_Enemy1>  {
             bool walkable = stateMachine.Check_PositionWalkAble(pos);    
             if (walkable) { stateMachine.Set_Nav_Destination(pos); }
 
+           ((Enemy1_StateMachine)stateMachine).DoWhatEver();
         }
     }
 
