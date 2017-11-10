@@ -12,14 +12,15 @@ public class Enemy1_Partrol : AiStateInterface<LE_Enemy1>  {
 
     public override void Enter(LE_Enemy1 entity)
     {
-        entity.StateMachine.Anima_Set_Float("Speed Z", 1.0f);
+
+        Enemy1_StateMachine stateMachine = entity.StateMachine as Enemy1_StateMachine;
+        stateMachine.Anima_Set_Float("Speed Z", 1.0f);
 
     }
 
     public override void Execute(LE_Enemy1 entity)
     {
         Enemy1_StateMachine stateMachine = entity.StateMachine as Enemy1_StateMachine;
-
         stateMachine.fieldOfView.DebugDrawFielOfView();
         LEIdentification id = stateMachine.fieldOfView.Get_Nearest_T_InsideFiledOfView<LEIdentification>(Is_Player, 0.5f, ref timer, stateMachine.targetLayer);
 
@@ -29,7 +30,7 @@ public class Enemy1_Partrol : AiStateInterface<LE_Enemy1>  {
             return;
         }
 
-        if (stateMachine.ArriveDestination_NotPathPending())
+        if (stateMachine.Check_ArriveDestination_NotPathPending())
         {
             Vector3 pos = stateMachine.Get_RandomPosXZ_BasedOnCurrentPos(-20, 20);
             bool walkable = stateMachine.Check_PositionWalkAble(pos);

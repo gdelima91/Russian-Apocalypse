@@ -13,7 +13,7 @@ public class UIManagerEditor : EditorWindow {
     static ItemDataBaseList itemDatabaseList = null;
     static ItemAttributeList itemAttributeList = null;
 
-    [MenuItem("UI System/UIManager")]
+    [MenuItem("Inventory System/UIManager")]
     static void Init() {
         EditorWindow.GetWindow(typeof(UIManagerEditor));
         headTexture = Resources.Load<Texture>("EditorWindowTextures/headTexture");

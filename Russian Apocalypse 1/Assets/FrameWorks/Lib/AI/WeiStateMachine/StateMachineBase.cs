@@ -12,6 +12,10 @@ public abstract class StateMachineBase : MonoBehaviour
     public AiUtility.FieldOfView fieldOfView;
     public LayerMask targetLayer;
     public Transform currentTFTarget;
+    Vector3 targetOldPos;
+
+    Rigidbody rgbody;
+    
 
     public bool Ckeck_FindPlayer()
     {
@@ -49,12 +53,53 @@ public abstract class StateMachineBase : MonoBehaviour
         transitionManager.Set_Nav_Destination(pos);
     }
 
+    public void Approach_Target(float offset)
+    {
+        Vector3 dir = currentTFTarget.position - transform.position;
+        dir.Normalize();
+        Vector3 newdest = currentTFTarget.position - dir * offset;
+        for (int i = 0; i < 10; i++)
+        {
+            bool walkable = Check_PositionWalkAble(newdest);
+            if (walkable)
+            {
+                Set_Nav_Destination(newdest);
+                return;
+            }
+            else
+            {
+                Vector2 randOffset = Random.insideUnitCircle;
+                newdest += new Vector3 (randOffset.x,newdest.y,randOffset.y);
+            }
+        }
+    }
+
+    public void Look_At_Target()
+    {
+        transform.LookAt(currentTFTarget.position);
+    }
+
     public bool Check_PositionWalkAble(Vector3 pos)
     {
        return transitionManager.SamplePosition(pos);
     }
 
-    public bool ArriveDestination_NotPathPending()
+    public bool Check_Target_NewPosition(float sqrOffset)
+    {
+        if ((currentTFTarget.position - targetOldPos).sqrMagnitude < sqrOffset)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+
+    /// <summary>
+    /// This Function Usually used for setting a Random Position.
+    /// </summary>
+    public bool Check_ArriveDestination_NotPathPending()
     {
         return transitionManager.ArriveDestination_NotPathPending();
     }
@@ -63,5 +108,13 @@ public abstract class StateMachineBase : MonoBehaviour
     {
         animatorManager.SetFloat(name, value);
     }
+
+    public void Anima_Set_Float_BasedOnRigdbody(string name)
+    {
+        if (rgbody == null) { rgbody = GetComponent<Rigidbody>(); if (rgbody == null) { Debug.LogError("No Rigdbody Attack to Game Object"); return; } }
+        animatorManager.SetFloat(name, rgbody.velocity.sqrMagnitude);
+    }
+
+
 
 }
