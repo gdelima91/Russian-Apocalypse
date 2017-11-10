@@ -8,20 +8,15 @@ namespace AiUtility{
     //Dont use Serializable proporty and Constructor at the same time
     //Because when we use Constructor. We actually create a instance of eye Transform.
     //the eye Transform will not be update with the original Transform
+
     [System.Serializable]
     public class FieldOfView
     {
         public Transform eye;
         public float viewDistance;
         public float viewAngle;
-        /*
-        public FieldOfView(float _distance,float _angle) {
-            //eye = _eye; //dont assign it in constructor. it will create a instance of eye.
-            viewDistance = _distance;
-            viewAngle = _angle;
-        }*/
 
-        public T Get_Nearest_Obj_InsideFieldOfView<T>() where T : MonoBehaviour {
+        public T Find_Nearest_Obj_InsideFieldOfView<T>() where T : MonoBehaviour {
             List<T> allObjectInrange = new List<T>();
             List<T> allObjectInView = new List<T>();
 
@@ -167,18 +162,20 @@ namespace AiUtility{
 
         public Collider Get_Nearest_Collider_InsideFieldOfView() {
 
-            List<Collider> allColliderInView = Get_All_Collider_InsideFieldOfView();
-
+            //get all Collider in a sphere
+            Collider[] allColliders = Physics.OverlapSphere(eye.position, viewDistance);
             //Get Check the nearest collider
             Collider nearestCollider = null;
             float nearestDis = float.MaxValue;
-            foreach (Collider collider in allColliderInView)
+
+            //get all Collider in View
+            foreach (Collider c in allColliders)
             {
-                float dist = (collider.transform.position - eye.position).magnitude;
-                if (dist < nearestDis)
+                bool infieldOfView = Vector3.Angle(eye.forward, c.transform.position - eye.position) < viewAngle / 2;
+                if (infieldOfView)
                 {
-                    nearestDis = dist;
-                    nearestCollider = collider;
+                    float dist = (c.transform.position - eye.position).magnitude;
+                    if (dist < nearestDis) { nearestDis = dist; nearestCollider = c; }
                 }
             }
             return nearestCollider;
@@ -198,6 +195,76 @@ namespace AiUtility{
                 {
                     nearestDis = dist;
                     nearestCollider = collider;
+                }
+            }
+            return nearestCollider;
+        }
+
+        public Collider Get_Nearest_Collider_InsideFieldOfView<T>()
+        {
+            //get all Collider in a sphere
+            Collider[] allColliders = Physics.OverlapSphere(eye.position, viewDistance);
+
+            //Get Check the nearest collider
+            Collider nearestCollider = null;
+            float nearestDis = float.MaxValue;
+
+            //get all Collider in View
+            foreach (Collider c in allColliders)
+            {
+                bool infieldOfView = Vector3.Angle(eye.forward, c.transform.position - eye.position) < viewAngle / 2;
+                bool hasComponentOfT = c.GetComponent<T>() != null;
+                if(infieldOfView && hasComponentOfT) {
+                    float dist = (c.transform.position - eye.position).magnitude;
+                    if (dist < nearestDis) { nearestDis = dist; nearestCollider = c; }
+                }  
+            }
+            return nearestCollider;
+
+        }
+
+        public Collider Get_Nearest_Collider_InsideFieldOfView<T>(LayerMask layerMask) where T : MonoBehaviour
+        {
+            //get all Collider in a sphere
+            Collider[] allColliders = Physics.OverlapSphere(eye.position, viewDistance,layerMask);
+            //Get Check the nearest collider
+            Collider nearestCollider = null;
+            float nearestDis = float.MaxValue;
+
+            //get all Collider in View
+            foreach (Collider c in allColliders)
+            {
+                bool infieldOfView = Vector3.Angle(eye.forward, c.transform.position - eye.position) < viewAngle / 2;
+                bool hasComponentOfT = c.GetComponent<T>() != null;
+                if (infieldOfView && hasComponentOfT)
+                {
+                    float dist = (c.transform.position - eye.position).magnitude;
+                    if (dist < nearestDis) { nearestDis = dist; nearestCollider = c; }
+                }
+            }
+            return nearestCollider;
+        }
+
+        public Collider Get_Nearest_Collider_InsideFiledOfView<T>(System.Func<T,bool> extraConditionCall) where T : MonoBehaviour
+        {
+            //get all Collider in a sphere
+            Collider[] allColliders = Physics.OverlapSphere(eye.position, viewDistance);
+
+            //Get Check the nearest collider
+            Collider nearestCollider = null;
+            float nearestDis = float.MaxValue;
+
+            //get all Collider in View
+            foreach (Collider c in allColliders)
+            {
+                bool infieldOfView = Vector3.Angle(eye.forward, c.transform.position - eye.position) < viewAngle / 2;
+                T t = c.GetComponent<T>();
+                if (t == null) { continue; }
+                bool extraCondition = extraConditionCall(t);
+                if (infieldOfView && extraCondition)
+                {
+                    float dist = (c.transform.position - eye.position).magnitude;
+                    if (dist < nearestDis) { nearestDis = dist; nearestCollider = c; }
                 }
             }
             return nearestCollider;
@@ -234,6 +301,35 @@ namespace AiUtility{
                 }
             }
             return null;
+        }
+
+        public T Get_Nearest_T_InsideFiledOfView<T>(System.Func<T, bool> extraConditionCall,float frequence, ref float timer,LayerMask layerMask) where T : MonoBehaviour
+        {
+
+            if(timer > Time.time) {return null;}
+            timer = Time.time + frequence;
+
+            //get all Collider in a sphere
+            Collider[] allColliders = Physics.OverlapSphere(eye.position, viewDistance);
+
+            //Get Check the nearest collider
+            T returnT = null;
+            float nearestDis = float.MaxValue;
+
+            //get all Collider in View
+            foreach (Collider c in allColliders)
+            {
+                bool infieldOfView = Vector3.Angle(eye.forward, c.transform.position - eye.position) < viewAngle / 2;
+                T t = c.GetComponent<T>();
+                if (t == null) { continue; }
+                bool extraCondition = extraConditionCall(t);
+                if (infieldOfView && extraCondition)
+                {
+                    float dist = (c.transform.position - eye.position).magnitude;
+                    if (dist < nearestDis) { nearestDis = dist; returnT = t; }
+                }
+            }
+            return returnT;
         }
 
         public bool Get_First_Collider_CanSeeInFieldOfView(LayerMask layerMask, string tag, ref Collider collider)
@@ -360,21 +456,8 @@ namespace AiUtility{
             Debug.DrawRay(eye.position, pos1);
             Debug.DrawRay(eye.position, pos2);
             //Debug.Log(eye.position);
-
             //Debug.DrawRay(staticOrigin, staticForward, Color.red);
         }
-
-
-        public bool See_Target_InFieldOfView_WithComponent<T>(List<Collider> allPartition) where T : MonoBehaviour
-        {
-            foreach (Collider c in allPartition)
-            {
-                
-                return true;
-            }
-            return false;
-        }
-
 
         public bool See_Collider_InFieldOfView(Collider c)
         {

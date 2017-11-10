@@ -9,6 +9,9 @@ public abstract class StateMachineBase : MonoBehaviour
     [HideInInspector] public LETransiationManager transitionManager;
     [HideInInspector] public LEAnimatorManager animatorManager;
 
+    public AiUtility.FieldOfView fieldOfView;
+    public LayerMask targetLayer;
+    public Transform currentTFTarget;
 
     public bool Ckeck_FindPlayer()
     {
@@ -36,6 +39,11 @@ public abstract class StateMachineBase : MonoBehaviour
         return transform.position + offset;
     }
 
+    public float Get_Distance_To_Target()
+    {
+        return Vector3.Distance(transform.position, currentTFTarget.position);
+    }
+
     public void Set_Nav_Destination(Vector3 pos)
     {
         transitionManager.Set_Nav_Destination(pos);
@@ -55,6 +63,5 @@ public abstract class StateMachineBase : MonoBehaviour
     {
         animatorManager.SetFloat(name, value);
     }
-
 
 }
