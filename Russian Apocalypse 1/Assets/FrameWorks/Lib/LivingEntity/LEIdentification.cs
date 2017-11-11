@@ -10,6 +10,8 @@ public class LEIdentification : MonoBehaviour
     [SerializeField]private string union = Non;
 
     public LEType letype = LEType.AI;
+
+    
 }
 
 public enum LEType

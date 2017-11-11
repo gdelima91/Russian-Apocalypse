@@ -84,7 +84,7 @@ public abstract class StateMachineBase : MonoBehaviour
        return transitionManager.SamplePosition(pos);
     }
 
-    public bool Check_Target_NewPosition(float sqrOffset)
+    public bool Check_Target_Get_NewPosition(float sqrOffset)
     {
         if ((currentTFTarget.position - targetOldPos).sqrMagnitude < sqrOffset)
         {
@@ -115,6 +115,35 @@ public abstract class StateMachineBase : MonoBehaviour
         animatorManager.SetFloat(name, rgbody.velocity.sqrMagnitude);
     }
 
+    public float GetSet___GET_TargetDis___SET_KeepTargetInRange(float range,float desiredRange)
+    {
+        float dstToTarget = Get_Distance_To_Target();
+        if (dstToTarget > range)
+        {
+            if (Check_Target_Get_NewPosition(0.25f))
+            {
+                Approach_Target(desiredRange);
+            }
+        }
+        return dstToTarget;
+    }
 
+    /// <summary>
+    /// Check if the Target in the max range, and set the position to the desired range
+    /// </summary>
+    /// <returns> return a bool, which indicate if the target in range </returns>
+    public bool CheckSet___CHECK_InRange_SET_KeepTargetInRange(float maxRange, float desiredRange)
+    {
+        float dstToTarget = Get_Distance_To_Target();
+        if (dstToTarget > maxRange)
+        {
+            if (Check_Target_Get_NewPosition(0.25f))
+            {
+                Approach_Target(desiredRange);
+            }
+            return false;
+        }
+        return true;
+    }
 
 }

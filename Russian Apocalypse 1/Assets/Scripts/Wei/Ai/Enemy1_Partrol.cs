@@ -22,11 +22,11 @@ public class Enemy1_Partrol : AiStateInterface<LE_Enemy1>  {
     {
         Enemy1_StateMachine stateMachine = entity.StateMachine as Enemy1_StateMachine;
         stateMachine.fieldOfView.DebugDrawFielOfView();
-        LEIdentification id = stateMachine.fieldOfView.Get_Nearest_T_InsideFiledOfView<LEIdentification>(Is_Player, 0.5f, ref timer, stateMachine.targetLayer);
+        LEIdentification id = stateMachine.fieldOfView.Get_Nearest_T_InsideFiledOfViewRange<LEIdentification>(Can_SeePlayer, 0.5f, ref timer, stateMachine.targetLayer);
 
         if (id != null) {
             stateMachine.currentTFTarget = id.transform;
-            stateMachine.ChangeState(Enemy1_Chase.Instance);
+            stateMachine.ChangeState(Enemy1_Fight.Instance);
             return;
         }
 
@@ -43,8 +43,13 @@ public class Enemy1_Partrol : AiStateInterface<LE_Enemy1>  {
       
     }
 
-    public bool Is_Player(LEIdentification id)
+    public bool Can_SeePlayer(LEIdentification id,AiUtility.FieldOfView fieldOfView)
     {
-        return id.letype == LEType.Player;
+        
+        bool isPlayer = id.letype == LEType.Player;
+        bool canSee = id.GetComponent<LEPhysicsManager>().Check_DirectlyRaycast(fieldOfView.eye.position);
+
+        return (isPlayer && canSee);
+
     }
 }
