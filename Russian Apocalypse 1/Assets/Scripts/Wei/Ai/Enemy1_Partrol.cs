@@ -34,7 +34,10 @@ public class Enemy1_Partrol : AiStateInterface<LE_Enemy1>  {
         {
             Vector3 pos = stateMachine.Get_RandomPosXZ_BasedOnCurrentPos(-20, 20);
             bool walkable = stateMachine.Check_PositionWalkAble(pos);
-            if (walkable) { stateMachine.Set_Nav_Destination(pos); }
+            if (walkable) {
+                GizmosDebuger.Instance.spherePos = pos;
+                stateMachine.Set_Nav_Destination(pos);
+            }
         }
     }
 

@@ -36,7 +36,7 @@ public abstract class StateMachineBase : MonoBehaviour
         return transform.position + offset;
     }
 
-    public Vector2 Get_RandomPosXZ_BasedOnCurrentPos(float from, float to)
+    public Vector3 Get_RandomPosXZ_BasedOnCurrentPos(float from, float to)
     {
         Vector3 offset = Vector3.zero;
         offset =  offset.RandomPosXZ(from, to);

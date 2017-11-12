@@ -455,10 +455,9 @@ namespace AiUtility{
         public void DebugDrawFielOfView()
         {
             Vector3 forwardPos = eye.forward * viewDistance;
-            forwardPos.y += 0.2f;
             Vector3 pos1 = Quaternion.AngleAxis(-viewAngle/2.0f, Vector3.up) * forwardPos;
             Vector3 pos2 = Quaternion.AngleAxis(viewAngle/2.0f, Vector3.up) * forwardPos;
-            Vector3 eyePos = new Vector3(eye.position.x, eye.position.y + 0.2f, eye.position.z);
+            Vector3 eyePos = new Vector3(eye.position.x, eye.position.y, eye.position.z);
             Debug.DrawRay(eyePos, forwardPos,Color.red);
             Debug.DrawRay(eyePos, pos1, Color.red);
             Debug.DrawRay(eyePos, pos2, Color.red);
