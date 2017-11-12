@@ -26,14 +26,18 @@ public class GameUIPr : Singleton<GameUIPr> {
 
 
     //UI Prefabs
-    public MainManue MainManue_PB;
-    public SettingPanel SettingPanel_PB;
-    public LoadSavePanel LoadSPanel_PB;
-    public SaveGamePanel SavePanel_PB;
-    public LevelTransitionPanel LevelTransitionPanel_PB;
-    public InventoryPanel InventoryPanel_PB;
-    public ItemInfo ItemInfo_PB;
-
+    public MainManue PB_MainManue;
+    public SettingPanel PB_SettingPanel;
+    public LoadSavePanel PB_LoadSPanel;
+    public SaveGamePanel PB_SavePanel;
+    public LevelTransitionPanel PB_LevelTransitionPanel;
+    public InventoryPanel PB_InventoryPanel;
+    public ItemInfo PB_ItemInfo;
+    public SliderObj PB_SliderHorizontal;
+    public SliderObj PB_SliderVertical;
+    
+    SliderObj SliderHorizontal {get {if (PB_SliderHorizontal != null) return PB_SliderHorizontal;else {return Resources.Load<SliderObj>("UIDefault\\Text_Slider_Horizontal");}}}
+    SliderObj SliderVertical { get { if (PB_SliderHorizontal != null) return PB_SliderHorizontal; else { return Resources.Load<SliderObj>("UIDefault\\Text_Slider_Vertical"); } } }
 
     [HideInInspector]
     public GameObject mainManueObj;    //This is the main Manue Object----Press Icon Botton or press Esc key
@@ -57,13 +61,13 @@ public class GameUIPr : Singleton<GameUIPr> {
         MainManue mainManue =  GetComponentInChildren<MainManue>();
         if (mainManue == null)
         {
-            if (MainManue_PB == null)
+            if (PB_MainManue == null)
             {
                 MakingDefault_MainMenu();
             }
             else
             {
-                mainManueObj = Instantiate(MainManue_PB).gameObject;
+                mainManueObj = Instantiate(PB_MainManue).gameObject;
                 mainManueObj.transform.SetParent(MainCanvasObject.transform);
             }
         }
@@ -79,14 +83,14 @@ public class GameUIPr : Singleton<GameUIPr> {
         SettingPanel settingPanel = GetComponentInChildren<SettingPanel>();
         if (settingPanel == null)
         {
-            if (SettingPanel_PB == null)
+            if (PB_SettingPanel == null)
             {
                 MakingDefault_SettingPanel();
                 subPanelObjs.Add(settingPanelObj);
             }
             else
             {
-                settingPanelObj = Instantiate(SettingPanel_PB).gameObject;
+                settingPanelObj = Instantiate(PB_SettingPanel).gameObject;
                 settingPanelObj.transform.SetParent(MainCanvasObject.transform);
                 subPanelObjs.Add(settingPanelObj);
             }   
@@ -390,7 +394,19 @@ public class GameUIPr : Singleton<GameUIPr> {
         Create_Text(imageObj.transform, "Setting", 20, Color.red, null, V.UIHelper.VAnchorRect.Fill);
         Create_Button<SettingButton>(imageObj.transform, "SettingButton", Color.green, null, new V.UIHelper.VAnchorRect(0.9f, 0.0f, 1.0f, 1.0f));
 
+        rect.ScaleHorizontal_Mid(0.9f);
+        rect.MoveVertical(-0.15f);
 
+        SliderObj masterVolumSlider = Create_Slider_Horizontal(settingPanelObj.transform,"MasterVolumSliderObj","Master Volum",rect);
+        AudioManager.Instance.masterSlider = masterVolumSlider;
+
+        rect.MoveVertical(-0.15f);
+        SliderObj sfxVolumSlider = Create_Slider_Horizontal(settingPanelObj.transform, "SFXVolumSliderOBj", "SFX Volum", rect);
+        AudioManager.Instance.sfxSlider = sfxVolumSlider;
+
+        rect.MoveVertical(-0.15f);
+        SliderObj musicVolumSlider = Create_Slider_Horizontal(settingPanelObj.transform, "MusicVolumSliderOBj", "Music Volum", rect);
+        AudioManager.Instance.musicSlider = musicVolumSlider;
 
 
     }
@@ -461,10 +477,29 @@ public class GameUIPr : Singleton<GameUIPr> {
         // V.UIHelper.SetAndMatchAnchors(ref textRT, rect.min_LowerLeft, rect.max_UpperRight);
     }
 
+    SliderObj Create_Slider_Vertical(Transform parent, string name, string textTitle,V.UIHelper.VAnchorRect rect)
+    {
+        SliderObj sliderObj =  Instantiate(SliderVertical);
+        sliderObj.gameObject.name = name;
+        sliderObj.ReSetTitle(textTitle);
+        sliderObj.transform.SetParent(parent);
+        sliderObj.GetComponent<RectTransform>().Set_Match_Anchors(rect.min_LowerLeft, rect.max_UpperRight);
+        return sliderObj;
+    }
+
+    SliderObj Create_Slider_Horizontal(Transform parent, string name, string textTitle, V.UIHelper.VAnchorRect rect)
+    {
+        SliderObj sliderObj = Instantiate(SliderHorizontal);
+        sliderObj.gameObject.name = name;
+        sliderObj.ReSetTitle(textTitle);
+        sliderObj.transform.SetParent(parent);
+        sliderObj.GetComponent<RectTransform>().Set_Match_Anchors(rect.min_LowerLeft, rect.max_UpperRight);
+        return sliderObj;
+    }
+   
     private void Reset()
     {
         CheckAndInitMainCanvas();
     }
 }
-
 

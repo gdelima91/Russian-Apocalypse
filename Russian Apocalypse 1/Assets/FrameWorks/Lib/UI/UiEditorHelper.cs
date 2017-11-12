@@ -8,6 +8,7 @@ public class UiEditorHelper : MonoBehaviour {
 	void AlingTheAnchor()
 	{
 		RectTransform rt = GetComponent<RectTransform>();
-		V.UIHelper.MatchCornersToAnchors(ref rt);
+        //V.UIHelper.MatchCornersToAnchors(ref rt);
+        rt.Set_Match_Anchors_To_Anchors();
 	}
 }

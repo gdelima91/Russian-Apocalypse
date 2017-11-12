@@ -7,7 +7,7 @@ public class LEIdentification : MonoBehaviour
 {
     const string Non = "Non";
 
-    [SerializeField]private string union = Non;
+    public string union = Non;
 
     public LEType letype = LEType.AI;
 

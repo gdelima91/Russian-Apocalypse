@@ -14,11 +14,11 @@ public class MusicVolumeSlider : MonoBehaviour {
         {
             musicSlider.onValueChanged.AddListener(delegate { ValueChange(); });
         }
-        musicSlider.value = AudioManager.instance.musicVolumePercent;
+        musicSlider.value = AudioManager.Instance.musicVolumePercent;
     }
 
     public void ValueChange()
     {
-        AudioManager.instance.SetVolume(musicSlider.value, AudioManager.AudioChannel.Music);
+        AudioManager.Instance.SetVolume(musicSlider.value, AudioManager.AudioChannel.Music);
     }
 }

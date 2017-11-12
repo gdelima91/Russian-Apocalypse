@@ -81,7 +81,7 @@ public class ItemInfo : MonoBehaviour {
     [MenuItem("Master System/Create/ItemInfo")]
     public static void menuItemCreateItemInfo() {
         if (GameObject.FindGameObjectWithTag("ItemInfo") == null) {
-            GameObject toolTip = (GameObject)Instantiate(Resources.Load("Prefabs/ItemInfo") as GameObject);
+            GameObject toolTip = Instantiate(Resources.Load("Prefabs/ItemInfo") as GameObject);
             toolTip.GetComponent<RectTransform>().localPosition = new Vector3(Screen.width / 2, Screen.height / 2, 0);
             toolTip.transform.SetParent(GameObject.FindGameObjectWithTag("Canvas").transform);
             toolTip.AddComponent<ItemInfo>().LoadVariables();

@@ -12,7 +12,7 @@ public abstract class StateMachineBase : MonoBehaviour
     public AiUtility.FieldOfView fieldOfView;
     public LayerMask targetLayer;
     public Transform currentTFTarget;
-    Vector3 targetOldPos;
+    [HideInInspector]public Vector3 targetOldPos;
 
     Rigidbody rgbody;
     

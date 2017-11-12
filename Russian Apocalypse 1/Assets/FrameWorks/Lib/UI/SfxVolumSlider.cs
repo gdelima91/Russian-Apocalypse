@@ -14,11 +14,11 @@ public class SfxVolumSlider : MonoBehaviour {
         {
             sfxSlider.onValueChanged.AddListener(delegate { ValueChange(); });
         }
-        sfxSlider.value = AudioManager.instance.sfxVolumePercent;
+        sfxSlider.value = AudioManager.Instance.sfxVolumePercent;
     }
 
     public void ValueChange()
     {
-        AudioManager.instance.SetVolume(sfxSlider.value, AudioManager.AudioChannel.Sfx);
+        AudioManager.Instance.SetVolume(sfxSlider.value, AudioManager.AudioChannel.Sfx);
     }
 }

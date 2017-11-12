@@ -18,7 +18,7 @@ public class Enemy1_Fight : AiStateInterface<LE_Enemy1> {
     {
         Enemy1_StateMachine stateMachine = entity.StateMachine as Enemy1_StateMachine;
         stateMachine.Look_At_Target();
-        bool targetInFightRange = stateMachine.CheckSet___CHECK_InRange_SET_KeepTargetInRange(5.0f,3.0f);
+        stateMachine.CheckSet___CHECK_InRange_SET_KeepTargetInRange(5.0f,3.0f);
 
         /*
          Shoot ..........

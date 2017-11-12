@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class AudioManager : MonoBehaviour {
+public class AudioManager : Singleton<AudioManager> {
+    protected AudioManager() { }
 
 	public enum AudioChannel{Master,Sfx,Music}
 
@@ -18,47 +19,58 @@ public class AudioManager : MonoBehaviour {
 	AudioSource[] musicSources;
 	int activeMusicSourceIndex;
 
-	public static AudioManager instance;
 	Transform audioListener;
 	Transform targetT;
 
 	SoundLib library;
 
+
+    public SliderObj masterSlider;
+    public SliderObj sfxSlider;
+    public SliderObj musicSlider;
+
 	void Awake()
 	{
-		if(instance !=null)
+		library = GetComponent<SoundLib>();
+
+		musicSources = new AudioSource[2];
+		for(int i = 0;i<2;i++)
 		{
-			Destroy(gameObject); //When we reload a new Sence. We get a copy. so we need to Destroy it.
-		}else{
-			DontDestroyOnLoad(gameObject);
-
-			instance = this;
-
-			library = GetComponent<SoundLib>();
-
-			musicSources = new AudioSource[2];
-			for(int i = 0;i<2;i++)
-			{
-				GameObject newMusicSource = new GameObject("Music source" + (i +1));
-				musicSources[i] =  newMusicSource.AddComponent<AudioSource>();
-				newMusicSource.transform.parent = transform;
-			}
-			GameObject newSfx2Dsource = new GameObject("2D sfx source");
-			sfx2DSource = newSfx2Dsource.AddComponent<AudioSource>();
-			newSfx2Dsource.transform.parent = transform;
-
-			audioListener = FindObjectOfType<AudioListener>().transform;
-			//playerT = FindObjectOfType<Player>().transform;
-
-			masterVolumePercent = PlayerPrefs.GetFloat("master Volume",masterVolumePercent);
-			musicVolumePercent = PlayerPrefs.GetFloat("music Volume",masterVolumePercent);
-			sfxVolumePercent = PlayerPrefs.GetFloat("Sfx Volume",sfxVolumePercent);
+			GameObject newMusicSource = new GameObject("Music source" + (i +1));
+			musicSources[i] =  newMusicSource.AddComponent<AudioSource>();
+			newMusicSource.transform.parent = transform;
 		}
+		GameObject newSfx2Dsource = new GameObject("2D sfx source");
+		sfx2DSource = newSfx2Dsource.AddComponent<AudioSource>();
+		newSfx2Dsource.transform.parent = transform;
+
+		audioListener = FindObjectOfType<AudioListener>().transform;
+		//playerT = FindObjectOfType<Player>().transform;
+
+		masterVolumePercent = PlayerPrefs.GetFloat("master Volume",masterVolumePercent);
+		musicVolumePercent = PlayerPrefs.GetFloat("music Volume",masterVolumePercent);
+		sfxVolumePercent = PlayerPrefs.GetFloat("Sfx Volume",sfxVolumePercent);
+
 	}
 
     private void Start()
     {
+        if (masterSlider != null) {
+            masterSlider.onValueChangeEvent_Handler -= SetMaster;
+            masterSlider.onValueChangeEvent_Handler += SetMaster;
+        }
 
+        if (sfxSlider != null)
+        {
+            sfxSlider.onValueChangeEvent_Handler -= SetSFX;
+            sfxSlider.onValueChangeEvent_Handler += SetSFX;
+        }
+
+        if (sfxSlider != null)
+        {
+            musicSlider.onValueChangeEvent_Handler -= SetMusic;
+            musicSlider.onValueChangeEvent_Handler += SetMusic;
+        }
     }
 
     void Update()
@@ -74,8 +86,24 @@ public class AudioManager : MonoBehaviour {
         targetT = tf;
     }
 
-	public void SetVolume(float volumePercent,AudioChannel channel)
+    public void SetMaster(float v)
+    {
+        SetVolume(v, AudioChannel.Master);
+    }
+
+    public void SetSFX(float v)
+    {
+        SetVolume(v, AudioChannel.Sfx);
+    }
+
+    public void SetMusic(float v)
+    {
+        SetVolume(v, AudioChannel.Music);
+    }
+
+    public void SetVolume(float volumePercent,AudioChannel channel)
 	{
+        //Debug.LogFormat("Set Volume {0} : {1}", channel, volumePercent);
 		switch(channel)
 		{
 		case AudioChannel.Master:

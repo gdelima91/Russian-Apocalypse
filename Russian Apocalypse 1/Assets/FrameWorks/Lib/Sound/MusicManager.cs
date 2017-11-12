@@ -10,13 +10,13 @@ public class MusicManager : MonoBehaviour {
 	void Start()
 	{
         //Debug.Log("Play Music");
-		AudioManager.instance.PlayMusic(menuTheme,3);
+		AudioManager.Instance.PlayMusic(menuTheme,3);
         Invoke("PlayMusic1",3.0f );
     }
 
     void PlayMusic1()
     {
-        AudioManager.instance.PlayMusic(mainTheme, 1);
+        AudioManager.Instance.PlayMusic(mainTheme, 1);
     }
 	void Update()
 	{
