@@ -44,7 +44,7 @@ public class GameCentalPr : Singleton<GameCentalPr> {
     public LERotationManager PlayerBasicMovementManager { get { if (leUnitBasicMovementManager == null) { InitalTarget(); } return leUnitBasicMovementManager; } }
     public LEInputClientManager PlayerInputActionManager { get { if (leUnitBasicMovementManager == null) { InitalTarget(); } return inputActionManager; } }
 
-    public static BaseSerializableData[] buildInDatas;
+    public static BaseSerializableData[] allBuildInDatas;
 
 
     void Start()
@@ -146,7 +146,7 @@ public class GameCentalPr : Singleton<GameCentalPr> {
         reader.ReadString();                       //Reader The sceneName again
 
         //3. Find all build in SerialiazableDatas
-        buildInDatas = FindObjectsOfType<BaseSerializableData>();
+        allBuildInDatas = FindObjectsOfType<BaseSerializableData>();
 
         //4.) Deserialize All Data
         while (reader.BaseStream.Position != reader.BaseStream.Length)
@@ -165,6 +165,7 @@ public class GameCentalPr : Singleton<GameCentalPr> {
         reader.Close();
     }
 
+    //Runtime Spawn Object
     void CreateAndLoad_RTS_Object(BinaryReader reader)
     {
         System.Type t = System.Type.GetType(reader.ReadString());
@@ -175,7 +176,9 @@ public class GameCentalPr : Singleton<GameCentalPr> {
     {
         //Because The Build In Object already in the scene, So we do not need to 
         //Creae a Instance of the Object, Just find the Data Object, and Serialize it Directly.
-        foreach (BaseSerializableData data in buildInDatas)
+
+        //Find the Editor Time BuildIn Object, then DeSerialize it.
+        foreach (BaseSerializableData data in allBuildInDatas)
         {
             if (data.uniqueId == uniqueID)
             {

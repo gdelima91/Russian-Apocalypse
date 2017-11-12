@@ -7,13 +7,14 @@ namespace V
 	public class UIHelper
 	{
 
-		/// <summary>
-		///     Set the four corner of the rectTransform to it's four Anchors
-		/// when we set offsetMax and offsetMin to Vector2.zero; the corner and the size
-		/// of the UI element will be fully match to its Anchors
-		/// </summary>
-		/// <param name="rectTransform"></param>
-		public static void MatchCornersToAnchors(ref RectTransform rectTransform)
+        /// <summary>
+        ///     Set the four corner of the rectTransform to it's four Anchors
+        /// when we set offsetMax and offsetMin to Vector2.zero; the corner and the size
+        /// of the UI element will be fully match to its Anchors
+        /// </summary>
+        /// <param name="rectTransform"></param>
+        [System.Obsolete("This Method is Obsolet, Please Use the RectTransform Extension method: 'Set_Match_Anchors_To_Anchors' instead")]
+        public static void MatchCornersToAnchors(ref RectTransform rectTransform)
 		{
 			rectTransform.offsetMax = Vector2.zero;
 			rectTransform.offsetMin = Vector2.zero;
@@ -24,6 +25,7 @@ namespace V
 		/// </summary>
 		/// <param name="rectTransform"> the rectTransform we wanna to move</param>
 		/// <param name="move">the value of move should be in the range[0,1]. It's like a the UV which related to rectTransform's parent rectTransform</param>
+        [System.Obsolete("This Method is Obsolet, Please Use the RectTransform Extension method:  'Set_Move_Anchors' instead")]
 		public static void MoveAnchors(ref RectTransform rectTransform, Vector2 move)
 		{
 			Vector2 anchorMax = rectTransform.anchorMax;
@@ -32,7 +34,8 @@ namespace V
 			rectTransform.anchorMin += new Vector2(move.x, move.y);
 		}
 
-		public static void SetAndMatchAnchors(ref RectTransform rectTransform,Vector2 min_LowerLeft, Vector2 max_UpperRight)
+        [System.Obsolete("This Method is Obsolet, Please Use the RectTransform Extension method: 'Set_Match_Anchors' instead")]
+        public static void SetAndMatchAnchors(ref RectTransform rectTransform,Vector2 min_LowerLeft, Vector2 max_UpperRight)
         { 	
 			rectTransform.anchorMin = min_LowerLeft;
             rectTransform.anchorMax = max_UpperRight;

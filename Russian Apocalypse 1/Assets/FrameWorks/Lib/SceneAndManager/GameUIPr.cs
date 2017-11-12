@@ -336,7 +336,7 @@ public class GameUIPr : Singleton<GameUIPr> {
         mainManueObj.AddComponent<DragPanel>();
         mainManueObj.transform.SetParent(MainCanvasObject.transform);
         RectTransform rectTransform = mainManueObj.GetComponent<RectTransform>();
-        rectTransform.SetDeltaSize_At_ScreenPos(new Vector2(200, 400), new Vector2(0, 0));
+        rectTransform.Set_DeltaSize_Anchor_ScreenPos(new Vector2(200, 400), new Vector2(0, 0));
 
         Color buttonColor = new Color(0.0f, 0.8f, 0.5f, 1.0f);
         V.UIHelper.VAnchorRect rect = new V.UIHelper.VAnchorRect(0.05f, 0.85f, 0.95f, 0.95f);
@@ -379,15 +379,20 @@ public class GameUIPr : Singleton<GameUIPr> {
         RectTransform rectTransform = settingPanelObj.GetComponent<RectTransform>();
 
         //rectTransform.SetDeltaSize_At_ScreenPos(new Vector2(300, 350), new Vector2(0, 0));
-        rectTransform.Set_Anchor_Left_Top(new Vector2(400, 350), new Vector2(20, 20));
+        rectTransform.Set_DeltaSize_Anchor_Left_Top(new Vector2(400, 350), new Vector2(20, 20));
         
 
         Color imageColor = new Color(173 / (float)255, 173 / (float)255, 240 / (float)255);
         V.UIHelper.VAnchorRect rect = new V.UIHelper.VAnchorRect(0.0f, 0.9f, 1.0f, 1.0f);
 
+        //Setting header Icom, Text, toggle Button
         GameObject imageObj = Create_Image(settingPanelObj.transform, "SettingObj", imageColor, null, rect);
         Create_Text(imageObj.transform, "Setting", 20, Color.red, null, V.UIHelper.VAnchorRect.Fill);
         Create_Button<SettingButton>(imageObj.transform, "SettingButton", Color.green, null, new V.UIHelper.VAnchorRect(0.9f, 0.0f, 1.0f, 1.0f));
+
+
+
+
     }
 
     T Create_Button_TEXT<T>(Transform parent, string name, Color buttonColor,Sprite buttonSprit,V.UIHelper.VAnchorRect rect,int fontSize,Color textColor,Font font) where T : MonoBehaviour
@@ -412,7 +417,9 @@ public class GameUIPr : Singleton<GameUIPr> {
         T t = buttonObj.AddComponent<T>();
         buttonObj.transform.SetParent(parent);
         RectTransform buttonRT = buttonObj.GetComponent<RectTransform>();
-        V.UIHelper.SetAndMatchAnchors(ref buttonRT, rect.min_LowerLeft, rect.max_UpperRight);
+        buttonRT.Set_Match_Anchors(rect.min_LowerLeft, rect.max_UpperRight);
+
+        //V.UIHelper.SetAndMatchAnchors(ref buttonRT, rect.min_LowerLeft, rect.max_UpperRight);
         return t;
     }
 
@@ -431,7 +438,9 @@ public class GameUIPr : Singleton<GameUIPr> {
         image.sprite = imageSprit;
         imageObject.transform.SetParent(parent);
         RectTransform imageRT = imageObject.GetComponent<RectTransform>();
-        V.UIHelper.SetAndMatchAnchors(ref imageRT, rect.min_LowerLeft, rect.max_UpperRight);
+        imageRT.Set_Match_Anchors(rect.min_LowerLeft, rect.max_UpperRight);
+
+        //V.UIHelper.SetAndMatchAnchors(ref imageRT, rect.min_LowerLeft, rect.max_UpperRight);
         return imageObject;
     }
 
@@ -448,7 +457,8 @@ public class GameUIPr : Singleton<GameUIPr> {
             text.font = Resources.Load<Font>("OpenSansBold");
         textObj.transform.SetParent(parent);
         RectTransform textRT = textObj.GetComponent<RectTransform>();
-        V.UIHelper.SetAndMatchAnchors(ref textRT, rect.min_LowerLeft, rect.max_UpperRight);
+        textRT.Set_Match_Anchors(rect.min_LowerLeft, rect.max_UpperRight);
+        // V.UIHelper.SetAndMatchAnchors(ref textRT, rect.min_LowerLeft, rect.max_UpperRight);
     }
 
     private void Reset()
