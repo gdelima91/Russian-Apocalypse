@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 1fff980dba9406442b6492bf4910cf5e
-timeCreated: 1509582833
+timeCreated: 1511600418
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -8,13 +8,9 @@ ModelImporter:
     100000: polySurface2
     100002: //RootNode
     100004: Sidewalk_smallCurve
-    100006: transform6
-    100008: transform7
     400000: polySurface2
     400002: //RootNode
     400004: Sidewalk_smallCurve
-    400006: transform6
-    400008: transform7
     2300000: Sidewalk_smallCurve
     3300000: Sidewalk_smallCurve
     4300000: Sidewalk_smallCurve
@@ -23,8 +19,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: lambert1
-    second: {fileID: 2100000, guid: dc7059827f90ed64fb8dff35107f8b0b, type: 2}
+      name: lambert8
+    second: {fileID: 2100000, guid: 4384c21b8b8257548ab99fed9287c84f, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
