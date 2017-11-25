@@ -9,7 +9,7 @@ using System.Linq;
 //Will shoot the gun, and use the shot animation....When the inputActionClient is a 
 //sword, the LEEntity will play sword animation
 //
-public class LEInputableObjectManager : MonoBehaviour {
+public class LEInputableObjectManager : MonoBehaviour,LEEditorTimeAutoInitializer {
 
     public List<IAO_Offset_Info> iao_Offset_info = new List<IAO_Offset_Info>();
 
@@ -80,6 +80,11 @@ public class LEInputableObjectManager : MonoBehaviour {
     /// </summary>
     [ContextMenu("Manual_Init_InputableObject")]
     void Manual_Init_InputableObject()
+    {
+        initInputObject = GetComponentInChildren<InputableObject>();
+    }
+
+    public void ET_Init()
     {
         initInputObject = GetComponentInChildren<InputableObject>();
     }

@@ -3,5 +3,5 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LEHip : LEIPhysicsPart {
+public class LEHip : LEPhysicsPros {
 }

@@ -6,8 +6,6 @@ using UnityEngine;
 
 public class LE_BruteAnimationCallback : LEAnimationCallBack {
 
-
-
     public override void InvokeMethod(MethodInfo m, object[] obj)
     {
         m.Invoke(this, obj);

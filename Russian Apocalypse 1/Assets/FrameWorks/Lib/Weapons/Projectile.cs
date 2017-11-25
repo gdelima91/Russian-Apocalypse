@@ -6,22 +6,17 @@ public class Projectile : MonoBehaviour
 
     public LayerMask collisionMask;
     public Color trailColour;
-    float speed = 10;
+    public float speed = 10;
     float damage = 1;
 
     float lifetime = 3;
     float skinWidth = .1f;
+    Rigidbody rg;
 
     void Start()
     {
         Destroy(gameObject, lifetime);
-
-        Collider[] initialCollisions = Physics.OverlapSphere(transform.position, .1f, collisionMask);
-        if (initialCollisions.Length > 0)
-        {
-            OnHitObject(initialCollisions[0], transform.position);
-        }
-
+        rg = GetComponent<Rigidbody>();
         GetComponent<TrailRenderer>().material.SetColor("_TintColor", trailColour);
     }
 
@@ -30,32 +25,21 @@ public class Projectile : MonoBehaviour
         speed = newSpeed;
     }
 
-    void Update()
+    void LateUpdate()
     {
         float moveDistance = speed * Time.deltaTime;
-        CheckCollisions(moveDistance);
-        transform.Translate(Vector3.forward * moveDistance);
+        //transform.Translate(Vector3.forward * moveDistance);
+        rg.AddForce(transform.forward * moveDistance);
     }
 
-
-    void CheckCollisions(float moveDistance)
+    private void OnCollisionEnter(Collision collision)
     {
-        Ray ray = new Ray(transform.position, transform.forward);
-        RaycastHit hit;
-
-        if (Physics.Raycast(ray, out hit, moveDistance + skinWidth, collisionMask, QueryTriggerInteraction.Collide))
+        LEPhysicsPros physicsPros = collision.collider.GetComponent<LEPhysicsPros>();
+        if (physicsPros != null)
         {
-            OnHitObject(hit.collider, hit.point);
+            physicsPros.Recive_Damage(100);
+            Destroy(gameObject);
         }
     }
 
-    void OnHitObject(Collider c, Vector3 hitPoint)
-    {
-       // IDamageable damageableObject = c.GetComponent<IDamageable>();
-        //if (damageableObject != null)
-        //{
-        //    damageableObject.TakeHit(damage, hitPoint, transform.forward);
-        //}
-        GameObject.Destroy(gameObject);
-    }
 }

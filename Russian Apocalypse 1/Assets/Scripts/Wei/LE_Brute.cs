@@ -23,7 +23,6 @@ public class LE_Brute : LEMainBase {
         rotationManager.UpdateRotation(userInput);
         transitionManager.UpdateTransition(userInput);
         animationManager.UpdateAnimation(userInput);
-   
     }
 
     public override void Dispatch_Animation_Message(AnimationMessageType messageType, object messageValue)

@@ -32,8 +32,14 @@ public abstract class InputableObject : MonoBehaviour {
     public virtual void MiddleMouse_Down() { }
     public virtual void MiddleMouse_Up() { }
 
+    /// <summary>
+    /// We Play the Game and Animation In Eidtor Model. And Set the Item to the Proper Local Position and Rotation.
+    /// Then Copy the Transform Value
+    /// Then Exit the Editor Play Model, and Paste the Transform value. and Then Call the Function 
+    /// To record IAO Offset Info for the LEEntity.
+    /// </summary>
     [ContextMenu("Record IAO Offset Info")]
-    public void Record_IAO_Offset_Info()
+    public void EditorTime_Manually_Initialization()
     {
         LEInputableObjectManager manager = transform.root.GetComponent<LEInputableObjectManager>();
         if (manager == null)
