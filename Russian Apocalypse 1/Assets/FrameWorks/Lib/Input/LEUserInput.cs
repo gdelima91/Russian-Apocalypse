@@ -5,11 +5,11 @@ using UnityStandardAssets.CrossPlatformInput;
 
 namespace V
 {
-    [RequireComponent(typeof(LEInputClientManager))]
+    [RequireComponent(typeof(LEInputableObjectManager))]
     public class LEUserInput : MonoBehaviour
     {
 
-        LEInputClientManager inputClientManager;
+        LEInputableObjectManager inputClientManager;
 
         public string fireButton;
 
@@ -33,7 +33,7 @@ namespace V
 
         private void Start()
         {
-            inputClientManager = GetComponent<LEInputClientManager>();
+            inputClientManager = GetComponent<LEInputableObjectManager>();
             if (inputClientManager == null)
             {
                 Debug.LogError("inputActionManager is Null");
@@ -78,7 +78,7 @@ namespace V
 
             if (Input.GetMouseButton(0))
             {
-                inputClientManager.GetKey_A();
+                inputClientManager.Get_LeftMouse();
             }
 
             if (Input.GetMouseButtonUp(0))

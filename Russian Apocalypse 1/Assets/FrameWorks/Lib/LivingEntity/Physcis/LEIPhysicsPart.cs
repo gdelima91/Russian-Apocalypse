@@ -18,7 +18,7 @@ public abstract class LEIPhysicsPart : MonoBehaviour {
             if (hit.collider.gameObject == gameObject)
             {
                 Debug.DrawLine(pos, transform.position, Color.blue);
-                UnityEditor.EditorApplication.isPaused = true;
+                //UnityEditor.EditorApplication.isPaused = true;
                 return true;
             }
         }

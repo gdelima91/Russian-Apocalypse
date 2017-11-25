@@ -4,7 +4,7 @@ using UnityEngine;
 using System.IO;
 
 
-[RequireComponent(typeof(LEInputClientManager))]
+[RequireComponent(typeof(LEInputableObjectManager))]
 [RequireComponent(typeof(LEAnimatorManager))]
 [RequireComponent(typeof(LERotationManager))]
 [RequireComponent(typeof(LETransiationManager))]
@@ -12,7 +12,7 @@ using System.IO;
 [RequireComponent(typeof(LEPhysicsManager))]
 public abstract class LEMainBase : MonoBehaviour {
 
-    protected LEInputClientManager inputClientManager;
+    protected LEInputableObjectManager inputClientManager;
     protected LERotationManager rotationManager;
     protected LEAnimatorManager animationManager;
     protected LETransiationManager transitionManager;
@@ -27,7 +27,7 @@ public abstract class LEMainBase : MonoBehaviour {
 
     protected virtual void OnEnable()
     {
-        inputClientManager = GetComponent<LEInputClientManager>();
+        inputClientManager = GetComponent<LEInputableObjectManager>();
         rotationManager = GetComponent<LERotationManager>();
         transitionManager = GetComponent<LETransiationManager>();
         animationManager = GetComponent<LEAnimatorManager>();
