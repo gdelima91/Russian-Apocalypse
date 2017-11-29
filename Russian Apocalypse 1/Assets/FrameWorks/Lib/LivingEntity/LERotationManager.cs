@@ -8,6 +8,9 @@ public class LERotationManager : MonoBehaviour {
 
     private float yaw;  //Rotation around Y Axis
     public float turnReactionSpped = 0.1f;
+    public GameObject gun;
+    public GameObject projec_Spawner;
+    public GameObject ball;
     float turnSmoothVelocity;
 
 
@@ -45,11 +48,30 @@ public class LERotationManager : MonoBehaviour {
     //The Player Look at where The mouse and Ground Intersection
     protected void Turn_To_MouseDir()
     {
-        if (Input.GetMouseButton(0))
-        {
-            Vector3 mousePos = V.MouseAndCamera.GetMouseGroundIntersectionPoint();
-            mousePos.y = transform.position.y;
-            SkeletonT.LookAt(mousePos);
+        //Gavin Edit - bringing up ground plane to match with the gun's plane
+        
+
+        if (Input.GetMouseButton(0)) {
+            //Vector3 mousePos = V.MouseAndCamera.GetMouseGroundIntersectionPoint();
+
+            Plane groundPlane = new Plane(Vector3.up, gun.transform.position);
+            Vector3 mousePos;
+
+
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            float cameraToIntersectpointDst;
+            
+
+            if (groundPlane.Raycast(ray, out cameraToIntersectpointDst)) {
+                mousePos = ray.GetPoint(cameraToIntersectpointDst);
+
+                mousePos.y = projec_Spawner.transform.position.y;
+                SkeletonT.LookAt(mousePos);
+                projec_Spawner.transform.LookAt(mousePos);
+                Debug.DrawLine(Camera.main.transform.position, mousePos);
+                Debug.Log(mousePos);
+                ball.transform.position = mousePos;
+            }
         }
     }
 
