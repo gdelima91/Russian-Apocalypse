@@ -8,8 +8,9 @@ public abstract class StateMachineGeneric<T> : StateMachineBase where T : LEMain
     private AiStateInterface<T> currentState = null;
     private AiStateInterface<T> PreviousState = null;
 
-    private void Start()
+    sealed protected override void Start()
     {
+        base.Start();
         Init_Target_InitState();
     }
 

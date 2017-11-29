@@ -1,9 +1,10 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class LETransiationManager : MonoBehaviour {
+public class LETransiationManager : SubManager {
 
     public bool freezeY = true;
 
@@ -34,7 +35,7 @@ public class LETransiationManager : MonoBehaviour {
         transitionDriver.Update();
     }
 
-    public void UpdateTransition(V.LEUserInput input)
+    public override void UpdateManager(MKInputData input)
     {
         if (controlType == TransitionControlType.RootMotion) { /*If We use Root Motion, We just Dont do Anything*/}
         else if (controlType == TransitionControlType.NaveMesh) { UpdateNaveMeshAngent(); }
@@ -43,12 +44,18 @@ public class LETransiationManager : MonoBehaviour {
         else if (controlType == TransitionControlType.NaveMesh) { /*if NavMesh We dont do anything.*/}
     }
 
+    public override void CompositeData(MKInputData inputmanager)
+    {
+        // Compositing Data
+    }
+
+
     public void UpdateNaveMeshAngent()
     {
         if (navMeshAgent == null) { navMeshAgent = GetComponent<NavMeshAgent>(); if (navMeshAgent == null) { Debug.LogError("Game Object Dont have NaveMeshAgent Component"); return; } }
     }
 
-    public void UpdateTransitionBasedOn_Camera_Forward(V.LEUserInput input)
+    public void UpdateTransitionBasedOn_Camera_Forward(MKInputData input)
     {
         if (input.currentVH != Vector2.zero)
         {
@@ -63,7 +70,7 @@ public class LETransiationManager : MonoBehaviour {
     }
 
     //Main Body is the transform which contain the animator....
-    public void UpdateTransitionBasedOn_MainBody_forward(V.LEUserInput input)
+    public void UpdateTransitionBasedOn_MainBody_forward(MKInputData input)
     {
         if (input.currentVH != Vector2.zero)
         {
@@ -94,6 +101,7 @@ public class LETransiationManager : MonoBehaviour {
         if (navMeshAgent == null) { navMeshAgent = GetComponent<NavMeshAgent>(); if (navMeshAgent == null) { Debug.LogError("Game Object Dont have NaveMeshAgent Component"); return false; } }
         return navMeshAgent.ArriveDestination_NotPathPending();
     }
+
 }
 
 public enum TransitionControlType

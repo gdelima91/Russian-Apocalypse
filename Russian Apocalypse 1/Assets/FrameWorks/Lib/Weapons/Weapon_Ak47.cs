@@ -7,22 +7,15 @@ namespace V
 {
     public class Weapon_Ak47 : Gun
     {
+        public override System.Type Type { get { return typeof(Weapon_Ak47); } }
 
-        public override void Init(LEInputableObjectManager manager)
+        public override SLOTID[] SlotIDs
         {
-
+            get
+            {
+                return new SLOTID[] { SLOTID.RightHand};
+            }
         }
 
-        public override void LeftMouse_On()
-        {
-            OnTriggerHold();
-        }
-
-        public override void LeftMouse_Up()
-        {
-            OnTriggerRelease();
-        }
-
-        public override System.Type IDType { get { return typeof(Weapon_Ak47); } }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,7 +9,7 @@ using UnityEngine;
 /// </summary>
 namespace V
 {
-    public class LECameraManager : MonoBehaviour
+    public class LECameraManager : SubManager
     {
         public bool Freeze_Yaw;
         public bool Freeze_Pitch;
@@ -35,22 +36,27 @@ namespace V
         }
 
         // Update is called once per frame
-        public void UpdateCameraManager(LEUserInput userInput)
+        public override void UpdateManager(MKInputData input)
         {
             //Input for Camera
-            if (userInput.mouseScroll != 0 || userInput.mouseHorizontal != 0 || userInput.mouseVertical != 0)
+            if (input.mouseScroll != 0 || input.mouseHorizontal != 0 || input.mouseVertical != 0)
             {
-                cameraDelta.delta_pitch = userInput.mouseVertical;
-                cameraDelta.delta_yaw = userInput.mouseHorizontal;
-                cameraDelta.delta_dstToTarget = userInput.mouseScroll;
+                cameraDelta.delta_pitch = input.mouseVertical;
+                cameraDelta.delta_yaw = input.mouseHorizontal;
+                cameraDelta.delta_dstToTarget = input.mouseScroll;
 
                 SetCameraDelta(cameraDelta);
 
-                userInput.mouseVertical = 0;
-                userInput.mouseHorizontal = 0;
+                input.mouseVertical = 0;
+                input.mouseHorizontal = 0;
             }
 
             currentCamera.UpdateCamera();
+        }
+
+        public override void CompositeData(MKInputData inputmanager)
+        {
+            //Do Nothing Right Now....
         }
 
         private void LateUpdate()

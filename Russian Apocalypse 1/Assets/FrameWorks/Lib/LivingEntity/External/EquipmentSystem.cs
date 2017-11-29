@@ -2,4 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LECurrentTarget : MonoBehaviour {}
+public class EquipmentSystem
+{
+
+	
+}

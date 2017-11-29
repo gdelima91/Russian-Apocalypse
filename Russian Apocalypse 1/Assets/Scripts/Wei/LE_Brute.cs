@@ -6,24 +6,8 @@ using UnityEngine;
 
 public class LE_Brute : LEMainBase {
 
-    V.LEUserInput userInput;
-    V.LECameraManager cameraManager;
-   
 
-    private void Start()
-    {
-        userInput = GetComponent<V.LEUserInput>();
-        cameraManager = GetComponent<V.LECameraManager>();
-    }
-
-    private void Update()
-    {
-        userInput.UpdateInput();
-        cameraManager.UpdateCameraManager(userInput);
-        rotationManager.UpdateRotation(userInput);
-        transitionManager.UpdateTransition(userInput);
-        animationManager.UpdateAnimation(userInput);
-    }
+ 
 
     public override void Dispatch_Animation_Message(AnimationMessageType messageType, object messageValue)
     {

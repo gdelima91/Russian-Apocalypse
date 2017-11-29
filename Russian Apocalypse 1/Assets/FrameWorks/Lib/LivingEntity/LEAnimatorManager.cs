@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Reflection;
+using System;
 
-public class LEAnimatorManager : MonoBehaviour {
+public class LEAnimatorManager : SubManager {
 
     [HideInInspector]
     public Animator animator;
@@ -36,8 +37,8 @@ public class LEAnimatorManager : MonoBehaviour {
         mainBody = transform.root.GetComponentInChildren<Animator>().transform;
     }
 
-    public void UpdateAnimation(V.LEUserInput input) {
-
+    public override void UpdateManager(MKInputData input)
+    {
         if (input.currentVH == Vector2.zero)
         {
             animator.SetFloat("Speed X", 0.0f);
@@ -52,8 +53,13 @@ public class LEAnimatorManager : MonoBehaviour {
             animator.SetFloat("Speed X", vh.x);
             animator.SetFloat("Speed Z", vh.y);
         }
-
     }
+
+    public override void CompositeData(MKInputData inputmanager)
+    {
+        //Do nothing Right Now
+    }
+
 
     public virtual void SetKeyStatue(InputIndex index,bool state) { animator.SetBool(index.ToString(), state); }
 

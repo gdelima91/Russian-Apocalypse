@@ -37,12 +37,12 @@ public class GameCentalPr : Singleton<GameCentalPr> {
     LEMainBase leUnitProcessor;
     LEAnimatorManager leUnitAnimationManager;
     LERotationManager leUnitBasicMovementManager;
-    LEInputableObjectManager inputActionManager;
+    LEIECompositer inputActionManager;
     
     public LEMainBase PlayerProcessor {get { if (leUnitProcessor == null) { InitalTarget(); } return leUnitProcessor; }}
     public LEAnimatorManager PlayerAnimationManager { get { if (leUnitAnimationManager == null) { InitalTarget(); } return leUnitAnimationManager; } }
     public LERotationManager PlayerBasicMovementManager { get { if (leUnitBasicMovementManager == null) { InitalTarget(); } return leUnitBasicMovementManager; } }
-    public LEInputableObjectManager PlayerInputActionManager { get { if (leUnitBasicMovementManager == null) { InitalTarget(); } return inputActionManager; } }
+    public LEIECompositer PlayerInputActionManager { get { if (leUnitBasicMovementManager == null) { InitalTarget(); } return inputActionManager; } }
 
     public static BaseSerializableData[] allBuildInDatas;
 
@@ -67,7 +67,7 @@ public class GameCentalPr : Singleton<GameCentalPr> {
         leUnitProcessor = targetLEObject.GetComponent<LEMainBase>();
         leUnitAnimationManager = targetLEObject.GetComponent<LEAnimatorManager>();
         leUnitBasicMovementManager = targetLEObject.GetComponent<LERotationManager>();
-        inputActionManager = targetLEObject.GetComponent<LEInputableObjectManager>();
+        inputActionManager = targetLEObject.GetComponent<LEIECompositer>();
     }
 
     void InitTarget_Default()
@@ -79,7 +79,7 @@ public class GameCentalPr : Singleton<GameCentalPr> {
             leUnitProcessor = targetLEObject.GetComponent<LEMainBase>();
             leUnitAnimationManager = targetLEObject.GetComponent<LEAnimatorManager>();
             leUnitBasicMovementManager = targetLEObject.GetComponent<LERotationManager>();
-            inputActionManager = targetLEObject.GetComponent<LEInputableObjectManager>();
+            inputActionManager = targetLEObject.GetComponent<LEIECompositer>();
         }
     }
 

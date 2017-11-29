@@ -1,36 +1,74 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
+
+
+// Split Data and Logical..........
+// Logical contains the interface to Load data.
+// Logical contains Action Delegate-----
+// The Data will make a configration for the Logical 
+// tell the Action delegate how to run the Functions.
+// If it is too hard or cost too much.....
+// Then The data----contains some Config functions
 
 public abstract class InputableObject : MonoBehaviour {
 
-    public abstract void Init(LEInputableObjectManager manager);
-    public abstract System.Type IDType { get; }
+    public void LoadInputableObject(LEIECompositer manager) {manager.LoadDependence_Config(this); }
+    public abstract System.Type Type { get; }
+    public abstract SLOTID[] SlotIDs { get; }
+    public virtual bool DoubleHand { get { return false; } }
+
     public void ShutDown() { }
     public void SetUpLayer(int layer) { }
     public void DisableCollision() { }
     public void EnableCollision() { }
 
-    public virtual void Key_A_On(){}
-    public virtual void Key_A_Down(){}
-    public virtual void Key_A_Up(){}
+    #region Key
+    //-----------------------------------------------------------
+    //-----------------------------------------------------------
+    Action<InputableObject> KEY_A_ON;
+    Action<InputableObject> KEY_A_DOWN;
+    Action<InputableObject> KEY_A_UP;
+    public void BIND_KEY_A_ON(Action<InputableObject> a) { KEY_A_ON -= a; KEY_A_ON += a; }
+    public void BIND_KEY_A_DOWN(Action<InputableObject> a) { KEY_A_DOWN -= a; KEY_A_DOWN += a; }
+    public void BIND_KEY_A_UP(Action<InputableObject> a) { KEY_A_UP -= a; KEY_A_UP += a; }
 
-    public virtual void Key_B_On() { }
-    public virtual void Key_B_Down() { }
-    public virtual void Key_B_Up() { }
+    Action<InputableObject> KEY_B_ON;
+    Action<InputableObject> KEY_B_DOWN;
+    Action<InputableObject> KEY_B_UP;
+    public void BIND_KEY_B_ON(Action<InputableObject> a) { KEY_B_ON -= a; KEY_B_ON += a; }
+    public void BIND_KEY_B_DOWN(Action<InputableObject> a) { KEY_B_DOWN -= a; KEY_B_DOWN += a; }
+    public void BIND_KEY_B_UP(Action<InputableObject> a) { KEY_B_UP -= a; KEY_B_UP += a; }
 
-    public virtual void LeftMouse_On() { }
-    public virtual void LeftMouse_Down() { }
-    public virtual void LeftMouse_Up() { }
+    Action<InputableObject> LEFTMOUSE_ON;
+    Action<InputableObject> LEFTMOUSE_DOWN;
+    Action<InputableObject> LEFTMOUSE_UP;
+    public void BIND_LEFTMOUSE_ON(Action<InputableObject> a) { LEFTMOUSE_ON -= a; LEFTMOUSE_ON += a; }
+    public void BIND_LEFTMOUSE_DOWN(Action<InputableObject> a) { LEFTMOUSE_DOWN -= a; LEFTMOUSE_DOWN += a; }
+    public void BIND_LEFTMOUSE_UP(Action<InputableObject> a) { LEFTMOUSE_UP -= a; LEFTMOUSE_UP += a; }
+    #endregion
 
-    public virtual void RightMouse_On() { }
-    public virtual void RightMouse_Down() { }
-    public virtual void RightMouse_Up() { }
+    public void Key_A_Hold(){ if (KEY_A_ON != null) KEY_A_ON(this); }
+    public void Key_A_Down() { if (KEY_A_DOWN != null) KEY_A_DOWN(this); }
+    public void Key_A_Up() {if (KEY_A_UP != null) KEY_A_UP(this);}
 
-    public virtual void MiddleMouse_On() { }
-    public virtual void MiddleMouse_Down() { }
-    public virtual void MiddleMouse_Up() { }
+    public void Key_B_Hold() { if (KEY_B_ON != null) KEY_B_ON(this);}
+    public void Key_B_Down() { if (KEY_B_DOWN != null) KEY_B_DOWN(this); }
+    public void Key_B_Up() {  if (KEY_B_UP != null) KEY_B_UP(this); }
+
+    public void LeftMouse_Hold() {if (LEFTMOUSE_ON != null)LEFTMOUSE_ON(this);}
+    public void LeftMouse_Down() {if (LEFTMOUSE_DOWN != null) LEFTMOUSE_DOWN(this);}
+    public void LeftMouse_Up() {if (LEFTMOUSE_UP != null) LEFTMOUSE_UP(this);}
+
+    public void RightMouse_On() { }
+    public void RightMouse_Down() { }
+    public void RightMouse_Up() { }
+
+    public void MiddleMouse_On() { }
+    public void MiddleMouse_Down() { }
+    public void MiddleMouse_Up() { }
 
     /// <summary>
     /// We Play the Game and Animation In Eidtor Model. And Set the Item to the Proper Local Position and Rotation.
@@ -41,15 +79,30 @@ public abstract class InputableObject : MonoBehaviour {
     [ContextMenu("Record IAO Offset Info")]
     public void EditorTime_Manually_Initialization()
     {
-        LEInputableObjectManager manager = transform.root.GetComponent<LEInputableObjectManager>();
+        LEIECompositer manager = transform.root.GetComponent<LEIECompositer>();
         if (manager == null)
         {
             Debug.LogError("The ROOT dont have a compoent of LEInputableObjectManager");
         }
         else
         {
-            manager.Record_IAO_Offset_Info(IDType, transform.localPosition, transform.localRotation);
+            manager.Record_IAO_Offset_Info(Type, transform.localPosition, transform.localRotation);
         }
     }
+
+    [Flags]
+    public enum SLOTID
+    {
+        Non,               
+        RightHand,               
+        LeftHand,          
+        RightFeet,         
+        LeftFeet,         
+        Head,
+        RightWrist,
+        LeftWrist,
+    }
 }
+
+
 

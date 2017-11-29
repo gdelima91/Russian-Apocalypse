@@ -1,8 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LERotationManager : MonoBehaviour {
+public class LERotationManager : SubManager {
 
     public RotationControlType controlType = RotationControlType.Look_To_CameraDir;
 
@@ -32,10 +33,17 @@ public class LERotationManager : MonoBehaviour {
         SkeletonT = transform.GetComponentInChildren<Animator>().transform;
     }
 
-    public void UpdateRotation(V.LEUserInput userInput) {
-        if (controlType == RotationControlType.Look_To_CameraDir) { Turn_To_CameraDir_Smooth(userInput); }
+
+    public override void UpdateManager(MKInputData inputData)
+    {
+        if (controlType == RotationControlType.Look_To_CameraDir) { Turn_To_CameraDir_Smooth(inputData); }
         else if (controlType == RotationControlType.Look_At_MouseDir) { Turn_To_MouseDir(); }
         else if (controlType == RotationControlType.Non_Strafe_And_Back) {/*this means no Rotation Control for this LE Object*/ }
+    }
+
+    public override void CompositeData(MKInputData inputData)
+    {
+
     }
 
     public void Set_RotationControlType(RotationControlType _controlType) {
@@ -55,7 +63,7 @@ public class LERotationManager : MonoBehaviour {
 
     //When player press W the character will move forwad direction of the camera
     //When player press A the character will move left direction of the camera
-    protected void Turn_To_CameraDir_Smooth(V.LEUserInput userInput)
+    protected void Turn_To_CameraDir_Smooth(MKInputData userInput)
     {
         if (userInput.currentVH == Vector2.zero) { return; }
         float targetDegree = Mathf.Atan2(userInput.currentVH.x, userInput.currentVH.y) * Mathf.Rad2Deg + cameramanager.Yaw(); // cameramanager.CurrentCamera.Transform.eulerAngles.y;

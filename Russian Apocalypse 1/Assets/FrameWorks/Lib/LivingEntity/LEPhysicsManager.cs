@@ -1,14 +1,25 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LEPhysicsManager : MonoBehaviour {
+public class LEPhysicsManager : SubManager {
 
     LEPhysicsPros[] allPhysicsParts;
 	// Use this for initialization
 	void Start () {
         allPhysicsParts = GetComponentsInChildren<LEPhysicsPros>();
 	}
+
+    public override void UpdateManager(MKInputData inputmanager)
+    {
+        //update manager......
+    }
+
+    public override void CompositeData(MKInputData inputmanager)
+    {
+        //Compositing Data
+    }
 
 
     public bool Check_DirectlyRaycast(Vector3 pos)

@@ -102,7 +102,7 @@ namespace V
                 //recoilAngle = Mathf.Clamp(recoilAngle, 0, 30);
 
                 if (shootAudio != null)
-                    AudioManager.Instance.PlaySound(shootAudio, transform.position);
+                    AudioManager.Instance.PlaySound(shootAudio, Camera.main.transform.position);
             }
         }
 
@@ -150,13 +150,13 @@ namespace V
             }
         }
 
-        public void OnTriggerHold()
+        public void OnTriggerHold(InputableObject i)
         {
             Shoot();
             triggerReleasedSinceLastShot = false;
         }
 
-        public void OnTriggerRelease()
+        public void OnTriggerRelease(InputableObject i)
         {
             triggerReleasedSinceLastShot = true;
             shotsRemainingInBurst = burstCount;

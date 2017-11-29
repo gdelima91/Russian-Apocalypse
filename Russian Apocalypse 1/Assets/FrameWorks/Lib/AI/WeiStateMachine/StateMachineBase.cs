@@ -6,8 +6,6 @@ public abstract class StateMachineBase : MonoBehaviour
 {
     //Those Value will be assigned. When SateMachine Base First Time be accessed from the LEMainBase.....
     [HideInInspector] public LEMainBase leBase;
-    [HideInInspector] public LETransiationManager transitionManager;
-    [HideInInspector] public LEAnimatorManager animatorManager;
 
     public AiUtility.FieldOfView fieldOfView;
     public LayerMask targetLayer;
@@ -15,7 +13,11 @@ public abstract class StateMachineBase : MonoBehaviour
     [HideInInspector]public Vector3 targetOldPos;
 
     Rigidbody rgbody;
-    
+
+    protected virtual void Start()
+    {
+        leBase = GetComponent<LEMainBase>();
+    }
 
     public bool Ckeck_FindPlayer()
     {
@@ -50,7 +52,7 @@ public abstract class StateMachineBase : MonoBehaviour
 
     public void Set_Nav_Destination(Vector3 pos)
     {
-        transitionManager.Set_Nav_Destination(pos);
+        leBase.transitionManager.Set_Nav_Destination(pos);
     }
 
     public void Approach_Target(float offset)
@@ -81,7 +83,7 @@ public abstract class StateMachineBase : MonoBehaviour
 
     public bool Check_PositionWalkAble(Vector3 pos)
     {
-       return transitionManager.SamplePosition(pos);
+       return leBase.transitionManager.SamplePosition(pos);
     }
 
     public bool Check_Target_Get_NewPosition(float sqrOffset)
@@ -101,18 +103,18 @@ public abstract class StateMachineBase : MonoBehaviour
     /// </summary>
     public bool Check_ArriveDestination_NotPathPending()
     {
-        return transitionManager.ArriveDestination_NotPathPending();
+        return leBase.transitionManager.ArriveDestination_NotPathPending();
     }
 
     public void Anima_Set_Float(string name,float value)
     {
-        animatorManager.SetFloat(name, value);
+        leBase.animatorManager.SetFloat(name, value);
     }
 
     public void Anima_Set_Float_BasedOnRigdbody(string name)
     {
         if (rgbody == null) { rgbody = GetComponent<Rigidbody>(); if (rgbody == null) { Debug.LogError("No Rigdbody Attack to Game Object"); return; } }
-        animatorManager.SetFloat(name, rgbody.velocity.sqrMagnitude);
+        leBase.animatorManager.SetFloat(name, rgbody.velocity.sqrMagnitude);
     }
 
     public float GetSet___GET_TargetDis___SET_KeepTargetInRange(float range,float desiredRange)
