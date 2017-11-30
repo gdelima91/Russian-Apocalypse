@@ -99,6 +99,8 @@ public class LERotationManager : MonoBehaviour {
             lookDir = lookPos - transform.position;
             lookDir.y = 0;
 
+            projec_Spawner.transform.LookAt(lookPos);
+
             transform.LookAt(transform.position + lookDir, Vector3.up);
         }
     }

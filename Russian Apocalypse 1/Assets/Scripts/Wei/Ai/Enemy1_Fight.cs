@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Enemy1_Fight : AiStateInterface<LE_Enemy1> {
 
+
     public static readonly Enemy1_Fight Instance = new Enemy1_Fight();
 
 
@@ -23,8 +24,11 @@ public class Enemy1_Fight : AiStateInterface<LE_Enemy1> {
         /*
          Shoot ..........
          */
+
+        
         
     }
+
 
     public override void Exit(LE_Enemy1 entity)
     {

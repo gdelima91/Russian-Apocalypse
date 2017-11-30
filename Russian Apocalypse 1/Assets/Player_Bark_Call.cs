@@ -20,7 +20,7 @@ public class Player_Bark_Call : MonoBehaviour {
     {
         int rng = Random.Range(0, 100);
 
-        if(rng > 50)
+        if(rng > 25)
         {
             pBM.PlayClip(PlayerBark_List.FolderName.OnEnemyKill);
         }
