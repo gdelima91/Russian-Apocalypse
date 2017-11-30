@@ -79,6 +79,10 @@ public abstract class StateMachineBase : MonoBehaviour
         transform.LookAt(currentTFTarget.position);
     }
 
+    public void Look_At_Target_XZ() {
+        transform.LookAt(new Vector3(currentTFTarget.position.x, transform.position.y, currentTFTarget.position.z));
+    }
+
     public bool Check_PositionWalkAble(Vector3 pos)
     {
        return transitionManager.SamplePosition(pos);

@@ -91,11 +91,13 @@ namespace V
                     projectilesRemainingInMag--;
                     nextShotTime = Time.time + msBetweenShots / 1000;
                     Projectile newProjectile = Instantiate(projectile, projectileSpawn[i].position, projectileSpawn[i].rotation) as Projectile;
+                    newProjectile.gameObject.layer = gameObject.layer;
                     newProjectile.SetSpeed(muzzleVelocity);
                 }
 
                 //Instantiate(shell, shellEjection.position, shellEjection.rotation);
-                muzzleflash.Activate();
+                if(muzzleflash!=null)
+                    muzzleflash.Activate();
 
                 //transform.localPosition -= Vector3.forward * Random.Range(kickMinMax.x, kickMinMax.y);
                 //recoilAngle += Random.Range(recoilAngleMinMax.x, recoilAngleMinMax.y);

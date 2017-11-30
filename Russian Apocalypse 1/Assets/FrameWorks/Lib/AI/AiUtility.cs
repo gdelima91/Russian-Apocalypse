@@ -321,7 +321,6 @@ namespace AiUtility{
             //get all Collider in View
             foreach (Collider c in allColliders)
             {
-
                 bool infieldOfView = Vector3.Angle(eye.forward, c.transform.position - eye.position) < viewAngle / 2;
                 if (!infieldOfView) continue;
                 T t = c.GetComponent<T>();

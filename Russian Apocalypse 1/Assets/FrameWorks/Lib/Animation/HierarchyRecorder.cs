@@ -1,7 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
+#if UNITY_EDITOR
 using UnityEditor;
+
+
 using UnityEditor.Experimental.Animations;
 
 public class HierarchyRecorder : MonoBehaviour
@@ -48,3 +52,4 @@ public class HierarchyRecorder : MonoBehaviour
         }
     }
 }
+#endif

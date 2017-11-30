@@ -49,7 +49,7 @@ public class LEInputableObjectManager : MonoBehaviour,LEEditorTimeAutoInitialize
     public void GetKey_B_Down() { if (inputableObject != null) inputableObject.Key_B_Down(); }
     public void GetKey_B_Up() { if (inputableObject != null) inputableObject.Key_B_Up(); }
 
-    public void Get_LeftMouse() { if (inputableObject != null) inputableObject.LeftMouse_On();}
+    public void Get_LeftMouse() { if (inputableObject != null) { inputableObject.LeftMouse_On(); } }
 
     public void ShutDown() { if (inputableObject != null) inputableObject.ShutDown();}
 
@@ -60,7 +60,7 @@ public class LEInputableObjectManager : MonoBehaviour,LEEditorTimeAutoInitialize
             inputableObject.ShutDown();
         inputableObject = client;
         inputableObject.Init(this);
-        inputableObject.SetUpLayer(gameObject.layer + 1);
+        inputableObject.SetUpLayer(gameObject.layer);
         SetUpOffset(client, client.IDType);
     }
 

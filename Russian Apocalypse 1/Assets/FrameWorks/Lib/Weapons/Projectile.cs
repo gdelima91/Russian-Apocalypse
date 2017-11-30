@@ -40,7 +40,11 @@ public class Projectile : MonoBehaviour
         if (physicsPros != null)
         {
             physicsPros.Recive_Damage(100);
-            collision.collider.GetComponent<HitmarkerPlayer>().PlayHitmarker();
+
+            if (collision.collider.GetComponent<HitmarkerPlayer>() != null) {
+                collision.collider.GetComponent<HitmarkerPlayer>().PlayHitmarker();
+            }
+            
         }
         Destroy(gameObject);
     }

@@ -87,7 +87,7 @@ public class LERotationManager : MonoBehaviour {
             //projec_Spawner.transform.rotation = Quaternion.Euler(new Vector3(0f, projec_Spawner.transform.eulerAngles.y, 0f));
             //projec_Spawner.transform.rotation = Quaternion.Euler(new Vector3(transform.rotation.x, angle, transform.rotation.z));
 
-            //Debug.DrawLine(Camera.main.transform.position, mousePos);
+
             ////print(angle);
             //Vector3 ballPos = mousePos;
             //ball.transform.position = ballPos;
@@ -96,12 +96,24 @@ public class LERotationManager : MonoBehaviour {
 
             lookPos = hit.point;
 
+            Debug.DrawLine(Camera.main.transform.position, lookPos);
             lookDir = lookPos - transform.position;
             lookDir.y = 0;
 
             projec_Spawner.transform.LookAt(lookPos);
 
+            //projec_Spawner.transform.LookAt();
             transform.LookAt(transform.position + lookDir, Vector3.up);
+
+            //Vector3 playerToMouse = hit.point - transform.position;
+            //playerToMouse.y = 0;
+
+            //Quaternion newRotation = Quaternion.LookRotation(playerToMouse);
+            //transform.rotation = newRotation;
+
+            //Debug.DrawLine(ray.origin, hit.point);
+
+            //ball.transform.position = hit.point;
         }
     }
 
