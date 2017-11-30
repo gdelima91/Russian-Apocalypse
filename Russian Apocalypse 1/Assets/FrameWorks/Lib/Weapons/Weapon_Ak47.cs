@@ -7,10 +7,11 @@ namespace V
 {
     public class Weapon_Ak47 : Gun
     {
+        public AudioClip gunShot;
 
         public override void Init(LEInputableObjectManager manager)
         {
-
+            GetComponentInParent<Gun>().shootAudio = gunShot;
         }
 
         public override void LeftMouse_On()

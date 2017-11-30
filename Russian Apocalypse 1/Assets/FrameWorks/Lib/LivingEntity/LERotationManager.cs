@@ -49,29 +49,43 @@ public class LERotationManager : MonoBehaviour {
     protected void Turn_To_MouseDir()
     {
         //Gavin Edit - bringing up ground plane to match with the gun's plane
-        
-
-        if (Input.GetMouseButton(0)) {
-            //Vector3 mousePos = V.MouseAndCamera.GetMouseGroundIntersectionPoint();
-
-            Plane groundPlane = new Plane(Vector3.up, gun.transform.position);
-            Vector3 mousePos;
 
 
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            float cameraToIntersectpointDst;
-            
 
-            if (groundPlane.Raycast(ray, out cameraToIntersectpointDst)) {
-                mousePos = ray.GetPoint(cameraToIntersectpointDst);
+        //Vector3 mousePos = V.MouseAndCamera.GetMouseGroundIntersectionPoint();
 
-                mousePos.y = projec_Spawner.transform.position.y;
-                SkeletonT.LookAt(mousePos);
-                projec_Spawner.transform.LookAt(mousePos);
-                Debug.DrawLine(Camera.main.transform.position, mousePos);
-                Debug.Log(mousePos);
-                ball.transform.position = mousePos;
-            }
+        Plane groundPlane = new Plane(Vector3.up, Vector3.zero);
+        float rayLength;
+        Vector3 mousePos;
+        Vector3 objectPos;
+        Vector3 vec3;
+        float angle;
+
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+        if (groundPlane.Raycast(ray, out rayLength)) {
+            mousePos = ray.GetPoint(rayLength);
+
+            objectPos = transform.position;
+
+            vec3.x = mousePos.x - objectPos.x;
+            vec3.z = mousePos.z - objectPos.z;
+
+            angle = Mathf.Atan2(vec3.x, vec3.z) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Euler(new Vector3(transform.rotation.x, angle, transform.rotation.z));
+
+            //transform.LookAt(new Vector3(mousePos.x, transform.position.y, mousePos.z));
+
+            //projec_Spawner.transform.LookAt(projLook);
+
+            //projec_Spawner.transform.rotation = Quaternion.Euler(new Vector3(0f, projec_Spawner.transform.eulerAngles.y, 0f));
+            projec_Spawner.transform.rotation = Quaternion.Euler(new Vector3(transform.rotation.x, angle, transform.rotation.z));
+
+            Debug.DrawLine(Camera.main.transform.position, mousePos);
+            print(angle);
+            Vector3 ballPos = mousePos - objectPos;
+            ball.transform.position = ballPos;
+
         }
     }
 
