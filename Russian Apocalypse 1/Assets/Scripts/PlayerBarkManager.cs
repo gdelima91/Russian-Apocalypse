@@ -51,7 +51,7 @@ public class PlayerBarkManager : MonoBehaviour {
 
     }
 
-    void PlayClip (PlayerBark_List.FolderName folderInt) {
+    public void PlayClip (PlayerBark_List.FolderName folderInt) {
         if (canPlay)
         {
             canPlay = false;

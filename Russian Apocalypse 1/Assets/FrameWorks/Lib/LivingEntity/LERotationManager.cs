@@ -61,31 +61,45 @@ public class LERotationManager : MonoBehaviour {
         Vector3 vec3;
         float angle;
 
+        RaycastHit hit;
+        Vector3 lookPos;
+        Vector3 lookDir;
+
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-        if (groundPlane.Raycast(ray, out rayLength)) {
-            mousePos = ray.GetPoint(rayLength);
+        if (Physics.Raycast(ray, out hit, 100)) {
+            //mousePos = ray.GetPoint(rayLength);
 
-            objectPos = transform.position;
+            //objectPos = transform.position;
 
-            vec3.x = mousePos.x - objectPos.x;
-            vec3.z = mousePos.z - objectPos.z;
+            //vec3.x = mousePos.x - objectPos.x;
+            //vec3.z = mousePos.z - objectPos.z;
 
-            angle = Mathf.Atan2(vec3.x, vec3.z) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.Euler(new Vector3(transform.rotation.x, angle, transform.rotation.z));
+            //angle = Mathf.Atan2(vec3.x, vec3.z) * Mathf.Rad2Deg;
+            //transform.rotation = Quaternion.Euler(new Vector3(transform.rotation.x, angle, transform.rotation.z));
 
-            //transform.LookAt(new Vector3(mousePos.x, transform.position.y, mousePos.z));
+            //mousePos.y = projec_Spawner.transform.position.y;
+
+
 
             //projec_Spawner.transform.LookAt(projLook);
 
             //projec_Spawner.transform.rotation = Quaternion.Euler(new Vector3(0f, projec_Spawner.transform.eulerAngles.y, 0f));
-            projec_Spawner.transform.rotation = Quaternion.Euler(new Vector3(transform.rotation.x, angle, transform.rotation.z));
+            //projec_Spawner.transform.rotation = Quaternion.Euler(new Vector3(transform.rotation.x, angle, transform.rotation.z));
 
-            Debug.DrawLine(Camera.main.transform.position, mousePos);
-            print(angle);
-            Vector3 ballPos = mousePos - objectPos;
-            ball.transform.position = ballPos;
+            //Debug.DrawLine(Camera.main.transform.position, mousePos);
+            ////print(angle);
+            //Vector3 ballPos = mousePos;
+            //ball.transform.position = ballPos;
+            //transform.LookAt(new Vector3(ball.transform.position.x, transform.position.y, ball.transform.position.z));
 
+
+            lookPos = hit.point;
+
+            lookDir = lookPos - transform.position;
+            lookDir.y = 0;
+
+            transform.LookAt(transform.position + lookDir, Vector3.up);
         }
     }
 

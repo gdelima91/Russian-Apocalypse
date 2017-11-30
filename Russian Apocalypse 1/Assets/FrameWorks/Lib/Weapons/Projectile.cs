@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
+using System;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Projectile : MonoBehaviour
 {
@@ -38,8 +40,9 @@ public class Projectile : MonoBehaviour
         if (physicsPros != null)
         {
             physicsPros.Recive_Damage(100);
-            Destroy(gameObject);
+            collision.collider.GetComponent<HitmarkerPlayer>().PlayHitmarker();
         }
+        Destroy(gameObject);
     }
 
 }

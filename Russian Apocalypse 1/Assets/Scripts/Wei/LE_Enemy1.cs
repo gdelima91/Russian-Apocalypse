@@ -21,7 +21,7 @@ public class LE_Enemy1 : LEMainBase {
     public override bool Damage(float number)
     {
         health -= number;
-        if (health < 0) { Die(); }
+        if (health <= 0) { Die(); }
         return false;
     }
 
