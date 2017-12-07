@@ -71,43 +71,43 @@ namespace V
         void StandaredKeyInput()
         {
 
-            if (Input.GetMouseButtonDown(0))
-            {
-                inputClientManager.GetKey_A_Down();
-            }
+            //if (Input.GetMouseButtonDown(0))
+            //{
+            //    inputClientManager.GetKey_A_Down();
+            //}
 
-            if (Input.GetMouseButton(0))
-            {
-                inputClientManager.Get_LeftMouse();
-            }
+            //if (Input.GetMouseButton(0))
+            //{
+            //    inputClientManager.Get_LeftMouse();
+            //}
 
-            if (Input.GetMouseButtonUp(0))
-            {
-                inputClientManager.GetKey_A_Up();
-            }
+            //if (Input.GetMouseButtonUp(0))
+            //{
+            //    inputClientManager.GetKey_A_Up();
+            //}
 
-            if (Input.GetKeyDown(Key_B))
-            {
-                inputClientManager.GetKey_B_Down();
-            }
+            //if (Input.GetKeyDown(Key_B))
+            //{
+            //    inputClientManager.GetKey_B_Down();
+            //}
 
-            if (Input.GetKeyDown(KeyCode.I))
-            {
-                GameUIPr.Instance.InventoryPanelEvent();
-            }
+            //if (Input.GetKeyDown(KeyCode.I))
+            //{
+            //    GameUIPr.Instance.InventoryPanelEvent();
+            //}
         }
 
         void CrossPlatformButtonInput()
         {
-            if (CrossPlatformInputManager.GetButton(fireButton))
-            {
-                inputClientManager.GetKey_A();
-            }
+            //if (CrossPlatformInputManager.GetButton(fireButton))
+            //{
+            //    inputClientManager.GetKey_A();
+            //}
 
-            if (CrossPlatformInputManager.GetButtonUp(fireButton))
-            {
-                inputClientManager.GetKey_A_Up();
-            }
+            //if (CrossPlatformInputManager.GetButtonUp(fireButton))
+            //{
+            //    inputClientManager.GetKey_A_Up();
+            //}
         }
     }
 

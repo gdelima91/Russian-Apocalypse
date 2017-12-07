@@ -10,6 +10,10 @@ public class LE_Enemy1 : LEMainBase {
     public GameObject ragDoll;
     public GameObject blood;
 
+    void Start() {
+        Debug.Log(transform.position);
+    }
+
     public override void Dispatch_Animation_Message(AnimationMessageType messageType, object messageValue)
     {
        

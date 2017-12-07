@@ -19,7 +19,7 @@ public class LETransiationManager : MonoBehaviour {
     private Vector3 transitionVH;
 
    
-    NavMeshAgent navMeshAgent;
+    public NavMeshAgent navMeshAgent;
     [HideInInspector] public NavMeshHit hit = new NavMeshHit();
 
     private void Start()
@@ -45,7 +45,7 @@ public class LETransiationManager : MonoBehaviour {
 
     public void UpdateNaveMeshAngent()
     {
-        if (navMeshAgent == null) { navMeshAgent = GetComponent<NavMeshAgent>(); if (navMeshAgent == null) { Debug.LogError("Game Object Dont have NaveMeshAgent Component"); return; } }
+       // if (navMeshAgent == null) { navMeshAgent = GetComponent<NavMeshAgent>(); if (navMeshAgent == null) { Debug.LogError("Game Object Dont have NaveMeshAgent Component"); return; } }
     }
 
     public void UpdateTransitionBasedOn_Camera_Forward(V.LEUserInput input)

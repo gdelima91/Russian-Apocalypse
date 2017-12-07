@@ -9,21 +9,13 @@ namespace V
     {
         public AudioClip gunShot;
 
-        public override void Init(LEInputableObjectManager manager)
-        {
-            GetComponentInParent<Gun>().shootAudio = gunShot;
+        void Update() {
+            if (Input.GetMouseButton(0)) {
+                OnTriggerHold();
+            }
+            if (Input.GetMouseButtonUp(0)) {
+                OnTriggerRelease();
+            }
         }
-
-        public override void LeftMouse_On()
-        {
-            OnTriggerHold();
-        }
-
-        public override void LeftMouse_Up()
-        {
-            OnTriggerRelease();
-        }
-
-        public override System.Type IDType { get { return typeof(Weapon_Ak47); } }
     }
 }
