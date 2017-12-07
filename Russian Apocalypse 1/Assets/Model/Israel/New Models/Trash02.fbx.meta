@@ -12,6 +12,7 @@ ModelImporter:
     2300000: LitterPile_C_LOD3
     3300000: LitterPile_C_LOD3
     4300000: LitterPile_C_LOD3
+    6400000: LitterPile_C_LOD3
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -49,7 +50,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
