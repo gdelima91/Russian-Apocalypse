@@ -25,7 +25,7 @@ public class Enemy1_Fight : AiStateInterface<LE_Enemy1> {
         /*
          Shoot ..........
          */
-        stateMachine.GetComponent<LEInputableObjectManager>().Get_LeftMouse();
+        stateMachine.gun.OnTriggerHold();
 
         
         

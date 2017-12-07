@@ -16,6 +16,8 @@ public class Enemy1_Partrol : AiStateInterface<LE_Enemy1>  {
         Enemy1_StateMachine stateMachine = entity.StateMachine as Enemy1_StateMachine;
         stateMachine.Anima_Set_Float("Speed Z", 1.0f);
 
+        if (TempManager.Instance.playerCollider != null)
+            stateMachine.Set_Nav_Destination(TempManager.Instance.playerCollider.transform.position);
     }
 
     public override void Execute(LE_Enemy1 entity)
@@ -39,14 +41,15 @@ public class Enemy1_Partrol : AiStateInterface<LE_Enemy1>  {
             return;
         }
 
-        if (stateMachine.Check_ArriveDestination_NotPathPending())
-        {
+        if (stateMachine.Check_ArriveDestination_NotPathPending()) {
             Vector3 pos = stateMachine.Get_RandomPosXZ_BasedOnCurrentPos(-20, 20);
             bool walkable = stateMachine.Check_PositionWalkAble(pos);
+            Debug.Log(walkable);
             if (walkable) {
                 GizmosDebuger.Instance.spherePos = pos;
                 stateMachine.Set_Nav_Destination(pos);
             }
+
         }
     }
 

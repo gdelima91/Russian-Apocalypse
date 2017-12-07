@@ -22,6 +22,9 @@ public class BloodFX : MonoBehaviour {
         if (collision.gameObject.layer == 10) {
             print("Hit");
             Instantiate(blood, transform.position, transform.rotation);
+
+            collision.gameObject.GetComponent<Rigidbody>().AddForce(gameObject.GetComponent<Rigidbody>().velocity * 10);
+            //collision.gameObject.GetComponent<Rigidbody>().AddForce(collision.collider.GetComponent<Rigidbody>().velocity * 10);
         }
     }
 }

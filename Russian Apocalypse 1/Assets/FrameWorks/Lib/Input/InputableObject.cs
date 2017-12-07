@@ -7,7 +7,7 @@ public abstract class InputableObject : MonoBehaviour {
 
     public abstract void Init(LEInputableObjectManager manager);
     public abstract System.Type IDType { get; }
-    public void ShutDown() { }
+    public virtual void ShutDown() { }
     public void SetUpLayer(int layer) { }
     public void DisableCollision() { }
     public void EnableCollision() { }
@@ -48,7 +48,7 @@ public abstract class InputableObject : MonoBehaviour {
         }
         else
         {
-            manager.Record_IAO_Offset_Info(IDType, transform.localPosition, transform.localRotation);
+            //manager.Record_IAO_Offset_Info(IDType, transform.localPosition, transform.localRotation);
         }
     }
 }

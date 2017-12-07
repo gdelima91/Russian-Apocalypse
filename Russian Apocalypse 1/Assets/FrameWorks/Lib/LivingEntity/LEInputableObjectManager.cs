@@ -9,118 +9,136 @@ using System.Linq;
 //Will shoot the gun, and use the shot animation....When the inputActionClient is a 
 //sword, the LEEntity will play sword animation
 //
-public class LEInputableObjectManager : MonoBehaviour,LEEditorTimeAutoInitializer {
+public class LEInputableObjectManager : MonoBehaviour {
 
-    public List<IAO_Offset_Info> iao_Offset_info = new List<IAO_Offset_Info>();
+    //public List<IAO_Offset_Info> iao_Offset_info = new List<IAO_Offset_Info>();
 
-    protected Transform rightHandTF;
-    private LEAnimatorManager animationManager;
+    //protected Transform rightHandTF;
+    //private LEAnimatorManager animationManager;
 
-    public InputableObject initInputObject;
+    //public int index = 0;
+    //public InputableObject[] initInputObjects;
 
-    InputableObject inputableObject;
-    public int actionItemPhycislayer = 0;
+    //InputableObject inputableObject;
+    //public int actionItemPhycislayer = 0;
 
-    private void Start()
-    {
-        if (initInputObject != null) { ResetClient(initInputObject); }
-    }
+    //private void Start()
+    //{
+    //    if (initInputObjects.Length > 0 ) { ResetClient(initInputObjects[0]); }
+    //}
 
-    protected virtual void OnEnable()
-    {
-        RightHandHolder righthand = GetComponentInChildren<RightHandHolder>();
-        if (righthand != null)
-        {
-            rightHandTF = righthand.transform;
-        }
-        animationManager = GetComponent<LEAnimatorManager>();
-    }
+    //protected virtual void OnEnable()
+    //{
+    //    RightHandHolder righthand = GetComponentInChildren<RightHandHolder>();
+    //    if (righthand != null)
+    //    {
+    //        rightHandTF = righthand.transform;
+    //    }
+    //    animationManager = GetComponent<LEAnimatorManager>();
+    //}
 
-    private void LateUpdate()
-    {
+    //private void LateUpdate()
+    //{
         
-    }
+    //}
 
-    public void GetKey_A() {if (inputableObject != null) inputableObject.Key_A_On(); }
-    public void GetKey_A_Down() { if (inputableObject != null) inputableObject.Key_A_Down(); }
-    public void GetKey_A_Up() { if (inputableObject != null) inputableObject.Key_A_Up(); }
+    //public void Update() {
+    //    if (Input.GetMouseButtonDown(1)) {
+    //        NextWeapon();
+    //    }
+    //}
 
-    public void GetKey_B() { if (inputableObject != null) inputableObject.Key_B_On(); }
-    public void GetKey_B_Down() { if (inputableObject != null) inputableObject.Key_B_Down(); }
-    public void GetKey_B_Up() { if (inputableObject != null) inputableObject.Key_B_Up(); }
+    //public void NextWeapon() {
+        
+    //    ResetClient(initInputObjects[index]);
 
-    public void Get_LeftMouse() { if (inputableObject != null) { inputableObject.LeftMouse_On(); } }
+    //}
 
-    public void ShutDown() { if (inputableObject != null) inputableObject.ShutDown();}
+    //public void GetKey_A() {if (inputableObject != null) inputableObject.Key_A_On(); }
+    //public void GetKey_A_Down() { if (inputableObject != null) inputableObject.Key_A_Down(); }
+    //public void GetKey_A_Up() { if (inputableObject != null) inputableObject.Key_A_Up(); }
 
-    //Reset InputAction Client and Init the Client.
-    public void ResetClient(InputableObject client)
-    {
-        if(inputableObject!=null)
-            inputableObject.ShutDown();
-        inputableObject = client;
-        inputableObject.Init(this);
-        inputableObject.SetUpLayer(gameObject.layer);
-        SetUpOffset(client, client.IDType);
-    }
+    //public void GetKey_B() { if (inputableObject != null) inputableObject.Key_B_On(); }
+    //public void GetKey_B_Down() { if (inputableObject != null) inputableObject.Key_B_Down(); }
+    //public void GetKey_B_Up() { if (inputableObject != null) inputableObject.Key_B_Up(); }
 
-    //InputableObject Call those Functions and Fields----
-    public void ChangeAnimationMotionType(LEAnimatorManager.AnimationMotionType type)
-    {
-        animationManager.SetMotionType(type);
-    }
+    //public void Get_LeftMouse() { if (inputableObject != null) { inputableObject.LeftMouse_On(); } }
 
-    public Transform RightHand { get { return rightHandTF; } }
+    //public void ShutDown() { if (inputableObject != null) inputableObject.ShutDown();}
 
-    public LEAnimatorManager AnimationManager { get { return animationManager; } }
+    ////Reset InputAction Client and Init the Client.
+    //public void ResetClient(InputableObject client)
+    //{
+    //    if (client == null) { return; }
+    //    client.gameObject.SetActive(true);
+    //    if(inputableObject!=null)
+    //        inputableObject.ShutDown();
+    //    inputableObject = client;
+    //    inputableObject.Init(this);
+    //    inputableObject.SetUpLayer(gameObject.layer);
+    //    SetUpOffset(client, client.IDType);
 
-    /// <summary>
-    /// This function should be called at Editor time.......To optimize Some Of the Initalization.
-    /// Especially for the Function GetComponentInChildren<T> inside the Awake,or Start
-    /// </summary>
-    [ContextMenu("Manual_Init_InputableObject")]
-    void Manual_Init_InputableObject()
-    {
-        initInputObject = GetComponentInChildren<InputableObject>();
-    }
+    //    index++;
+    //    index %= initInputObjects.Length;
+    //}
 
-    public void ET_Init()
-    {
-        initInputObject = GetComponentInChildren<InputableObject>();
-    }
+    ////InputableObject Call those Functions and Fields----
+    //public void ChangeAnimationMotionType(LEAnimatorManager.AnimationMotionType type)
+    //{
+    //    animationManager.SetMotionType(type);
+    //}
 
-    public void Record_IAO_Offset_Info(System.Type type, Vector3 pos, Quaternion rot)
-    {
-        if (iao_Offset_info.Count > 0)
-        {
-            IAO_Offset_Info info = iao_Offset_info.First(i => i.IAOType == type.ToString());
-            if (info != null)
-            {
-                info.posOffset = pos;
-                info.rotOffset = rot;
-            }
-            else
-            {
-                iao_Offset_info.Add(new IAO_Offset_Info(type, pos, rot));
-            }
-        }
-        else {
-            iao_Offset_info.Add(new IAO_Offset_Info(type, pos, rot));
-        }
-    }
+    //public Transform RightHand { get { return rightHandTF; } }
 
-    void SetUpOffset(InputableObject obj,System.Type type)
-    {
-        if (iao_Offset_info.Count > 0)
-        {
-            IAO_Offset_Info info = iao_Offset_info.First(i => i.IAOType == type.ToString());
-            if (info != null)
-            {
-                obj.transform.localPosition = info.posOffset ;
-                obj.transform.localRotation = info.rotOffset;
-            }
-        }
-    }
+    //public LEAnimatorManager AnimationManager { get { return animationManager; } }
+
+    ///// <summary>
+    ///// This function should be called at Editor time.......To optimize Some Of the Initalization.
+    ///// Especially for the Function GetComponentInChildren<T> inside the Awake,or Start
+    ///// </summary>
+    //[ContextMenu("Manual_Init_InputableObject")]
+    //void Manual_Init_InputableObject()
+    //{
+    //    initInputObjects[0] = GetComponentInChildren<InputableObject>();
+    //}
+
+    //public void ET_Init()
+    //{
+    //    initInputObjects[0] = GetComponentInChildren<InputableObject>();
+    //}
+
+    //public void Record_IAO_Offset_Info(System.Type type, Vector3 pos, Quaternion rot)
+    //{
+    //    if (iao_Offset_info.Count > 0)
+    //    {
+    //        IAO_Offset_Info info = iao_Offset_info.First(i => i.IAOType == type.ToString());
+    //        if (info != null)
+    //        {
+    //            info.posOffset = pos;
+    //            info.rotOffset = rot;
+    //        }
+    //        else
+    //        {
+    //            iao_Offset_info.Add(new IAO_Offset_Info(type, pos, rot));
+    //        }
+    //    }
+    //    else {
+    //        iao_Offset_info.Add(new IAO_Offset_Info(type, pos, rot));
+    //    }
+    //}
+
+    //void SetUpOffset(InputableObject obj,System.Type type)
+    //{
+    //    if (iao_Offset_info.Count > 0)
+    //    {
+    //        IAO_Offset_Info info = iao_Offset_info.First(i => i.IAOType == type.ToString());
+    //        if (info != null)
+    //        {
+    //            obj.transform.localPosition = info.posOffset ;
+    //            obj.transform.localRotation = info.rotOffset;
+    //        }
+    //    }
+    //}
 }
 
 //this class contains the offset information.
