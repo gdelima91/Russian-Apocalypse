@@ -37,6 +37,7 @@ public class CursorManager : MonoBehaviour {
 
     public void setHand()
     {
+        Debug.Log("Set Hand CursorManager");
         Cursor.SetCursor(hand, hotSpot, cursorMode);
     }
 

@@ -88,7 +88,7 @@ namespace V
                     {
                         break;
                     }
-                    projectilesRemainingInMag--;
+                    //projectilesRemainingInMag--;
                     nextShotTime = Time.time + msBetweenShots / 1000;
                     Projectile newProjectile = Instantiate(projectile, projectileSpawn[i].position, projectileSpawn[i].rotation) as Projectile;
                     newProjectile.gameObject.layer = gameObject.layer;

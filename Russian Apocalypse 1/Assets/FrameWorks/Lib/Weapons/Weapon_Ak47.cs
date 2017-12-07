@@ -17,7 +17,6 @@ namespace V
         public override void LeftMouse_On()
         {
             OnTriggerHold();
-            
         }
 
         public override void LeftMouse_Up()

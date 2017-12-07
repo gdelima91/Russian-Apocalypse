@@ -54,16 +54,16 @@ public class LERotationManager : MonoBehaviour {
 
         //Vector3 mousePos = V.MouseAndCamera.GetMouseGroundIntersectionPoint();
 
-        Plane groundPlane = new Plane(Vector3.up, Vector3.zero);
-        float rayLength;
-        Vector3 mousePos;
-        Vector3 objectPos;
-        Vector3 vec3;
-        float angle;
+        Plane groundPlane = new Plane(Vector3.up, transform.position);
+        //float rayLength;
+        //Vector3 mousePos;
+        //Vector3 objectPos;
+        //Vector3 vec3;
+        //float angle;
 
         RaycastHit hit;
         Vector3 lookPos;
-        Vector3 lookDir;
+        //Vector3 lookDir;
 
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
@@ -96,14 +96,26 @@ public class LERotationManager : MonoBehaviour {
 
             lookPos = hit.point;
 
-            Debug.DrawLine(Camera.main.transform.position, lookPos);
-            lookDir = lookPos - transform.position;
-            lookDir.y = 0;
+            Debug.DrawLine(Camera.main.transform.position, lookPos,Color.red);
+            //lookDir = lookPos - transform.position;
+            //lookDir.y = 0;
 
-            projec_Spawner.transform.LookAt(lookPos);
+            //projec_Spawner.transform.LookAt(lookPos);
 
             //projec_Spawner.transform.LookAt();
-            transform.LookAt(transform.position + lookDir, Vector3.up);
+            //transform.LookAt(transform.position + lookDir, Vector3.up);
+            LE_Enemy1 enemy = V.VPhysics.RaycastExtention.If_Collision_FromAtoB<LE_Enemy1>(Camera.main.transform.position, lookPos);
+            if (enemy != null)
+            {
+                transform.LookAt(new Vector3(enemy.transform.position.x, transform.position.y, enemy.transform.position.z));
+                projec_Spawner.transform.LookAt(new Vector3(enemy.transform.position.x, projec_Spawner.transform.position.y, enemy.transform.position.z));
+            }
+            else
+            {
+
+                transform.LookAt(new Vector3(lookPos.x, transform.position.y, lookPos.z));
+                projec_Spawner.transform.LookAt(new Vector3(lookPos.x, projec_Spawner.transform.position.y, lookPos.z));
+            }
 
             //Vector3 playerToMouse = hit.point - transform.position;
             //playerToMouse.y = 0;
@@ -115,6 +127,12 @@ public class LERotationManager : MonoBehaviour {
 
             //ball.transform.position = hit.point;
         }
+    }
+
+    protected void Turn_To_MouseDir2()
+    {
+       
+
     }
 
     //When player press W the character will move forwad direction of the camera

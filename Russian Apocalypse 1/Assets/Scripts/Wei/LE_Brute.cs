@@ -9,7 +9,8 @@ public class LE_Brute : LEMainBase {
     V.LEUserInput userInput;
     V.LECameraManager cameraManager;
 
-    public float health = 500f;
+    public float currentHealth = 500f;
+    public float maxHealth = 1000f;
    
 
     private void Start()
@@ -37,8 +38,8 @@ public class LE_Brute : LEMainBase {
        
     }
     public override bool Damage(float number) {
-        health -= number;
-        if (health <= 0) {
+        currentHealth -= number;
+        if (currentHealth <= 0) {
             GameObject obj = new GameObject();
             obj.AddComponent<Camera>();
             obj.transform.position = cameraManager.CurrentCamera.Transform.position;
