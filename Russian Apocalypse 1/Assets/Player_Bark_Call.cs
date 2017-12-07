@@ -18,13 +18,14 @@ public class Player_Bark_Call : MonoBehaviour {
 
     void OnDestroy ()
     {
-        int rng = Random.Range(0, 100);
+        //Note:  When OnDestroy get called.
+        //       pBM will also be release from the memory.....
+        
+        //int rng = Random.Range(0, 100);
 
-        if(rng > 25)
-        {
-            pBM.PlayClip(PlayerBark_List.FolderName.OnEnemyKill);
-        }
-        
-        
+        //if(rng > 25)
+        //{
+        //    pBM.PlayClip(PlayerBark_List.FolderName.OnEnemyKill);
+        //}  
     }
 }

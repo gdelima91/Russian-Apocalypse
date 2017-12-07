@@ -29,16 +29,16 @@ public class LE_Enemy1 : LEMainBase {
 
     public void Die()
     {
-
+        GameObject deadRagDoll = Instantiate(ragDoll, transform.position, transform.rotation);
         //GameObject cube = Instantiate(GameObject.CreatePrimitive(PrimitiveType.Cube),transform.position,transform.rotation);
         Instantiate(blood, transform.position, transform.rotation);
         Destroy(gameObject);
         
-        
+
     }
 
     private void OnDestroy() {
-        GameObject deadRagDoll = Instantiate(ragDoll, transform.position, transform.rotation);
+       
         //deadRagDoll.transform.parent = null;
     }
 

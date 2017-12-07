@@ -21,7 +21,7 @@ public class EnemySpawner : MonoBehaviour {
 
     void SpawnEnemy () {
         GameObject enemy1 = Instantiate(enemyToSpawn, transform.position, transform.rotation) as GameObject;
-        enemy1.GetComponent<Enemy1_StateMachine>().currentTFTarget = player.transform;
+        //enemy1.GetComponent<Enemy1_StateMachine>().currentTFTarget = player.transform;
         StartCoroutine("SpawnTimer");
     }
 

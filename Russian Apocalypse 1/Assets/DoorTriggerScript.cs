@@ -21,7 +21,7 @@ public class DoorTriggerScript : MonoBehaviour {
 	}
 
     private void OnTriggerEnter(Collider other) {
-        print(other.name);
+        //print(other.name);
         if (other.gameObject.layer == LayerMask.NameToLayer ("Player") && other.name == "Wei_Player") {
             if (frontTrigger) {
                 doorScript.OpenDoor(DoorScript.Triggers.Front);

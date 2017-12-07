@@ -9,13 +9,20 @@ public class CursorOnObj : MonoBehaviour {
 
     void OnMouseEnter()
     {
-        if(type == MouseActionType.PickUp)
+        Debug.Log("Cursor Enter");
+
+        if (type == MouseActionType.PickUp)
             CursorManager.GetInstance().setHand();
         if (type == MouseActionType.Eney)
             CursorManager.GetInstance().setAttack();
     }
 
     void OnMouseExit()
+    {
+        CursorManager.GetInstance().setMouse();
+    }
+
+    private void OnDestroy()
     {
         CursorManager.GetInstance().setMouse();
     }

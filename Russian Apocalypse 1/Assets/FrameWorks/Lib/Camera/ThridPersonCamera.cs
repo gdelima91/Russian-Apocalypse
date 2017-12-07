@@ -45,7 +45,7 @@ namespace V
             if (head != null) {referencelocalPos = head.transform.position - target.position;}
             else
             {
-                Debug.Log("Find Target with Animator");
+                //Debug.Log("Find Target with Animator");
                 referencelocalPos = transform.root.GetComponentInChildren<Animator>().transform.position - target.position;
             }
         }
