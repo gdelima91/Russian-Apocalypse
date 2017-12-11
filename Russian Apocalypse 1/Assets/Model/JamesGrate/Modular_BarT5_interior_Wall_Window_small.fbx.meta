@@ -1,0 +1,665 @@
+fileFormatVersion: 2
+guid: b7b933872bf9c7147ad487ccaccee8d0
+timeCreated: 1512966052
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: BarT5_interior_wall_Door3
+    100002: BarT5_interior_wall_windowed1
+    100004: BarT5_interior_wall_windowed1 1
+    100006: BarT5_interior_wall_windowed2
+    100008: BarT5_Wall5
+    100010: Modular_BarT5_Interior_Wall_BarT5_interior_wall_windowed2
+    100012: Modular_BarT5_Interior_Wall_door_BarT5_interior_wall_Door3
+    100014: Modular_BarT5_Interior_Wall_door_BarT5_interior_wall_windowed2
+    100016: Modular_BarT5_Interior_Wall_door_Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket
+    100018: Modular_BarT5_Interior_Wall_door_Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket1
+    100020: Modular_BarT5_Interior_Wall_door_Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket10
+    100022: Modular_BarT5_Interior_Wall_door_Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket11
+    100024: Modular_BarT5_Interior_Wall_door_Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket12
+    100026: Modular_BarT5_Interior_Wall_door_Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket13
+    100028: Modular_BarT5_Interior_Wall_door_Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket14
+    100030: Modular_BarT5_Interior_Wall_door_Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket15
+    100032: Modular_BarT5_Interior_Wall_door_Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket16
+    100034: Modular_BarT5_Interior_Wall_door_Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket17
+    100036: Modular_BarT5_Interior_Wall_door_Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket18
+    100038: Modular_BarT5_Interior_Wall_door_Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket19
+    100040: Modular_BarT5_Interior_Wall_door_Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket2
+    100042: Modular_BarT5_Interior_Wall_door_Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket20
+    100044: Modular_BarT5_Interior_Wall_door_Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket21
+    100046: Modular_BarT5_Interior_Wall_door_Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket22
+    100048: Modular_BarT5_Interior_Wall_door_Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket23
+    100050: Modular_BarT5_Interior_Wall_door_Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket24
+    100052: Modular_BarT5_Interior_Wall_door_Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket3
+    100054: Modular_BarT5_Interior_Wall_door_Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket4
+    100056: Modular_BarT5_Interior_Wall_door_Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket5
+    100058: Modular_BarT5_Interior_Wall_door_Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket6
+    100060: Modular_BarT5_Interior_Wall_door_Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket7
+    100062: Modular_BarT5_Interior_Wall_door_Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket8
+    100064: Modular_BarT5_Interior_Wall_door_Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket9
+    100066: Modular_BarT5_Interior_Wall_door_Modular_BarT5_Interior_Wall_windowed_pCube1
+    100068: Modular_BarT5_Interior_Wall_door_Modular_BarT5_Interior_Wall_windowed_pCube2
+    100070: Modular_BarT5_Interior_Wall_door_Modular_BarT5_Interior_Wall_windowed_pCube3
+    100072: Modular_BarT5_Interior_Wall_door_Modular_BarT5_wallBracket
+    100074: Modular_BarT5_Interior_Wall_door_Modular_BarT5_wallBracket1
+    100076: Modular_BarT5_Interior_Wall_door_Modular_BarT5_wallBracket10
+    100078: Modular_BarT5_Interior_Wall_door_Modular_BarT5_wallBracket11
+    100080: Modular_BarT5_Interior_Wall_door_Modular_BarT5_wallBracket12
+    100082: Modular_BarT5_Interior_Wall_door_Modular_BarT5_wallBracket13
+    100084: Modular_BarT5_Interior_Wall_door_Modular_BarT5_wallBracket14
+    100086: Modular_BarT5_Interior_Wall_door_Modular_BarT5_wallBracket15
+    100088: Modular_BarT5_Interior_Wall_door_Modular_BarT5_wallBracket16
+    100090: Modular_BarT5_Interior_Wall_door_Modular_BarT5_wallBracket17
+    100092: Modular_BarT5_Interior_Wall_door_Modular_BarT5_wallBracket18
+    100094: Modular_BarT5_Interior_Wall_door_Modular_BarT5_wallBracket19
+    100096: Modular_BarT5_Interior_Wall_door_Modular_BarT5_wallBracket2
+    100098: Modular_BarT5_Interior_Wall_door_Modular_BarT5_wallBracket20
+    100100: Modular_BarT5_Interior_Wall_door_Modular_BarT5_wallBracket21
+    100102: Modular_BarT5_Interior_Wall_door_Modular_BarT5_wallBracket22
+    100104: Modular_BarT5_Interior_Wall_door_Modular_BarT5_wallBracket23
+    100106: Modular_BarT5_Interior_Wall_door_Modular_BarT5_wallBracket24
+    100108: Modular_BarT5_Interior_Wall_door_Modular_BarT5_wallBracket3
+    100110: Modular_BarT5_Interior_Wall_door_Modular_BarT5_wallBracket4
+    100112: Modular_BarT5_Interior_Wall_door_Modular_BarT5_wallBracket5
+    100114: Modular_BarT5_Interior_Wall_door_Modular_BarT5_wallBracket6
+    100116: Modular_BarT5_Interior_Wall_door_Modular_BarT5_wallBracket7
+    100118: Modular_BarT5_Interior_Wall_door_Modular_BarT5_wallBracket8
+    100120: Modular_BarT5_Interior_Wall_door_Modular_BarT5_wallBracket9
+    100122: Modular_BarT5_Interior_Wall_door_pCube1
+    100124: Modular_BarT5_Interior_Wall_door_pCube2
+    100126: Modular_BarT5_Interior_Wall_door_pCube3
+    100128: Modular_BarT5_Interior_Wall_Modular_BarT5_wallBracket
+    100130: Modular_BarT5_Interior_Wall_Modular_BarT5_wallBracket1
+    100132: Modular_BarT5_Interior_Wall_Modular_BarT5_wallBracket10
+    100134: Modular_BarT5_Interior_Wall_Modular_BarT5_wallBracket11
+    100136: Modular_BarT5_Interior_Wall_Modular_BarT5_wallBracket12
+    100138: Modular_BarT5_Interior_Wall_Modular_BarT5_wallBracket13
+    100140: Modular_BarT5_Interior_Wall_Modular_BarT5_wallBracket14
+    100142: Modular_BarT5_Interior_Wall_Modular_BarT5_wallBracket15
+    100144: Modular_BarT5_Interior_Wall_Modular_BarT5_wallBracket16
+    100146: Modular_BarT5_Interior_Wall_Modular_BarT5_wallBracket17
+    100148: Modular_BarT5_Interior_Wall_Modular_BarT5_wallBracket18
+    100150: Modular_BarT5_Interior_Wall_Modular_BarT5_wallBracket19
+    100152: Modular_BarT5_Interior_Wall_Modular_BarT5_wallBracket2
+    100154: Modular_BarT5_Interior_Wall_Modular_BarT5_wallBracket20
+    100156: Modular_BarT5_Interior_Wall_Modular_BarT5_wallBracket21
+    100158: Modular_BarT5_Interior_Wall_Modular_BarT5_wallBracket22
+    100160: Modular_BarT5_Interior_Wall_Modular_BarT5_wallBracket23
+    100162: Modular_BarT5_Interior_Wall_Modular_BarT5_wallBracket24
+    100164: Modular_BarT5_Interior_Wall_Modular_BarT5_wallBracket3
+    100166: Modular_BarT5_Interior_Wall_Modular_BarT5_wallBracket4
+    100168: Modular_BarT5_Interior_Wall_Modular_BarT5_wallBracket5
+    100170: Modular_BarT5_Interior_Wall_Modular_BarT5_wallBracket6
+    100172: Modular_BarT5_Interior_Wall_Modular_BarT5_wallBracket7
+    100174: Modular_BarT5_Interior_Wall_Modular_BarT5_wallBracket8
+    100176: Modular_BarT5_Interior_Wall_Modular_BarT5_wallBracket9
+    100178: Modular_BarT5_Interior_Wall_pCube1
+    100180: Modular_BarT5_Interior_Wall_pCube2
+    100182: //RootNode
+    100184: Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket
+    100186: Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket1
+    100188: Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket10
+    100190: Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket11
+    100192: Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket12
+    100194: Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket13
+    100196: Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket14
+    100198: Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket15
+    100200: Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket16
+    100202: Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket17
+    100204: Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket18
+    100206: Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket19
+    100208: Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket2
+    100210: Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket20
+    100212: Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket21
+    100214: Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket22
+    100216: Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket23
+    100218: Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket24
+    100220: Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket3
+    100222: Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket4
+    100224: Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket5
+    100226: Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket6
+    100228: Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket7
+    100230: Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket8
+    100232: Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket9
+    100234: Modular_BarT5_Interior_Wall_windowed_pCube1
+    100236: Modular_BarT5_Interior_Wall_windowed_pCube2
+    100238: Modular_BarT5_Interior_Wall_windowed_pCube3
+    100240: Modular_BarT5_wallBracket
+    100242: Modular_BarT5_wallBracket1
+    100244: Modular_BarT5_wallBracket10
+    100246: Modular_BarT5_wallBracket11
+    100248: Modular_BarT5_wallBracket12
+    100250: Modular_BarT5_wallBracket13
+    100252: Modular_BarT5_wallBracket14
+    100254: Modular_BarT5_wallBracket15
+    100256: Modular_BarT5_wallBracket16
+    100258: Modular_BarT5_wallBracket17
+    100260: Modular_BarT5_wallBracket18
+    100262: Modular_BarT5_wallBracket19
+    100264: Modular_BarT5_wallBracket2
+    100266: Modular_BarT5_wallBracket20
+    100268: Modular_BarT5_wallBracket21
+    100270: Modular_BarT5_wallBracket22
+    100272: Modular_BarT5_wallBracket23
+    100274: Modular_BarT5_wallBracket24
+    100276: Modular_BarT5_wallBracket3
+    100278: Modular_BarT5_wallBracket4
+    100280: Modular_BarT5_wallBracket5
+    100282: Modular_BarT5_wallBracket6
+    100284: Modular_BarT5_wallBracket7
+    100286: Modular_BarT5_wallBracket8
+    100288: Modular_BarT5_wallBracket9
+    100290: pCube1
+    100292: pCube2
+    100294: pCube3
+    100296: transform1
+    100298: transform1 1
+    100300: transform1 2
+    100302: transform1 3
+    100304: transform1 4
+    100306: transform10
+    100308: transform10 1
+    100310: transform10 2
+    100312: transform10 3
+    100314: transform10 4
+    100316: transform11
+    100318: transform11 1
+    100320: transform11 2
+    100322: transform11 3
+    100324: transform11 4
+    100326: transform12
+    100328: transform12 1
+    100330: transform12 2
+    100332: transform12 3
+    100334: transform12 4
+    100336: transform13
+    100338: transform13 1
+    100340: transform13 2
+    100342: transform13 3
+    100344: transform13 4
+    100346: transform14
+    100348: transform14 1
+    100350: transform14 2
+    100352: transform14 3
+    100354: transform14 4
+    100356: transform15
+    100358: transform15 1
+    100360: transform15 2
+    100362: transform15 3
+    100364: transform15 4
+    100366: transform16
+    100368: transform16 1
+    100370: transform16 2
+    100372: transform16 3
+    100374: transform16 4
+    100376: transform17
+    100378: transform17 1
+    100380: transform17 2
+    100382: transform17 3
+    100384: transform17 4
+    100386: transform18
+    100388: transform18 1
+    100390: transform18 2
+    100392: transform18 3
+    100394: transform18 4
+    100396: transform19
+    100398: transform19 1
+    100400: transform19 2
+    100402: transform19 3
+    100404: transform19 4
+    100406: transform2
+    100408: transform2 1
+    100410: transform2 2
+    100412: transform2 3
+    100414: transform2 4
+    100416: transform20
+    100418: transform20 1
+    100420: transform20 2
+    100422: transform20 3
+    100424: transform20 4
+    100426: transform21
+    100428: transform21 1
+    100430: transform21 2
+    100432: transform21 3
+    100434: transform21 4
+    100436: transform22
+    100438: transform22 1
+    100440: transform22 2
+    100442: transform22 3
+    100444: transform22 4
+    100446: transform23
+    100448: transform23 1
+    100450: transform23 2
+    100452: transform23 3
+    100454: transform23 4
+    100456: transform24
+    100458: transform24 1
+    100460: transform24 2
+    100462: transform24 3
+    100464: transform24 4
+    100466: transform25
+    100468: transform25 1
+    100470: transform25 2
+    100472: transform25 3
+    100474: transform25 4
+    100476: transform26
+    100478: transform26 1
+    100480: transform26 2
+    100482: transform26 3
+    100484: transform26 4
+    100486: transform27
+    100488: transform27 1
+    100490: transform27 2
+    100492: transform27 3
+    100494: transform27 4
+    100496: transform3
+    100498: transform3 1
+    100500: transform3 2
+    100502: transform3 3
+    100504: transform3 4
+    100506: transform4
+    100508: transform4 1
+    100510: transform4 2
+    100512: transform4 3
+    100514: transform4 4
+    100516: transform5
+    100518: transform5 1
+    100520: transform5 2
+    100522: transform5 3
+    100524: transform5 4
+    100526: transform6
+    100528: transform6 1
+    100530: transform6 2
+    100532: transform6 3
+    100534: transform6 4
+    100536: transform7
+    100538: transform7 1
+    100540: transform7 2
+    100542: transform7 3
+    100544: transform7 4
+    100546: transform8
+    100548: transform8 1
+    100550: transform8 2
+    100552: transform8 3
+    100554: transform8 4
+    100556: transform9
+    100558: transform9 1
+    100560: transform9 2
+    100562: transform9 3
+    100564: transform9 4
+    400000: BarT5_interior_wall_Door3
+    400002: BarT5_interior_wall_windowed1
+    400004: BarT5_interior_wall_windowed1 1
+    400006: BarT5_interior_wall_windowed2
+    400008: BarT5_Wall5
+    400010: Modular_BarT5_Interior_Wall_BarT5_interior_wall_windowed2
+    400012: Modular_BarT5_Interior_Wall_door_BarT5_interior_wall_Door3
+    400014: Modular_BarT5_Interior_Wall_door_BarT5_interior_wall_windowed2
+    400016: Modular_BarT5_Interior_Wall_door_Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket
+    400018: Modular_BarT5_Interior_Wall_door_Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket1
+    400020: Modular_BarT5_Interior_Wall_door_Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket10
+    400022: Modular_BarT5_Interior_Wall_door_Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket11
+    400024: Modular_BarT5_Interior_Wall_door_Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket12
+    400026: Modular_BarT5_Interior_Wall_door_Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket13
+    400028: Modular_BarT5_Interior_Wall_door_Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket14
+    400030: Modular_BarT5_Interior_Wall_door_Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket15
+    400032: Modular_BarT5_Interior_Wall_door_Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket16
+    400034: Modular_BarT5_Interior_Wall_door_Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket17
+    400036: Modular_BarT5_Interior_Wall_door_Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket18
+    400038: Modular_BarT5_Interior_Wall_door_Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket19
+    400040: Modular_BarT5_Interior_Wall_door_Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket2
+    400042: Modular_BarT5_Interior_Wall_door_Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket20
+    400044: Modular_BarT5_Interior_Wall_door_Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket21
+    400046: Modular_BarT5_Interior_Wall_door_Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket22
+    400048: Modular_BarT5_Interior_Wall_door_Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket23
+    400050: Modular_BarT5_Interior_Wall_door_Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket24
+    400052: Modular_BarT5_Interior_Wall_door_Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket3
+    400054: Modular_BarT5_Interior_Wall_door_Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket4
+    400056: Modular_BarT5_Interior_Wall_door_Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket5
+    400058: Modular_BarT5_Interior_Wall_door_Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket6
+    400060: Modular_BarT5_Interior_Wall_door_Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket7
+    400062: Modular_BarT5_Interior_Wall_door_Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket8
+    400064: Modular_BarT5_Interior_Wall_door_Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket9
+    400066: Modular_BarT5_Interior_Wall_door_Modular_BarT5_Interior_Wall_windowed_pCube1
+    400068: Modular_BarT5_Interior_Wall_door_Modular_BarT5_Interior_Wall_windowed_pCube2
+    400070: Modular_BarT5_Interior_Wall_door_Modular_BarT5_Interior_Wall_windowed_pCube3
+    400072: Modular_BarT5_Interior_Wall_door_Modular_BarT5_wallBracket
+    400074: Modular_BarT5_Interior_Wall_door_Modular_BarT5_wallBracket1
+    400076: Modular_BarT5_Interior_Wall_door_Modular_BarT5_wallBracket10
+    400078: Modular_BarT5_Interior_Wall_door_Modular_BarT5_wallBracket11
+    400080: Modular_BarT5_Interior_Wall_door_Modular_BarT5_wallBracket12
+    400082: Modular_BarT5_Interior_Wall_door_Modular_BarT5_wallBracket13
+    400084: Modular_BarT5_Interior_Wall_door_Modular_BarT5_wallBracket14
+    400086: Modular_BarT5_Interior_Wall_door_Modular_BarT5_wallBracket15
+    400088: Modular_BarT5_Interior_Wall_door_Modular_BarT5_wallBracket16
+    400090: Modular_BarT5_Interior_Wall_door_Modular_BarT5_wallBracket17
+    400092: Modular_BarT5_Interior_Wall_door_Modular_BarT5_wallBracket18
+    400094: Modular_BarT5_Interior_Wall_door_Modular_BarT5_wallBracket19
+    400096: Modular_BarT5_Interior_Wall_door_Modular_BarT5_wallBracket2
+    400098: Modular_BarT5_Interior_Wall_door_Modular_BarT5_wallBracket20
+    400100: Modular_BarT5_Interior_Wall_door_Modular_BarT5_wallBracket21
+    400102: Modular_BarT5_Interior_Wall_door_Modular_BarT5_wallBracket22
+    400104: Modular_BarT5_Interior_Wall_door_Modular_BarT5_wallBracket23
+    400106: Modular_BarT5_Interior_Wall_door_Modular_BarT5_wallBracket24
+    400108: Modular_BarT5_Interior_Wall_door_Modular_BarT5_wallBracket3
+    400110: Modular_BarT5_Interior_Wall_door_Modular_BarT5_wallBracket4
+    400112: Modular_BarT5_Interior_Wall_door_Modular_BarT5_wallBracket5
+    400114: Modular_BarT5_Interior_Wall_door_Modular_BarT5_wallBracket6
+    400116: Modular_BarT5_Interior_Wall_door_Modular_BarT5_wallBracket7
+    400118: Modular_BarT5_Interior_Wall_door_Modular_BarT5_wallBracket8
+    400120: Modular_BarT5_Interior_Wall_door_Modular_BarT5_wallBracket9
+    400122: Modular_BarT5_Interior_Wall_door_pCube1
+    400124: Modular_BarT5_Interior_Wall_door_pCube2
+    400126: Modular_BarT5_Interior_Wall_door_pCube3
+    400128: Modular_BarT5_Interior_Wall_Modular_BarT5_wallBracket
+    400130: Modular_BarT5_Interior_Wall_Modular_BarT5_wallBracket1
+    400132: Modular_BarT5_Interior_Wall_Modular_BarT5_wallBracket10
+    400134: Modular_BarT5_Interior_Wall_Modular_BarT5_wallBracket11
+    400136: Modular_BarT5_Interior_Wall_Modular_BarT5_wallBracket12
+    400138: Modular_BarT5_Interior_Wall_Modular_BarT5_wallBracket13
+    400140: Modular_BarT5_Interior_Wall_Modular_BarT5_wallBracket14
+    400142: Modular_BarT5_Interior_Wall_Modular_BarT5_wallBracket15
+    400144: Modular_BarT5_Interior_Wall_Modular_BarT5_wallBracket16
+    400146: Modular_BarT5_Interior_Wall_Modular_BarT5_wallBracket17
+    400148: Modular_BarT5_Interior_Wall_Modular_BarT5_wallBracket18
+    400150: Modular_BarT5_Interior_Wall_Modular_BarT5_wallBracket19
+    400152: Modular_BarT5_Interior_Wall_Modular_BarT5_wallBracket2
+    400154: Modular_BarT5_Interior_Wall_Modular_BarT5_wallBracket20
+    400156: Modular_BarT5_Interior_Wall_Modular_BarT5_wallBracket21
+    400158: Modular_BarT5_Interior_Wall_Modular_BarT5_wallBracket22
+    400160: Modular_BarT5_Interior_Wall_Modular_BarT5_wallBracket23
+    400162: Modular_BarT5_Interior_Wall_Modular_BarT5_wallBracket24
+    400164: Modular_BarT5_Interior_Wall_Modular_BarT5_wallBracket3
+    400166: Modular_BarT5_Interior_Wall_Modular_BarT5_wallBracket4
+    400168: Modular_BarT5_Interior_Wall_Modular_BarT5_wallBracket5
+    400170: Modular_BarT5_Interior_Wall_Modular_BarT5_wallBracket6
+    400172: Modular_BarT5_Interior_Wall_Modular_BarT5_wallBracket7
+    400174: Modular_BarT5_Interior_Wall_Modular_BarT5_wallBracket8
+    400176: Modular_BarT5_Interior_Wall_Modular_BarT5_wallBracket9
+    400178: Modular_BarT5_Interior_Wall_pCube1
+    400180: Modular_BarT5_Interior_Wall_pCube2
+    400182: //RootNode
+    400184: Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket
+    400186: Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket1
+    400188: Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket10
+    400190: Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket11
+    400192: Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket12
+    400194: Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket13
+    400196: Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket14
+    400198: Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket15
+    400200: Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket16
+    400202: Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket17
+    400204: Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket18
+    400206: Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket19
+    400208: Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket2
+    400210: Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket20
+    400212: Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket21
+    400214: Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket22
+    400216: Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket23
+    400218: Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket24
+    400220: Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket3
+    400222: Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket4
+    400224: Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket5
+    400226: Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket6
+    400228: Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket7
+    400230: Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket8
+    400232: Modular_BarT5_Interior_Wall_windowed_Modular_BarT5_wallBracket9
+    400234: Modular_BarT5_Interior_Wall_windowed_pCube1
+    400236: Modular_BarT5_Interior_Wall_windowed_pCube2
+    400238: Modular_BarT5_Interior_Wall_windowed_pCube3
+    400240: Modular_BarT5_wallBracket
+    400242: Modular_BarT5_wallBracket1
+    400244: Modular_BarT5_wallBracket10
+    400246: Modular_BarT5_wallBracket11
+    400248: Modular_BarT5_wallBracket12
+    400250: Modular_BarT5_wallBracket13
+    400252: Modular_BarT5_wallBracket14
+    400254: Modular_BarT5_wallBracket15
+    400256: Modular_BarT5_wallBracket16
+    400258: Modular_BarT5_wallBracket17
+    400260: Modular_BarT5_wallBracket18
+    400262: Modular_BarT5_wallBracket19
+    400264: Modular_BarT5_wallBracket2
+    400266: Modular_BarT5_wallBracket20
+    400268: Modular_BarT5_wallBracket21
+    400270: Modular_BarT5_wallBracket22
+    400272: Modular_BarT5_wallBracket23
+    400274: Modular_BarT5_wallBracket24
+    400276: Modular_BarT5_wallBracket3
+    400278: Modular_BarT5_wallBracket4
+    400280: Modular_BarT5_wallBracket5
+    400282: Modular_BarT5_wallBracket6
+    400284: Modular_BarT5_wallBracket7
+    400286: Modular_BarT5_wallBracket8
+    400288: Modular_BarT5_wallBracket9
+    400290: pCube1
+    400292: pCube2
+    400294: pCube3
+    400296: transform1
+    400298: transform1 1
+    400300: transform1 2
+    400302: transform1 3
+    400304: transform1 4
+    400306: transform10
+    400308: transform10 1
+    400310: transform10 2
+    400312: transform10 3
+    400314: transform10 4
+    400316: transform11
+    400318: transform11 1
+    400320: transform11 2
+    400322: transform11 3
+    400324: transform11 4
+    400326: transform12
+    400328: transform12 1
+    400330: transform12 2
+    400332: transform12 3
+    400334: transform12 4
+    400336: transform13
+    400338: transform13 1
+    400340: transform13 2
+    400342: transform13 3
+    400344: transform13 4
+    400346: transform14
+    400348: transform14 1
+    400350: transform14 2
+    400352: transform14 3
+    400354: transform14 4
+    400356: transform15
+    400358: transform15 1
+    400360: transform15 2
+    400362: transform15 3
+    400364: transform15 4
+    400366: transform16
+    400368: transform16 1
+    400370: transform16 2
+    400372: transform16 3
+    400374: transform16 4
+    400376: transform17
+    400378: transform17 1
+    400380: transform17 2
+    400382: transform17 3
+    400384: transform17 4
+    400386: transform18
+    400388: transform18 1
+    400390: transform18 2
+    400392: transform18 3
+    400394: transform18 4
+    400396: transform19
+    400398: transform19 1
+    400400: transform19 2
+    400402: transform19 3
+    400404: transform19 4
+    400406: transform2
+    400408: transform2 1
+    400410: transform2 2
+    400412: transform2 3
+    400414: transform2 4
+    400416: transform20
+    400418: transform20 1
+    400420: transform20 2
+    400422: transform20 3
+    400424: transform20 4
+    400426: transform21
+    400428: transform21 1
+    400430: transform21 2
+    400432: transform21 3
+    400434: transform21 4
+    400436: transform22
+    400438: transform22 1
+    400440: transform22 2
+    400442: transform22 3
+    400444: transform22 4
+    400446: transform23
+    400448: transform23 1
+    400450: transform23 2
+    400452: transform23 3
+    400454: transform23 4
+    400456: transform24
+    400458: transform24 1
+    400460: transform24 2
+    400462: transform24 3
+    400464: transform24 4
+    400466: transform25
+    400468: transform25 1
+    400470: transform25 2
+    400472: transform25 3
+    400474: transform25 4
+    400476: transform26
+    400478: transform26 1
+    400480: transform26 2
+    400482: transform26 3
+    400484: transform26 4
+    400486: transform27
+    400488: transform27 1
+    400490: transform27 2
+    400492: transform27 3
+    400494: transform27 4
+    400496: transform3
+    400498: transform3 1
+    400500: transform3 2
+    400502: transform3 3
+    400504: transform3 4
+    400506: transform4
+    400508: transform4 1
+    400510: transform4 2
+    400512: transform4 3
+    400514: transform4 4
+    400516: transform5
+    400518: transform5 1
+    400520: transform5 2
+    400522: transform5 3
+    400524: transform5 4
+    400526: transform6
+    400528: transform6 1
+    400530: transform6 2
+    400532: transform6 3
+    400534: transform6 4
+    400536: transform7
+    400538: transform7 1
+    400540: transform7 2
+    400542: transform7 3
+    400544: transform7 4
+    400546: transform8
+    400548: transform8 1
+    400550: transform8 2
+    400552: transform8 3
+    400554: transform8 4
+    400556: transform9
+    400558: transform9 1
+    400560: transform9 2
+    400562: transform9 3
+    400564: transform9 4
+    2300000: BarT5_Wall5
+    3300000: BarT5_Wall5
+    4300000: BarT5_Wall5
+    9500000: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: blinn1
+    second: {fileID: 2100000, guid: 7ff95014f5cc14741a8306045c1e2828, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: dc7059827f90ed64fb8dff35107f8b0b, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

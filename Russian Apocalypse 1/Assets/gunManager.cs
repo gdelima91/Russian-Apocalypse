@@ -12,12 +12,12 @@ public class gunManager : MonoBehaviour {
     }
     // Update is called once per frame
     void Update () {
-        if (Input.GetMouseButtonDown(1)) {
-            Next();
-        }
+        //if (Input.GetMouseButtonDown(1)) {
+        //    Next();
+        //}
 	}
 
-    void Equp(int index) {
+    public void Equp(int index) {
        
         monos[index].gameObject.SetActive(true);
     }
