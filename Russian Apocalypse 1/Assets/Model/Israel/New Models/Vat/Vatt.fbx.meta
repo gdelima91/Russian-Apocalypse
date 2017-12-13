@@ -24,6 +24,7 @@ ModelImporter:
     2300000: pPlane2
     3300000: pPlane2
     4300000: pPlane2
+    6400000: pPlane2
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -61,7 +62,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
