@@ -1,8 +1,15 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: e8222bf6385decc44be07871c3b25cfe
 folderAsset: yes
 timeCreated: 1513212067
 licenseType: Pro
+=======
+guid: 780e5985bd0b3774cbeb68deb03fe610
+folderAsset: yes
+timeCreated: 1513192232
+licenseType: Free
+>>>>>>> origin/New_luigi_work
 DefaultImporter:
   externalObjects: {}
   userData: 

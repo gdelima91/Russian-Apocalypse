@@ -1,7 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 02da6c77a54e55d45b1f09043d7d678b
 timeCreated: 1513212069
 licenseType: Pro
+=======
+guid: c963253c2f364c64097195ad60f2278e
+timeCreated: 1513192257
+licenseType: Free
+>>>>>>> origin/New_luigi_work
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
@@ -40,6 +46,10 @@ ModelImporter:
     2300000: pCone3
     3300000: pCone3
     4300000: pCone3
+<<<<<<< HEAD
+=======
+    6400000: pCone3
+>>>>>>> origin/New_luigi_work
     9500000: //RootNode
   externalObjects:
   - first:
@@ -78,7 +88,11 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
+<<<<<<< HEAD
     addColliders: 0
+=======
+    addColliders: 1
+>>>>>>> origin/New_luigi_work
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1

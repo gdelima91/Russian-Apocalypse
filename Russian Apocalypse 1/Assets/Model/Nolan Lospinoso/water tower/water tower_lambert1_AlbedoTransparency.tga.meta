@@ -1,7 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: ccf4af70cb4ed6d4694508b6a3c4b37f
 timeCreated: 1513212068
 licenseType: Pro
+=======
+guid: 2c133decad93e774bad70dfc866bd0fa
+timeCreated: 1513192243
+licenseType: Free
+>>>>>>> origin/New_luigi_work
 TextureImporter:
   fileIDToRecycleName: {}
   externalObjects: {}

@@ -1,7 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 780e0f94d2d11004f9f63bf49cace346
 timeCreated: 1513212069
 licenseType: Pro
+=======
+guid: 33545853562a69144a09234094fb3738
+timeCreated: 1513192254
+licenseType: Free
+>>>>>>> origin/New_luigi_work
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
@@ -16,7 +22,11 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: building03
+<<<<<<< HEAD
     second: {fileID: 2100000, guid: d39f6d7d01ee9904ab071a8dd249c81c, type: 2}
+=======
+    second: {fileID: 2100000, guid: 4a8cc49263e4ced46b89d296e060acc8, type: 2}
+>>>>>>> origin/New_luigi_work
   materials:
     importMaterials: 1
     materialName: 0

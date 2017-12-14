@@ -20,6 +20,7 @@ ModelImporter:
     2300000: pCylinder11
     3300000: pCylinder11
     4300000: pCylinder11
+    6400000: pCylinder11
     9500000: //RootNode
   externalObjects:
   - first:
@@ -58,7 +59,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1

@@ -1,7 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: d39f6d7d01ee9904ab071a8dd249c81c
 timeCreated: 1513212069
 licenseType: Pro
+=======
+guid: 4a8cc49263e4ced46b89d296e060acc8
+timeCreated: 1513192254
+licenseType: Free
+>>>>>>> origin/New_luigi_work
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 2100000
