@@ -1,13 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: d68317a6a647e7246a078c146c20bd86
-timeCreated: 1513212069
-licenseType: Pro
-=======
-guid: 76f333933a953384db4a24fa1434241e
-timeCreated: 1513192255
-licenseType: Free
->>>>>>> origin/New_luigi_work
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
