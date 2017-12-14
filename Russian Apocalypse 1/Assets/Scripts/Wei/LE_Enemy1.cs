@@ -9,9 +9,14 @@ public class LE_Enemy1 : LEMainBase {
     public float health = 5000;
     public GameObject ragDoll;
     public GameObject blood;
+    private Player_Bark_Call pBC;
+    private DropManager dropManager;
+    private bool hasDied = false;
+    public Vector3 velocity;
 
     void Start() {
-        Debug.Log(transform.position);
+        pBC = GetComponent<Player_Bark_Call>();
+        dropManager = GetComponent<DropManager>();
     }
 
     public override void Dispatch_Animation_Message(AnimationMessageType messageType, object messageValue)
@@ -27,15 +32,24 @@ public class LE_Enemy1 : LEMainBase {
     public override bool Damage(float number)
     {
         health -= number;
-        if (health <= 0) { Die(); }
+        if (health <= 0) {
+            Die(velocity);
+        }
         return false;
     }
 
-    public void Die()
+    public void Die(Vector3 velocity)
     {
-        GameObject deadRagDoll = Instantiate(ragDoll, transform.position, transform.rotation);
-        //GameObject cube = Instantiate(GameObject.CreatePrimitive(PrimitiveType.Cube),transform.position,transform.rotation);
-        Instantiate(blood, transform.position, transform.rotation);
+        if (!hasDied) {
+            hasDied = true;
+            GameObject deadRagDoll = Instantiate(ragDoll, new Vector3 (transform.position.x, 0, transform.position.z), transform.rotation);
+            deadRagDoll.GetComponent<Rigidbody>().AddForce(transform.forward * 10000000);
+            //GameObject cube = Instantiate(GameObject.CreatePrimitive(PrimitiveType.Cube),transform.position,transform.rotation);
+            dropManager.RNGDrop(dropManager.rNGtoMinus);
+            Instantiate(blood, new Vector3(transform.position.x, 0, transform.position.z), transform.rotation);
+        }
+        pBC.RNGBark();
+
         Destroy(gameObject);
         
 

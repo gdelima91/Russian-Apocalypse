@@ -23,6 +23,8 @@ public class PlayerBarkManager : MonoBehaviour {
         barkList = GetComponent<PlayerBark_List>();
 	}
 
+
+
     // For test purposes
     void PlayerInput() {
         if (Input.GetKey(KeyCode.Alpha1)) {

@@ -7,6 +7,8 @@ public class Enemy1_Fight : AiStateInterface<LE_Enemy1> {
 
 
     public static readonly Enemy1_Fight Instance = new Enemy1_Fight();
+    public float timeBetween;
+    //Enemy1_StateMachine stateMachine;
 
 
     public override void Enter(LE_Enemy1 entity)
@@ -25,7 +27,11 @@ public class Enemy1_Fight : AiStateInterface<LE_Enemy1> {
         /*
          Shoot ..........
          */
-        stateMachine.gun.OnTriggerHold();
+
+        
+            stateMachine.gun.Shoot();
+        
+        
 
         
         

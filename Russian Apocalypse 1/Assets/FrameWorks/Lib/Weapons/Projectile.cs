@@ -9,7 +9,9 @@ public class Projectile : MonoBehaviour
     public LayerMask collisionMask;
     public Color trailColour;
     public float speed = 10;
-    float damage = 1;
+    public float aKDamage = 100;
+    public float shotgunDamage = 200;
+    float damage = 100;
 
     float lifetime = 3;
     float skinWidth = .1f;
@@ -34,19 +36,23 @@ public class Projectile : MonoBehaviour
         rg.AddForce(transform.forward * moveDistance);
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
+    private void OnCollisionEnter(Collision collision) {
         LEPhysicsPros physicsPros = collision.collider.GetComponent<LEPhysicsPros>();
-        if (physicsPros != null)
-        {
-            physicsPros.Recive_Damage(100);
-
+        if (physicsPros != null) {
+            physicsPros.Recive_Damage(damage);
             if (collision.collider.GetComponent<HitmarkerPlayer>() != null) {
                 collision.collider.GetComponent<HitmarkerPlayer>().PlayHitmarker();
             }
+
+            //LE_Enemy1 leEnemy = collision.collider.GetComponent<LE_Enemy1>();
+            //if (leEnemy != null) {
+            //    leEnemy.Damage(damage);
+            //    if (collision.collider.GetComponent<HitmarkerPlayer>() != null) {
+            //        collision.collider.GetComponent<HitmarkerPlayer>().PlayHitmarker();
+            //    }
+            //}
             
         }
         Destroy(gameObject);
-    }
-
+    }  
 }

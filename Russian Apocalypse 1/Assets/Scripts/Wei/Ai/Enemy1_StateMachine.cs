@@ -12,6 +12,9 @@ public class Enemy1_StateMachine : StateMachineGeneric<LE_Enemy1> {
     public NavMeshAgent angent;
     public V.Gun gun;
 
+    //private void Start() {
+    //    gun = GetComponentInChildren<V.Weapon_Ak47>();
+    //}
     protected override void Init_Target_InitState()
     {
         angent.enabled = true;

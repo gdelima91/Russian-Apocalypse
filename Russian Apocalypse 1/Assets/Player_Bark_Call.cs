@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player_Bark_Call : MonoBehaviour {
 
     public PlayerBarkManager pBM;
+    public float rNGNumberToBeHigherThan = 25;
 
 	// Use this for initialization
 	void Start () {
@@ -16,16 +17,16 @@ public class Player_Bark_Call : MonoBehaviour {
 		
 	}
 
-    void OnDestroy ()
+    public void RNGBark ()
     {
-        //Note:  When OnDestroy get called.
-        //       pBM will also be release from the memory.....
-        
-        //int rng = Random.Range(0, 100);
 
-        //if(rng > 25)
-        //{
-        //    pBM.PlayClip(PlayerBark_List.FolderName.OnEnemyKill);
-        //}  
+        int rng = Random.Range(0, 100);
+
+        if (rng > rNGNumberToBeHigherThan) {
+            if (pBM != null) {
+                pBM.PlayClip(PlayerBark_List.FolderName.OnEnemyKill);
+            }
+            
+        }
     }
 }

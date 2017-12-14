@@ -49,7 +49,7 @@ public class Weapon_Shotgun : MonoBehaviour {
         float currentAngle = 0;
         if (muzzlePoint == null) { return; }
         Vector3 initDir = muzzlePoint.forward.RotateAxis(Vector3.up, -shotSpread + 30);
-
+        GameObject obj = Instantiate(shotgunAudio) as GameObject;
         for (int i = 0; i < numberOfBullets; i++) {
             Projectile bullet = Instantiate(projectile, muzzlePoint.position, muzzlePoint.rotation) as Projectile;
             //if (i == 0) {
@@ -71,7 +71,7 @@ public class Weapon_Shotgun : MonoBehaviour {
             bullet.SetSpeed(muzzleVelocity);
             initDir = initDir.RotateAxis(Vector3.up, (angle * i) - shotSpread);
             timer = timeBetweenShots;
-            GameObject obj = Instantiate(shotgunAudio) as GameObject;
+            
             Destroy(obj, 3);
         }
     }

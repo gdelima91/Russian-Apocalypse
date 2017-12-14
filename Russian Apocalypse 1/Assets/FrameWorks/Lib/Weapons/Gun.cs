@@ -61,7 +61,7 @@ namespace V
             //}
         }
 
-        void Shoot()
+        public void Shoot()
         {
 
             if (!isReloading && Time.time > nextShotTime && projectilesRemainingInMag > 0)

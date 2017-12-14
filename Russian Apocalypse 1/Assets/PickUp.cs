@@ -22,6 +22,7 @@ public class PickUp : MonoBehaviour {
         if (other.gameObject.layer == 8) {
             if (other.gameObject.GetComponent<PickUpManager>() != null) {
                 other.gameObject.GetComponent<PickUpManager>().EquipShotgun(timer);
+                other.gameObject.GetComponent<PlayerBarkManager>().PlayClip(PlayerBark_List.FolderName.OnGettingGenericWeapon);
                 Destroy(gameObject);
             }
         }
